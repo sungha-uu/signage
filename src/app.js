@@ -103,7 +103,7 @@
           </section>
         </div>
         <footer class="screen-footer">
-          <span>매일 직접 빚는 수제 만두 전문점</span>
+          <span>매일 직접 빚는 수제만두 전문점</span>
           <div class="screen-footer__logo"><img src="${data.brand.logo}" alt="${data.brand.name}" /></div>
           <p>맛있는 한 끼, 정성껏 준비했습니다.</p>
         </footer>
