@@ -113,6 +113,7 @@
   function renderVideoScreen() {
     const [mandu, special, noodle] = data.categories;
     const compactGroups = [mandu, special, noodle];
+    const [heroMain, heroAccent] = data.hero.title.split(" + ");
 
     return `
       <section class="screen screen--video" data-screen="1" aria-label="메뉴와 영상">
@@ -122,7 +123,7 @@
               <div class="video-menu__hero-copy">
                 <span class="video-menu__eyebrow">BEST COMBO</span>
                 ${badge(data.hero.badge)}
-                <h1>${data.hero.title}</h1>
+                <h1><span>${heroMain} + </span><span class="accent">${heroAccent}</span></h1>
                 <strong>${won(data.hero.price)}</strong>
               </div>
             </section>
