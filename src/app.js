@@ -54,6 +54,7 @@
   function renderStaticScreen() {
     const [mandu, special, noodle] = data.categories;
     const [tangsuyukPhoto, noodlePhoto, fishcakePhoto] = data.gallery;
+    const [heroMain, heroAccent] = data.hero.title.split(" + ");
 
     return `
       <section class="screen screen--static" data-screen="0" aria-label="전체 메뉴판">
@@ -63,7 +64,7 @@
               <div class="static-feature__copy">
                 ${badge(data.hero.badge)}
                 <p class="static-feature__kicker">오늘의 추천 조합</p>
-                <h1>${data.hero.title.replace(" + ", "<span>+</span>")}</h1>
+                <h1><span>${heroMain}</span><em>+</em><span class="accent">${heroAccent}</span></h1>
                 <p class="static-feature__price">${won(data.hero.price)}</p>
               </div>
               <div class="static-feature__image-wrap">
@@ -78,15 +79,17 @@
               <ul class="dumpling-grid">${visibleItems(mandu).map((item) => menuRow(item, true)).join("")}</ul>
             </section>
           </section>
-          <section class="static-photo-rail" aria-label="대표 음식 사진">
-            <figure><img src="${tangsuyukPhoto.image}" alt="${tangsuyukPhoto.alt}" /></figure>
-            <figure><img src="${noodlePhoto.image}" alt="${noodlePhoto.alt}" /></figure>
-            <figure><img src="${fishcakePhoto.image}" alt="${fishcakePhoto.alt}" /></figure>
+          <section class="static-secondary">
+            <section class="static-photo-strip" aria-label="대표 음식 사진">
+              <figure><img src="${tangsuyukPhoto.image}" alt="${tangsuyukPhoto.alt}" /></figure>
+              <figure><img src="${noodlePhoto.image}" alt="${noodlePhoto.alt}" /></figure>
+              <figure><img src="${fishcakePhoto.image}" alt="${fishcakePhoto.alt}" /></figure>
+            </section>
+            <div class="static-card-grid">
+              ${categoryBlock(special, { dense: true })}
+              ${categoryBlock(noodle, { dense: true })}
+            </div>
           </section>
-          <aside class="static-side-menu">
-            ${categoryBlock(special, { dense: true })}
-            ${categoryBlock(noodle, { dense: true })}
-          </aside>
         </div>
         <footer class="screen-footer"><span>ORDER NOW</span><p>맛있는 한 끼, 꾼만두에서 준비했습니다.</p></footer>
       </section>`;
