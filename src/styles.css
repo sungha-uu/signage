@@ -190,7 +190,7 @@ button { font: inherit; }
 }
 
 .static-gallery-card > figure img { width: 100%; height: 100%; object-fit: cover; }
-.static-gallery-card > .static-photo--tangsuyuk img { object-position: center; transform: scale(1.75); }
+.static-gallery-card > .static-photo--tangsuyuk img { object-position: center; transform: scale(1.58); }
 
 .static-menu-row {
   display: grid;
