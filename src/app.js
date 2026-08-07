@@ -14,8 +14,13 @@
 
   const won = (price) => `${Number(price).toLocaleString("ko-KR")}원`;
   const visibleItems = (category) => category.items.filter((item) => item.visible !== false);
-  const signageMode = new URLSearchParams(window.location.search).get("mode") === "signage";
+  const searchParams = new URLSearchParams(window.location.search);
+  const signageMode = searchParams.get("mode") === "signage";
+  const testMode = searchParams.get("test") === "1";
   const behavior = signageMode ? { ...data.settings, ...data.settings.signageMode } : data.settings;
+  const staticDurationSeconds = testMode ? 1 : data.settings.staticDurationSeconds;
+
+  document.body.classList.toggle("signage-mode", signageMode);
 
   function badge(text, variant = "coral") {
     if (!text) return "";
@@ -42,7 +47,6 @@
       <section class="category ${options.featured ? "category--featured" : ""}">
         <header class="category__header">
           <div>
-            <p class="category__eyebrow">MENU</p>
             <h2>${category.title}</h2>
           </div>
           ${category.subtitle ? `<p class="category__subtitle">${category.subtitle}</p>` : ""}
@@ -73,7 +77,7 @@
             </div>
             <section class="dumpling-panel">
               <header class="dumpling-panel__header">
-                <div><span>HANDMADE</span><h2>만두 메뉴</h2></div>
+                <div><h2>만두 메뉴</h2></div>
                 <p>${mandu.subtitle}</p>
               </header>
               <ul class="dumpling-grid">${visibleItems(mandu).map((item) => menuRow(item, true)).join("")}</ul>
@@ -115,7 +119,7 @@
             <div class="video-menu__groups">
               ${compactGroups.map((category) => `
                 <section class="compact-group compact-group--${category.id}">
-                  <header><h2>${category.title}</h2><span>${category.subtitle}</span></header>
+                  <header><h2>${category.id === "mandu" ? "만두 메뉴" : category.title}</h2><span>${category.subtitle}</span></header>
                   <ul>${visibleItems(category).map((item) => menuRow(item, true)).join("")}</ul>
                 </section>`).join("")}
             </div>
@@ -162,7 +166,7 @@
       video.pause();
       video.currentTime = 0;
       if (behavior.autoRotate) {
-        screenTimer = setTimeout(() => setActiveScreen(1), data.settings.staticDurationSeconds * 1000);
+        screenTimer = setTimeout(() => setActiveScreen(1), staticDurationSeconds * 1000);
       }
     }
 
@@ -178,7 +182,7 @@
   function initialize() {
     app.innerHTML = renderStaticScreen() + renderVideoScreen();
     dots.innerHTML = '<button class="screen-dot is-active" aria-label="1번 메뉴판"></button><button class="screen-dot" aria-label="2번 영상 메뉴판"></button>';
-    controls.hidden = data.settings.showControls === false;
+    controls.hidden = behavior.showControls === false;
 
     document.querySelectorAll(".screen-dot").forEach((dot, index) => dot.addEventListener("click", () => setActiveScreen(index, true)));
     previousButton.addEventListener("click", () => setActiveScreen(activeScreen - 1, true));

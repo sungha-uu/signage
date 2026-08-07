@@ -7,6 +7,13 @@
   const frame = document.querySelector(".signage-frame");
   const screenButtons = document.querySelectorAll(".mobile-screen-button");
 
+  const outerParams = new URLSearchParams(window.location.search);
+  const frameUrl = new URL(frame.getAttribute("src"), window.location.href);
+  ["mode", "test"].forEach((key) => {
+    if (outerParams.has(key)) frameUrl.searchParams.set(key, outerParams.get(key));
+  });
+  if (frameUrl.href !== frame.src) frame.src = frameUrl.href;
+
   function fitStage() {
     const scale = Math.min(window.innerWidth / DESIGN_WIDTH, window.innerHeight / DESIGN_HEIGHT);
     stage.style.setProperty("--stage-scale", String(scale));

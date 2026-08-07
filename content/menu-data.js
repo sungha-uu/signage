@@ -14,7 +14,8 @@ window.MENU_BOARD_DATA = {
     signageMode: {
       autoRotate: true,
       videoAutoplay: true,
-      videoControls: false
+      videoControls: false,
+      showControls: false
     }
   },
   hero: {

@@ -37,6 +37,29 @@ python -m http.server 8080
 
 웹 페이지에서는 1번·2번 메뉴판을 화면 전환 버튼으로만 이동합니다. 2번 영상도 자동으로 재생되지 않으며 사용자가 영상 재생 버튼을 눌러야 시작합니다.
 
-향후 EXE는 `board.html?mode=signage`를 실행하여 자동 순환과 영상 자동 재생을 활성화합니다. 1번 메뉴판은 `settings.staticDurationSeconds` 동안 표시되고, 2번 영상이 끝나면 다시 1번으로 돌아갑니다.
+EXE는 `index.html?mode=signage`를 실행하여 자동 순환과 영상 자동 재생을 활성화합니다. 1번 메뉴판은 `settings.staticDurationSeconds` 동안 표시되고, 2번 영상이 끝나면 다시 1번으로 돌아갑니다.
+
+## Windows EXE
+
+EXE는 `index.html?mode=signage`를 실행하며 다음 동작을 자동으로 수행합니다.
+
+- 1페이지 15초 표시
+- 2페이지 자동 전환
+- 영상 자동 재생
+- 영상 종료 후 1페이지 복귀
+- Windows 화면 절전 방지
+
+배포 폴더에서는 EXE 옆의 `content` 폴더를 우선 사용합니다. 따라서 `content/menu-data.js`, 사진, 영상만 수정하면 EXE를 다시 빌드하지 않아도 됩니다.
+
+종료는 `Ctrl + Q`, 전체 화면 전환은 `F11`입니다. 자세한 내용은 `EXE_사용법.md`를 참고합니다.
+
+### EXE 빌드
+
+```powershell
+pnpm install
+pnpm run release:win
+```
+
+완성 파일은 `dist/release/`에 생성됩니다.
 
 TV, PC, 휴대폰 모두 같은 16:9 가로 메뉴판을 표시합니다. 휴대폰 세로 화면에서는 전체 메뉴판이 축소되어 위아래 여백과 함께 표시되며, 가로로 돌리면 더 크게 볼 수 있습니다.

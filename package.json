@@ -1,0 +1,48 @@
+{
+  "name": "sexy-kkunmandu-menu-board",
+  "version": "1.0.0",
+  "description": "섹시한 꾼만두 Windows 디지털 메뉴판",
+  "main": "electron/main.cjs",
+  "author": "sungha-uu",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start:electron": "electron .",
+    "build:portable": "electron-builder --win portable --x64",
+    "release:win": "pnpm run build:portable && node scripts/build-release.cjs"
+  },
+  "devDependencies": {
+    "electron": "43.3.0",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "kr.co.sexykkunmandu.menuboard",
+    "productName": "섹시한 꾼만두 메뉴판",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "board.html",
+      "index.html",
+      "README.md",
+      "EXE_사용법.md",
+      "menu_design.md",
+      "content/**/*",
+      "src/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "Sexy-Kkunmandu-MenuBoard-${version}.${ext}"
+    }
+  }
+}
