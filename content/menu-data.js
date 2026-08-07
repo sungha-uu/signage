@@ -5,7 +5,7 @@ window.MENU_BOARD_DATA = {
     logo: "content/assets/images/logo.png"
   },
   settings: {
-    staticDurationSeconds: 15,
+    staticDurationSeconds: 30,
     autoRotate: false,
     videoAutoplay: false,
     videoControls: true,

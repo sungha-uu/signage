@@ -112,8 +112,7 @@
         <div class="board board--video">
           <aside class="video-menu">
             <section class="video-menu__hero">
-              <div>${badge(data.hero.badge)}<span class="video-menu__eyebrow">BEST COMBO</span></div>
-              <h1>${data.hero.title}</h1>
+              <div>${badge(data.hero.badge)}<h1>${data.hero.title}</h1></div>
               <strong>${won(data.hero.price)}</strong>
             </section>
             <div class="video-menu__groups">
