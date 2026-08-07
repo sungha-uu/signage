@@ -117,9 +117,9 @@ button { font: inherit; }
 
 .static-feature__kicker { margin: .75em 0 .28em; color: var(--coral-deep); font-size: 19px; font-weight: 900; letter-spacing: .04em; }
 .static-feature__copy > .badge { min-height: 1.9em; padding: .2em .72em; font-size: 15px; font-weight: 900; }
-.static-feature h1 { margin: 0; font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 43px; font-style: normal; font-weight: 900; line-height: 1.06; letter-spacing: -.055em; }
+.static-feature h1 { margin: 0; font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 43px; font-style: normal; font-weight: 900; line-height: 1.06; letter-spacing: -.055em; text-align: center; }
 .static-feature h1 span { display: block; white-space: nowrap; }
-.static-feature h1 em { display: block; margin: -.08em 0 -.02em; color: var(--price-red); font-style: normal; line-height: .95; text-align: center; }
+.static-feature h1 em { display: block; margin: -.08em 0 -.02em; color: var(--price-red); font-style: normal; line-height: .95; }
 .static-feature h1 .accent { color: var(--ink); }
 .static-feature__price { margin: .14em 0 0; color: var(--price-red); font-size: 54px; font-weight: 900; letter-spacing: -.055em; white-space: nowrap; }
 .static-feature__image-wrap { position: relative; min-height: 0; margin: 18px 18px 18px 6px; overflow: hidden; border-radius: 24px; }
