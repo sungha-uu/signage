@@ -22,14 +22,6 @@
     return `<span class="badge badge--${variant}">${text}</span>`;
   }
 
-  function brandHeader(compact = false) {
-    return `
-      <header class="brand ${compact ? "brand--compact" : ""}">
-        <img class="brand__logo" src="${data.brand.logo}" alt="${data.brand.name}" />
-        <p class="brand__tagline">${data.brand.tagline}</p>
-      </header>`;
-  }
-
   function menuRow(item, dense = false) {
     return `
       <li class="menu-row ${item.accent ? "menu-row--accent" : ""} ${dense ? "menu-row--dense" : ""}">
@@ -65,34 +57,36 @@
 
     return `
       <section class="screen screen--static" data-screen="0" aria-label="전체 메뉴판">
-        ${brandHeader()}
         <div class="board board--static">
-          <section class="hero-card">
-            <div class="hero-card__copy">
-              ${badge(data.hero.badge)}
-              <p class="hero-card__kicker">오늘의 추천 조합</p>
-              <h1>${data.hero.title.replace(" + ", "<span>+</span>")}</h1>
-              <p class="hero-card__price">${won(data.hero.price)}</p>
-            </div>
-            <div class="hero-card__image-wrap">
-              <img src="${data.hero.image}" alt="${data.hero.imageAlt}" class="hero-card__image" />
-            </div>
-          </section>
-
-          <div class="static-menu-grid">
-            ${categoryBlock(mandu, { featured: true, dense: true })}
-            <section class="photo-category">
-              <img src="${tangsuyukPhoto.image}" alt="${tangsuyukPhoto.alt}" />
-              ${categoryBlock(special, { dense: true })}
-            </section>
-            <section class="photo-category photo-category--split">
-              <div class="photo-category__stack">
-                <img src="${noodlePhoto.image}" alt="${noodlePhoto.alt}" />
-                <img src="${fishcakePhoto.image}" alt="${fishcakePhoto.alt}" />
+          <section class="static-primary">
+            <div class="static-feature">
+              <div class="static-feature__copy">
+                ${badge(data.hero.badge)}
+                <p class="static-feature__kicker">오늘의 추천 조합</p>
+                <h1>${data.hero.title.replace(" + ", "<span>+</span>")}</h1>
+                <p class="static-feature__price">${won(data.hero.price)}</p>
               </div>
-              ${categoryBlock(noodle, { dense: true })}
+              <div class="static-feature__image-wrap">
+                <img src="${data.hero.image}" alt="${data.hero.imageAlt}" class="static-feature__image" />
+              </div>
+            </div>
+            <section class="dumpling-panel">
+              <header class="dumpling-panel__header">
+                <div><span>HANDMADE</span><h2>만두 메뉴</h2></div>
+                <p>${mandu.subtitle}</p>
+              </header>
+              <ul class="dumpling-grid">${visibleItems(mandu).map((item) => menuRow(item, true)).join("")}</ul>
             </section>
-          </div>
+          </section>
+          <section class="static-photo-rail" aria-label="대표 음식 사진">
+            <figure><img src="${tangsuyukPhoto.image}" alt="${tangsuyukPhoto.alt}" /></figure>
+            <figure><img src="${noodlePhoto.image}" alt="${noodlePhoto.alt}" /></figure>
+            <figure><img src="${fishcakePhoto.image}" alt="${fishcakePhoto.alt}" /></figure>
+          </section>
+          <aside class="static-side-menu">
+            ${categoryBlock(special, { dense: true })}
+            ${categoryBlock(noodle, { dense: true })}
+          </aside>
         </div>
         <footer class="screen-footer"><span>ORDER NOW</span><p>맛있는 한 끼, 꾼만두에서 준비했습니다.</p></footer>
       </section>`;
@@ -104,7 +98,6 @@
 
     return `
       <section class="screen screen--video" data-screen="1" aria-label="메뉴와 영상">
-        ${brandHeader(true)}
         <div class="board board--video">
           <aside class="video-menu">
             <section class="video-menu__hero">
