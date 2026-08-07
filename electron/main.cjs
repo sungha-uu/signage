@@ -186,8 +186,8 @@ async function runSmokeTest(window) {
       result.beforeEnded.controlsHidden === true &&
       result.afterEnded?.activeScreen === "0" &&
       (isSummerVariant
-        ? result.beforeEnded.effectMode === "summer" && result.beforeEnded.summerLeafCount === 18 && result.beforeEnded.summerVisibleLeafCount === 18 && result.beforeEnded.transitionAnimation === "summer-screen-in"
-        : result.beforeEnded.effectMode === null && result.beforeEnded.summerLeafCount === 0 && result.beforeEnded.transitionAnimation === "none")
+        ? result.beforeEnded.effectMode === "summer" && result.beforeEnded.summerLeafCount === 18 && result.beforeEnded.summerVisibleLeafCount === 18 && result.beforeEnded.transitionAnimation === "signage-screen-in"
+        : result.beforeEnded.effectMode === null && result.beforeEnded.summerLeafCount === 0 && result.beforeEnded.transitionAnimation === "signage-screen-in")
     );
   } catch (error) {
     result.error = error.stack || error.message;

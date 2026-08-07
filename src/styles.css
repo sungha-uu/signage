@@ -54,9 +54,9 @@ button { font: inherit; }
 
 .screen.is-active { display: grid; grid-template-rows: 1fr auto; }
 
-.effects-summer .screen.is-active { animation: summer-screen-in .72s cubic-bezier(.22, .7, .2, 1) both; }
+.signage-mode .screen.is-active { animation: signage-screen-in .72s cubic-bezier(.22, .7, .2, 1) both; }
 
-@keyframes summer-screen-in {
+@keyframes signage-screen-in {
   from { opacity: 0; transform: translate3d(0, 16px, 0) scale(1.006); filter: saturate(.9) brightness(1.04); }
   to { opacity: 1; transform: none; filter: none; }
 }
@@ -380,10 +380,10 @@ button { font: inherit; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body:not(.effects-summer),
-  body:not(.effects-summer) *,
-  body:not(.effects-summer) *::before,
-  body:not(.effects-summer) *::after {
+  body:not(.effects-summer):not(.signage-mode),
+  body:not(.effects-summer):not(.signage-mode) *,
+  body:not(.effects-summer):not(.signage-mode) *::before,
+  body:not(.effects-summer):not(.signage-mode) *::after {
     scroll-behavior: auto !important;
     animation-duration: .01ms !important;
     transition-duration: .01ms !important;
