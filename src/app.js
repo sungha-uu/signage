@@ -27,6 +27,13 @@
     return `<span class="badge badge--${variant}">${text}</span>`;
   }
 
+  function categoryIcon(category) {
+    if (category.iconImage) {
+      return `<span class="category-icon category-icon--brand" aria-hidden="true"><img src="${category.iconImage}" alt="" /></span>`;
+    }
+    return `<span class="category-icon" aria-hidden="true">${category.icon}</span>`;
+  }
+
   function menuRow(item, dense = false) {
     return `
       <li class="menu-row ${item.accent ? "menu-row--accent" : ""} ${dense ? "menu-row--dense" : ""}">
@@ -47,7 +54,7 @@
       <section class="category ${options.featured ? "category--featured" : ""}">
         <header class="category__header">
           <div>
-            <h2>${category.title}</h2>
+            <h2>${category.title}${categoryIcon(category)}</h2>
           </div>
           ${category.subtitle ? `<p class="category__subtitle">${category.subtitle}</p>` : ""}
         </header>
@@ -77,7 +84,7 @@
             </div>
             <section class="dumpling-panel">
               <header class="dumpling-panel__header">
-                <div><h2>만두 메뉴</h2></div>
+                <div><h2>${mandu.title}${categoryIcon(mandu)}</h2></div>
                 <p>${mandu.subtitle}</p>
               </header>
               <ul class="dumpling-grid">${visibleItems(mandu).map((item) => menuRow(item, true)).join("")}</ul>
@@ -112,13 +119,17 @@
         <div class="board board--video">
           <aside class="video-menu">
             <section class="video-menu__hero">
-              <div>${badge(data.hero.badge)}<h1>${data.hero.title}</h1></div>
+              <div class="video-menu__hero-copy">
+                <span class="video-menu__eyebrow">BEST COMBO</span>
+                ${badge(data.hero.badge)}
+                <h1>${data.hero.title}</h1>
+              </div>
               <strong>${won(data.hero.price)}</strong>
             </section>
             <div class="video-menu__groups">
               ${compactGroups.map((category) => `
                 <section class="compact-group compact-group--${category.id}">
-                  <header><h2>${category.id === "mandu" ? "만두 메뉴" : category.title}</h2><span>${category.subtitle}</span></header>
+                  <header><h2>${category.title}${categoryIcon(category)}</h2><span>${category.subtitle}</span></header>
                   <ul>${visibleItems(category).map((item) => menuRow(item, true)).join("")}</ul>
                 </section>`).join("")}
             </div>

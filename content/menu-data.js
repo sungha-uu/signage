@@ -28,7 +28,8 @@ window.MENU_BOARD_DATA = {
   categories: [
     {
       id: "mandu",
-      title: "만두",
+      title: "만두 메뉴",
+      iconImage: "content/assets/images/logo.png",
       subtitle: "매일 직접 빚는 수제만두",
       items: [
         { name: "모듬만두", price: 7000, description: "고기2 · 깻잎1 · 땡초1 · 새우1", visible: true },
@@ -42,7 +43,8 @@ window.MENU_BOARD_DATA = {
     },
     {
       id: "special",
-      title: "별미",
+      title: "별미 메뉴",
+      icon: "🥘",
       subtitle: "만두와 잘 어울리는 인기 메뉴",
       items: [
         { name: "옛날 탕수육", price: 12000, badge: "인기", visible: true },
@@ -54,6 +56,7 @@ window.MENU_BOARD_DATA = {
     {
       id: "noodle",
       title: "면 메뉴",
+      icon: "🍜",
       subtitle: "따뜻하게, 또는 시원하게",
       items: [
         { name: "냉메밀", price: 7000, badge: "여름 한정", visible: true },
