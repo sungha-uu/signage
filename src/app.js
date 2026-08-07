@@ -54,7 +54,7 @@
       <section class="category ${options.featured ? "category--featured" : ""}">
         <header class="category__header">
           <div>
-            <h2>${category.title}${categoryIcon(category)}</h2>
+            <h2>${categoryIcon(category)}${category.title}</h2>
           </div>
           ${category.subtitle ? `<p class="category__subtitle">${category.subtitle}</p>` : ""}
         </header>
@@ -84,7 +84,7 @@
             </div>
             <section class="dumpling-panel">
               <header class="dumpling-panel__header">
-                <div><h2>${mandu.title}${categoryIcon(mandu)}</h2></div>
+                <div><h2>${categoryIcon(mandu)}${mandu.title}</h2></div>
                 <p>${mandu.subtitle}</p>
               </header>
               <ul class="dumpling-grid">${visibleItems(mandu).map((item) => menuRow(item, true)).join("")}</ul>
@@ -129,7 +129,7 @@
             <div class="video-menu__groups">
               ${compactGroups.map((category) => `
                 <section class="compact-group compact-group--${category.id}">
-                  <header><h2>${category.title}${categoryIcon(category)}</h2><span>${category.subtitle}</span></header>
+                  <header><h2>${categoryIcon(category)}${category.title}</h2><span>${category.subtitle}</span></header>
                   <ul>${visibleItems(category).map((item) => menuRow(item, true)).join("")}</ul>
                 </section>`).join("")}
             </div>
