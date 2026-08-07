@@ -123,8 +123,8 @@
                 <span class="video-menu__eyebrow">BEST COMBO</span>
                 ${badge(data.hero.badge)}
                 <h1>${data.hero.title}</h1>
+                <strong>${won(data.hero.price)}</strong>
               </div>
-              <strong>${won(data.hero.price)}</strong>
             </section>
             <div class="video-menu__groups">
               ${compactGroups.map((category) => `
