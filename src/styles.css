@@ -364,10 +364,6 @@ button { font: inherit; }
   .screen-footer { padding-top: 12px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .effects-summer .screen.is-active { animation: none; }
-}
-
 @media (max-width: 620px) {
   .screen { padding: 12px; }
   .board--static, .board--video { padding: 12px; border-radius: 24px; }
@@ -384,5 +380,12 @@ button { font: inherit; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  body:not(.effects-summer),
+  body:not(.effects-summer) *,
+  body:not(.effects-summer) *::before,
+  body:not(.effects-summer) *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
 }

@@ -20,15 +20,15 @@
     effectLayer.className = "summer-effects";
     effectLayer.setAttribute("aria-hidden", "true");
 
-    const leafPositions = [4, 10, 17, 24, 31, 39, 48, 57, 64, 71, 78, 84, 90, 95];
+    const leafPositions = [3, 8, 13, 19, 25, 31, 37, 43, 49, 55, 61, 67, 73, 79, 85, 90, 94, 97];
     leafPositions.forEach((top, index) => {
       const leaf = document.createElement("i");
       leaf.className = "summer-leaf";
       leaf.style.setProperty("--leaf-y", `${top}%`);
-      leaf.style.setProperty("--leaf-size", `${12 + (index % 5) * 3}px`);
-      leaf.style.setProperty("--leaf-delay", `${-1.7 * index}s`);
-      leaf.style.setProperty("--leaf-duration", `${17 + (index % 4) * 3}s`);
-      leaf.style.setProperty("--leaf-drift", `${-55 + (index % 6) * 22}px`);
+      leaf.style.setProperty("--leaf-size", `${28 + (index % 5) * 6}px`);
+      leaf.style.setProperty("--leaf-delay", `${-1.25 * index}s`);
+      leaf.style.setProperty("--leaf-duration", `${13 + (index % 4) * 2.5}s`);
+      leaf.style.setProperty("--leaf-drift", `${-85 + (index % 6) * 34}px`);
       leaf.style.setProperty("--leaf-turn", `${210 + (index % 5) * 70}deg`);
       leaf.style.setProperty("--leaf-turn-mid", `${118 + (index % 5) * 42}deg`);
       effectLayer.appendChild(leaf);

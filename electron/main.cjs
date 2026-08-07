@@ -141,6 +141,7 @@ async function inspectSignage(window) {
     const video = doc && doc.querySelector("#menu-video");
     const active = doc && doc.querySelector(".screen.is-active");
     const controls = doc && doc.querySelector(".controls");
+    const summerLeaves = [...document.querySelectorAll(".summer-leaf")];
     return {
       ready: Boolean(doc && video && active),
       activeScreen: active ? active.dataset.screen : null,
@@ -150,7 +151,11 @@ async function inspectSignage(window) {
       controlsHidden: controls ? controls.hidden : null,
       effectMode: doc?.body?.dataset?.effects || null,
       transitionAnimation: active ? getComputedStyle(active).animationName : null,
-      summerLeafCount: document.querySelectorAll(".summer-leaf").length
+      summerLeafCount: summerLeaves.length,
+      summerVisibleLeafCount: summerLeaves.filter((leaf) => {
+        const style = getComputedStyle(leaf);
+        return style.display !== "none" && style.animationName === "summer-leaf-breeze";
+      }).length
     };
   })()`);
 }
@@ -181,7 +186,7 @@ async function runSmokeTest(window) {
       result.beforeEnded.controlsHidden === true &&
       result.afterEnded?.activeScreen === "0" &&
       (isSummerVariant
-        ? result.beforeEnded.effectMode === "summer" && result.beforeEnded.summerLeafCount === 14 && result.beforeEnded.transitionAnimation === "summer-screen-in"
+        ? result.beforeEnded.effectMode === "summer" && result.beforeEnded.summerLeafCount === 18 && result.beforeEnded.summerVisibleLeafCount === 18 && result.beforeEnded.transitionAnimation === "summer-screen-in"
         : result.beforeEnded.effectMode === null && result.beforeEnded.summerLeafCount === 0 && result.beforeEnded.transitionAnimation === "none")
     );
   } catch (error) {
