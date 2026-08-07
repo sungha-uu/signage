@@ -44,7 +44,7 @@ window.MENU_BOARD_DATA = {
     {
       id: "special",
       title: "별미 메뉴",
-      icon: "🥘",
+      icon: "✨️",
       subtitle: "만두와 잘 어울리는 인기 메뉴",
       items: [
         { name: "옛날 탕수육", price: 12000, badge: "인기", visible: true },
