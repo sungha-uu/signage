@@ -88,7 +88,7 @@ button { font: inherit; }
 
 .static-primary {
   display: grid;
-  grid-template-rows: minmax(0, 54fr) minmax(0, 46fr);
+  grid-template-rows: minmax(0, 52.5fr) minmax(0, 47.5fr);
   gap: 18px;
   min-height: 0;
 }
@@ -160,7 +160,7 @@ button { font: inherit; }
 
 .static-secondary {
   display: grid;
-  grid-template-rows: minmax(0, 40fr) minmax(0, 60fr);
+  grid-template-rows: minmax(0, 41.5fr) minmax(0, 58.5fr);
   gap: 18px;
   min-width: 0;
   min-height: 0;
