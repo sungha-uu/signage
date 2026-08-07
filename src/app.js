@@ -17,6 +17,11 @@
   const searchParams = new URLSearchParams(window.location.search);
   const signageMode = searchParams.get("mode") === "signage";
   const testMode = searchParams.get("test") === "1";
+  const effectsMode = searchParams.get("effects");
+  if (effectsMode === "summer") {
+    document.body.dataset.effects = "summer";
+    document.body.classList.add("effects-summer");
+  }
   const behavior = signageMode ? { ...data.settings, ...data.settings.signageMode } : data.settings;
   const staticDurationSeconds = testMode ? 1 : data.settings.staticDurationSeconds;
 
@@ -70,7 +75,7 @@
     return `
       <section class="screen screen--static" data-screen="0" aria-label="전체 메뉴판">
         <div class="board board--static">
-          <section class="static-primary">
+          <section class="static-photo-row" aria-label="대표 음식 사진">
             <div class="static-feature">
               <div class="static-feature__copy">
                 ${badge(data.hero.badge)}
@@ -82,6 +87,11 @@
                 <img src="${data.hero.image}" alt="${data.hero.imageAlt}" class="static-feature__image" />
               </div>
             </div>
+            <figure class="static-photo static-photo--tangsuyuk"><img src="${tangsuyukPhoto.image}" alt="${tangsuyukPhoto.alt}" /></figure>
+            <figure class="static-photo"><img src="${fishcakePhoto.image}" alt="${fishcakePhoto.alt}" /></figure>
+            <figure class="static-photo"><img src="${noodlePhoto.image}" alt="${noodlePhoto.alt}" /></figure>
+          </section>
+          <section class="static-menu-row">
             <section class="dumpling-panel">
               <header class="dumpling-panel__header">
                 <div><h2>${categoryIcon(mandu)}${mandu.title}</h2></div>
@@ -89,17 +99,8 @@
               </header>
               <ul class="dumpling-grid">${visibleItems(mandu).map((item) => menuRow(item, true)).join("")}</ul>
             </section>
-          </section>
-          <section class="static-secondary">
-            <section class="static-photo-strip" aria-label="대표 음식 사진">
-              <figure><img src="${tangsuyukPhoto.image}" alt="${tangsuyukPhoto.alt}" /></figure>
-              <figure><img src="${fishcakePhoto.image}" alt="${fishcakePhoto.alt}" /></figure>
-              <figure><img src="${noodlePhoto.image}" alt="${noodlePhoto.alt}" /></figure>
-            </section>
-            <div class="static-card-grid">
-              ${categoryBlock(special, { dense: true })}
-              ${categoryBlock(noodle, { dense: true })}
-            </div>
+            ${categoryBlock(special, { dense: true })}
+            ${categoryBlock(noodle, { dense: true })}
           </section>
         </div>
         <footer class="screen-footer">

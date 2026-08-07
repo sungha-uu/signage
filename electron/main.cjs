@@ -6,6 +6,8 @@ const http = require("node:http");
 const path = require("node:path");
 
 const isSmokeTest = process.argv.includes("--smoke-test");
+const launchedExecutablePath = process.env.PORTABLE_EXECUTABLE_FILE || process.execPath;
+const isSummerVariant = process.env.MENU_BOARD_VARIANT === "summer" || path.basename(launchedExecutablePath).includes("여름 애니메이션");
 const MIME_TYPES = {
   ".css": "text/css; charset=utf-8",
   ".html": "text/html; charset=utf-8",
@@ -145,14 +147,17 @@ async function inspectSignage(window) {
       videoPaused: video ? video.paused : null,
       videoCurrentTime: video ? video.currentTime : null,
       videoControls: video ? video.controls : null,
-      controlsHidden: controls ? controls.hidden : null
+      controlsHidden: controls ? controls.hidden : null,
+      effectMode: doc?.body?.dataset?.effects || null,
+      transitionAnimation: active ? getComputedStyle(active).animationName : null,
+      summerLeafCount: document.querySelectorAll(".summer-leaf").length
     };
   })()`);
 }
 
 async function runSmokeTest(window) {
   const resultPath = process.env.MENU_BOARD_SMOKE_RESULT || path.join(app.getPath("temp"), "menu-board-smoke.json");
-  const result = { ok: false, beforeEnded: null, afterEnded: null, error: null };
+  const result = { variant: isSummerVariant ? "summer" : "static", ok: false, beforeEnded: null, afterEnded: null, error: null };
 
   try {
     for (let attempt = 0; attempt < 24; attempt += 1) {
@@ -174,7 +179,10 @@ async function runSmokeTest(window) {
       result.beforeEnded.videoPaused === false &&
       result.beforeEnded.videoControls === false &&
       result.beforeEnded.controlsHidden === true &&
-      result.afterEnded?.activeScreen === "0"
+      result.afterEnded?.activeScreen === "0" &&
+      (isSummerVariant
+        ? result.beforeEnded.effectMode === "summer" && result.beforeEnded.summerLeafCount === 14 && result.beforeEnded.transitionAnimation === "summer-screen-in"
+        : result.beforeEnded.effectMode === null && result.beforeEnded.summerLeafCount === 0 && result.beforeEnded.transitionAnimation === "none")
     );
   } catch (error) {
     result.error = error.stack || error.message;
@@ -190,7 +198,10 @@ let localServer = null;
 async function createWindow() {
   localServer = await startLocalServer();
   const address = localServer.address();
-  const query = isSmokeTest ? "?mode=signage&test=1" : "?mode=signage";
+  const queryParams = new URLSearchParams({ mode: "signage" });
+  if (isSmokeTest) queryParams.set("test", "1");
+  if (isSummerVariant) queryParams.set("effects", "summer");
+  const query = `?${queryParams.toString()}`;
   const startUrl = `http://127.0.0.1:${address.port}/index.html${query}`;
 
   mainWindow = new BrowserWindow({
@@ -256,4 +267,3 @@ app.on("window-all-closed", () => app.quit());
 app.on("before-quit", () => {
   if (localServer) localServer.close();
 });
-

@@ -20,6 +20,7 @@ if (!releaseRoot.startsWith(distRoot + path.sep)) {
 fs.rmSync(releaseRoot, { recursive: true, force: true });
 fs.mkdirSync(releaseRoot, { recursive: true });
 fs.copyFileSync(portablePath, path.join(releaseRoot, "섹시한 꾼만두 메뉴판.exe"));
+fs.copyFileSync(portablePath, path.join(releaseRoot, "섹시한 꾼만두 메뉴판 - 여름 애니메이션.exe"));
 fs.cpSync(path.join(projectRoot, "content"), path.join(releaseRoot, "content"), { recursive: true });
 fs.copyFileSync(path.join(projectRoot, "README.md"), path.join(releaseRoot, "README.md"));
 fs.copyFileSync(path.join(projectRoot, "menu_design.md"), path.join(releaseRoot, "menu_design.md"));

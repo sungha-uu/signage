@@ -9,10 +9,33 @@
 
   const outerParams = new URLSearchParams(window.location.search);
   const frameUrl = new URL(frame.getAttribute("src"), window.location.href);
-  ["mode", "test"].forEach((key) => {
+  ["mode", "test", "effects"].forEach((key) => {
     if (outerParams.has(key)) frameUrl.searchParams.set(key, outerParams.get(key));
   });
   if (frameUrl.href !== frame.src) frame.src = frameUrl.href;
+
+  if (outerParams.get("effects") === "summer") {
+    document.documentElement.dataset.effects = "summer";
+    const effectLayer = document.createElement("div");
+    effectLayer.className = "summer-effects";
+    effectLayer.setAttribute("aria-hidden", "true");
+
+    const leafPositions = [4, 10, 17, 24, 31, 39, 48, 57, 64, 71, 78, 84, 90, 95];
+    leafPositions.forEach((top, index) => {
+      const leaf = document.createElement("i");
+      leaf.className = "summer-leaf";
+      leaf.style.setProperty("--leaf-y", `${top}%`);
+      leaf.style.setProperty("--leaf-size", `${12 + (index % 5) * 3}px`);
+      leaf.style.setProperty("--leaf-delay", `${-1.7 * index}s`);
+      leaf.style.setProperty("--leaf-duration", `${17 + (index % 4) * 3}s`);
+      leaf.style.setProperty("--leaf-drift", `${-55 + (index % 6) * 22}px`);
+      leaf.style.setProperty("--leaf-turn", `${210 + (index % 5) * 70}deg`);
+      leaf.style.setProperty("--leaf-turn-mid", `${118 + (index % 5) * 42}deg`);
+      effectLayer.appendChild(leaf);
+    });
+
+    stage.appendChild(effectLayer);
+  }
 
   function fitStage() {
     const scale = Math.min(window.innerWidth / DESIGN_WIDTH, window.innerHeight / DESIGN_HEIGHT);

@@ -29,11 +29,74 @@ body {
 }
 
 .signage-frame {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 1920px;
   height: 1080px;
   border: 0;
   background: #ed553b;
+}
+
+.summer-effects {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.summer-effects::before,
+.summer-effects::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  opacity: .16;
+  filter: blur(42px);
+  animation: summer-glow 8s ease-in-out infinite alternate;
+}
+
+.summer-effects::before { top: -210px; right: -100px; background: #fff7a8; }
+.summer-effects::after { left: -160px; bottom: -230px; background: #9bea9a; animation-delay: -4s; }
+
+.summer-leaf {
+  position: absolute;
+  left: -70px;
+  top: var(--leaf-y);
+  width: var(--leaf-size);
+  height: calc(var(--leaf-size) * .58);
+  border-radius: 90% 8% 90% 8%;
+  background: linear-gradient(135deg, rgba(37, 139, 65, .62), rgba(134, 205, 92, .34));
+  box-shadow: 0 1px 3px rgba(25, 90, 42, .14);
+  opacity: 0;
+  transform-origin: center;
+  animation: summer-leaf-breeze var(--leaf-duration) linear var(--leaf-delay) infinite;
+}
+
+.summer-leaf::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  top: 48%;
+  width: 72%;
+  border-top: 1px solid rgba(255, 255, 255, .42);
+  transform: rotate(-18deg);
+  transform-origin: left center;
+}
+
+@keyframes summer-leaf-breeze {
+  0% { opacity: 0; transform: translate3d(0, 0, 0) rotate(0deg); }
+  12% { opacity: .28; }
+  50% { transform: translate3d(1020px, var(--leaf-drift), 0) rotate(var(--leaf-turn-mid)); }
+  88% { opacity: .22; }
+  100% { opacity: 0; transform: translate3d(2060px, 14px, 0) rotate(var(--leaf-turn)); }
+}
+
+@keyframes summer-glow {
+  from { transform: scale(.88); opacity: .1; }
+  to { transform: scale(1.12); opacity: .2; }
 }
 
 .orientation-hint {
@@ -91,4 +154,8 @@ body {
 
 @media (orientation: portrait) and (max-width: 700px) {
   .orientation-hint { display: block; bottom: max(68px, calc(env(safe-area-inset-bottom) + 54px)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .summer-leaf, .summer-effects::before, .summer-effects::after { animation: none; display: none; }
 }
