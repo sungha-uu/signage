@@ -255,9 +255,9 @@ button { font: inherit; }
 .compact-group ul { display: grid; grid-auto-rows: minmax(0, 1fr); min-height: 0; }
 .compact-group--mandu ul { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, minmax(0, 1fr)); column-gap: 28px; }
 .compact-group .menu-row { align-items: center; min-height: 0; padding: 7px 0; }
-.compact-group .menu-row__name { font-size: 25px; font-weight: 900; }
-.compact-group .menu-row__price { font-size: 26px; font-weight: 900; }
-.compact-group .menu-row__description { font-size: 12px; }
+.compact-group .menu-row__name { font-size: 28px; font-weight: 900; }
+.compact-group .menu-row__price { font-size: 29px; font-weight: 900; }
+.compact-group .menu-row__description { font-size: 13px; }
 .compact-group .menu-row__title-line { position: relative; }
 .compact-group .badge { position: absolute; top: -21px; left: 0; font-size: .64em; font-weight: 900; transform: none; }
 .compact-group .menu-row__copy { align-self: center; }
