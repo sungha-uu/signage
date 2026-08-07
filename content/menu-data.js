@@ -35,7 +35,7 @@ window.MENU_BOARD_DATA = {
         { name: "깻잎만두", price: 7000, description: "1인분 5개", visible: true },
         { name: "땡초만두", price: 7000, description: "1인분 5개", visible: true },
         { name: "새우만두", price: 7000, description: "1인분 5개", visible: true },
-        { name: "탕수만두", price: 9000, visible: true },
+        { name: "탕수만두", price: 9000, description: "1인분 5개", visible: true },
         { name: "비빔야채", price: 2000, accent: true, visible: true }
       ]
     },
@@ -46,7 +46,7 @@ window.MENU_BOARD_DATA = {
       items: [
         { name: "옛날 탕수육", price: 12000, badge: "인기", visible: true },
         { name: "유린 탕수육", price: 14000, visible: true },
-        { name: "콩나물어묵", price: 5000, badge: "인기", visible: true },
+        { name: "콩나물어묵", price: 5000, description: "1인분 4개", badge: "인기", visible: true },
         { name: "음료수", price: 2000, description: "콜라 · 사이다", visible: true }
       ]
     },
