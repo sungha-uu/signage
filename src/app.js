@@ -82,8 +82,8 @@
           <section class="static-secondary">
             <section class="static-photo-strip" aria-label="대표 음식 사진">
               <figure><img src="${tangsuyukPhoto.image}" alt="${tangsuyukPhoto.alt}" /></figure>
-              <figure><img src="${noodlePhoto.image}" alt="${noodlePhoto.alt}" /></figure>
               <figure><img src="${fishcakePhoto.image}" alt="${fishcakePhoto.alt}" /></figure>
+              <figure><img src="${noodlePhoto.image}" alt="${noodlePhoto.alt}" /></figure>
             </section>
             <div class="static-card-grid">
               ${categoryBlock(special, { dense: true })}
@@ -91,13 +91,17 @@
             </div>
           </section>
         </div>
-        <footer class="screen-footer"><span>ORDER NOW</span><p>맛있는 한 끼, 꾼만두에서 준비했습니다.</p></footer>
+        <footer class="screen-footer">
+          <span>ORDER NOW</span>
+          <div class="screen-footer__logo"><img src="${data.brand.logo}" alt="${data.brand.name}" /></div>
+          <p>맛있는 한 끼, 섹시한 꾼만두에서 준비했습니다.</p>
+        </footer>
       </section>`;
   }
 
   function renderVideoScreen() {
     const [mandu, special, noodle] = data.categories;
-    const compactGroups = [mandu, noodle, special];
+    const compactGroups = [mandu, special, noodle];
 
     return `
       <section class="screen screen--video" data-screen="1" aria-label="메뉴와 영상">
@@ -125,7 +129,11 @@
             <button type="button" class="video-stage__sound" id="video-sound" aria-label="영상 소리 켜기">소리 켜기</button>
           </section>
         </div>
-        <footer class="screen-footer"><span>FRESH & HANDMADE</span><p>매일 정성껏 빚고, 맛있게 튀깁니다.</p></footer>
+        <footer class="screen-footer">
+          <span>FRESH & HANDMADE</span>
+          <div class="screen-footer__logo"><img src="${data.brand.logo}" alt="${data.brand.name}" /></div>
+          <p>매일 정성껏 빚고, 깨끗하게 튀깁니다.</p>
+        </footer>
       </section>`;
   }
 
