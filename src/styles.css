@@ -156,7 +156,7 @@ button { font: inherit; }
 
 .static-secondary {
   display: grid;
-  grid-template-rows: minmax(0, 34fr) minmax(0, 66fr);
+  grid-template-rows: minmax(0, 40fr) minmax(0, 60fr);
   gap: 18px;
   min-width: 0;
   min-height: 0;
