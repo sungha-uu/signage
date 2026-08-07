@@ -6,9 +6,16 @@ window.MENU_BOARD_DATA = {
   },
   settings: {
     staticDurationSeconds: 15,
-    autoRotate: true,
+    autoRotate: false,
+    videoAutoplay: false,
+    videoControls: true,
     showControls: true,
-    videoMuted: true
+    videoMuted: true,
+    signageMode: {
+      autoRotate: true,
+      videoAutoplay: true,
+      videoControls: false
+    }
   },
   hero: {
     badge: "인기",
@@ -65,4 +72,3 @@ window.MENU_BOARD_DATA = {
     title: "섹시한 꾼만두 이야기"
   }
 };
-

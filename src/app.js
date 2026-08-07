@@ -14,7 +14,8 @@
 
   const won = (price) => `${Number(price).toLocaleString("ko-KR")}원`;
   const visibleItems = (category) => category.items.filter((item) => item.visible !== false);
-  const isSignageViewport = () => window.matchMedia("(min-width: 1101px) and (min-aspect-ratio: 4 / 3)").matches;
+  const signageMode = new URLSearchParams(window.location.search).get("mode") === "signage";
+  const behavior = signageMode ? { ...data.settings, ...data.settings.signageMode } : data.settings;
 
   function badge(text, variant = "coral") {
     if (!text) return "";
@@ -120,7 +121,7 @@
             </div>
           </aside>
           <section class="video-stage" aria-label="${data.video.title}">
-            <video id="menu-video" playsinline preload="metadata" ${data.settings.videoMuted ? "muted" : ""} poster="${data.video.poster}">
+            <video id="menu-video" playsinline preload="metadata" ${data.settings.videoMuted ? "muted" : ""} ${behavior.videoControls ? "controls" : ""} poster="${data.video.poster}">
               <source src="${data.video.src}" type="video/mp4" />
               사용 중인 브라우저에서 영상을 재생할 수 없습니다.
             </video>
@@ -147,19 +148,26 @@
 
     if (activeScreen === 1) {
       video.currentTime = 0;
-      const playAttempt = video.play();
-      if (playAttempt) playAttempt.catch(() => {});
+      if (behavior.videoAutoplay) {
+        const playAttempt = video.play();
+        if (playAttempt) playAttempt.catch(() => {});
+      } else {
+        video.pause();
+      }
     } else {
       video.pause();
       video.currentTime = 0;
-      if (data.settings.autoRotate && isSignageViewport()) {
+      if (behavior.autoRotate) {
         screenTimer = setTimeout(() => setActiveScreen(1), data.settings.staticDurationSeconds * 1000);
       }
     }
 
     if (manual) {
       document.body.classList.add("controls-visible");
-      if (!isSignageViewport()) window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    if (window.parent !== window) {
+      window.parent.postMessage({ type: "menu-board-active-screen", screen: activeScreen }, window.location.origin);
     }
   }
 
@@ -171,7 +179,9 @@
     document.querySelectorAll(".screen-dot").forEach((dot, index) => dot.addEventListener("click", () => setActiveScreen(index, true)));
     previousButton.addEventListener("click", () => setActiveScreen(activeScreen - 1, true));
     nextButton.addEventListener("click", () => setActiveScreen(activeScreen + 1, true));
-    document.querySelector("#menu-video").addEventListener("ended", () => setActiveScreen(0));
+    document.querySelector("#menu-video").addEventListener("ended", () => {
+      if (behavior.autoRotate) setActiveScreen(0);
+    });
     document.querySelector("#video-sound").addEventListener("click", (event) => {
       const video = document.querySelector("#menu-video");
       video.muted = !video.muted;
@@ -185,6 +195,10 @@
       if (event.key === "ArrowRight") setActiveScreen(activeScreen + 1, true);
       if (event.key === "ArrowLeft") setActiveScreen(activeScreen - 1, true);
       if (event.key.toLowerCase() === "f") fullscreenButton.click();
+    });
+    window.addEventListener("message", (event) => {
+      if (event.origin !== window.location.origin) return;
+      if (event.data?.type === "menu-board-set-screen") setActiveScreen(Number(event.data.screen), true);
     });
     setActiveScreen(0);
   }
