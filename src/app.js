@@ -87,9 +87,11 @@
                 <img src="${data.hero.image}" alt="${data.hero.imageAlt}" class="static-feature__image" />
               </div>
             </div>
-            <figure class="static-photo static-photo--tangsuyuk"><img src="${tangsuyukPhoto.image}" alt="${tangsuyukPhoto.alt}" /></figure>
-            <figure class="static-photo"><img src="${fishcakePhoto.image}" alt="${fishcakePhoto.alt}" /></figure>
-            <figure class="static-photo"><img src="${noodlePhoto.image}" alt="${noodlePhoto.alt}" /></figure>
+            <section class="static-gallery-card">
+              <figure class="static-photo static-photo--tangsuyuk"><img src="${tangsuyukPhoto.image}" alt="${tangsuyukPhoto.alt}" /></figure>
+              <figure class="static-photo"><img src="${fishcakePhoto.image}" alt="${fishcakePhoto.alt}" /></figure>
+              <figure class="static-photo"><img src="${noodlePhoto.image}" alt="${noodlePhoto.alt}" /></figure>
+            </section>
           </section>
           <section class="static-menu-row">
             <section class="dumpling-panel">
