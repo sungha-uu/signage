@@ -14,6 +14,7 @@
 
   const won = (price) => `${Number(price).toLocaleString("ko-KR")}원`;
   const visibleItems = (category) => category.items.filter((item) => item.visible !== false);
+  const isSignageViewport = () => window.matchMedia("(min-width: 1101px) and (min-aspect-ratio: 4 / 3)").matches;
 
   function badge(text, variant = "coral") {
     if (!text) return "";
@@ -151,12 +152,15 @@
     } else {
       video.pause();
       video.currentTime = 0;
-      if (data.settings.autoRotate) {
+      if (data.settings.autoRotate && isSignageViewport()) {
         screenTimer = setTimeout(() => setActiveScreen(1), data.settings.staticDurationSeconds * 1000);
       }
     }
 
-    if (manual) document.body.classList.add("controls-visible");
+    if (manual) {
+      document.body.classList.add("controls-visible");
+      if (!isSignageViewport()) window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }
 
   function initialize() {
