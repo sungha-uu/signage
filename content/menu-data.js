@@ -30,7 +30,7 @@ window.MENU_BOARD_DATA = {
       title: "만두",
       subtitle: "매일 직접 빚는 수제만두",
       items: [
-        { name: "모듬만두", price: 7000, description: "고기2 · 깻잎1 · 땡초1 · 새우1", badge: "추천", visible: true },
+        { name: "모듬만두", price: 7000, description: "고기2 · 깻잎1 · 땡초1 · 새우1", visible: true },
         { name: "고기만두", price: 7000, description: "1인분 5개", visible: true },
         { name: "깻잎만두", price: 7000, description: "1인분 5개", visible: true },
         { name: "땡초만두", price: 7000, description: "1인분 5개", visible: true },

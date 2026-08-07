@@ -63,7 +63,7 @@
             <div class="static-feature">
               <div class="static-feature__copy">
                 ${badge(data.hero.badge)}
-                <p class="static-feature__kicker">오늘의 추천 조합</p>
+                <p class="static-feature__kicker">베스트 인기 메뉴</p>
                 <h1><span>${heroMain}</span><em>+</em><span class="accent">${heroAccent}</span></h1>
                 <p class="static-feature__price">${won(data.hero.price)}</p>
               </div>
