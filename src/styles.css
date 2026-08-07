@@ -184,7 +184,7 @@ button { font: inherit; }
 }
 
 .static-photo-strip img { width: 100%; height: 100%; object-fit: cover; }
-.static-photo-strip figure:first-child img { object-position: center; transform: scale(1.45); }
+.static-photo-strip figure:first-child img { object-position: center; transform: scale(1.75); }
 
 .static-card-grid {
   display: grid;
