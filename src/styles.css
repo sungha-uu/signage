@@ -285,9 +285,10 @@ button { font: inherit; }
 
 .dumpling-grid .menu-row,
 .compact-group--mandu .menu-row {
+  position: relative;
   display: grid;
   grid-template-columns: max-content minmax(18px, 1fr) max-content;
-  grid-template-rows: auto auto;
+  grid-template-rows: minmax(0, 1fr);
   align-content: center;
   align-items: center;
   column-gap: .55em;
@@ -307,9 +308,10 @@ button { font: inherit; }
 
 .dumpling-grid .menu-row__description,
 .compact-group--mandu .menu-row__description {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  margin-top: .24em;
+  position: absolute;
+  top: calc(50% + 1.35em);
+  left: 0;
+  margin: 0;
 }
 
 .dumpling-grid .menu-row__leader,
