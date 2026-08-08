@@ -54,7 +54,7 @@
 
   function comboBadge() {
     const crown = `<img class="combo-badge-crown" src="content/assets/images/crown-simple.svg?v=2" alt="" aria-hidden="true" />`;
-    return `<span class="combo-badge-row">${crown}${badge("추천")}${crown}</span>`;
+    return `<span class="combo-badge-wrap">${crown}${badge("추천")}</span>`;
   }
 
   function categoryIcon(category) {

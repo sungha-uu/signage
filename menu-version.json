@@ -20,9 +20,10 @@
       "comboCurrencyScale": "75%",
       "cardHeaderDividerWidth": "2.5px",
       "comboBadge": "추천",
-      "comboBadgeIcon": "simple_svg_crowns_flanking",
+      "comboBadgeIcon": "single_simple_svg_crown_top_left",
+      "comboBadgeCrownRotation": "-32deg",
       "comboBadgeSize": "15px",
-      "dashboardRevision": "20260809-72",
+      "dashboardRevision": "20260809-73",
       "githubPages": "https://sungha-uu.github.io/signage/",
       "gitTag": "v1"
     },
