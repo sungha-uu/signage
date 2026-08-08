@@ -52,6 +52,10 @@
     return `<span class="badge badge--${variant}">${text}</span>`;
   }
 
+  function comboBadge() {
+    return `<span class="combo-badge-stack"><span class="combo-badge-crown" aria-hidden="true">👑</span>${badge("추천")}</span>`;
+  }
+
   function categoryIcon(category) {
     if (category.iconImage) {
       return `<span class="category-icon category-icon--brand" aria-hidden="true"><img src="${category.iconImage}" alt="" /></span>`;
@@ -104,7 +108,7 @@
           <section class="static-photo-row" aria-label="대표 음식 사진">
             <div class="static-feature">
               <div class="static-feature__copy">
-                ${badge(`${data.hero.badge} 👍`)}
+                ${comboBadge()}
                 <p class="static-feature__kicker">${labels.bestMenu || "베스트 인기 메뉴"}</p>
                 <h1><span>${heroMain}</span><em>+</em><span class="accent">${heroAccent}</span></h1>
                 <p class="static-feature__price">${comboPrice(data.hero.price)}</p>
@@ -151,7 +155,7 @@
             <section class="video-menu__hero">
               <div class="video-menu__hero-copy">
                 <span class="video-menu__eyebrow">BEST COMBO</span>
-                ${badge(`${data.hero.badge} 👍`)}
+                ${comboBadge()}
                 <h1><span>${heroMain} + </span><span class="accent">${heroAccent}</span></h1>
                 <strong>${comboPrice(data.hero.price)}</strong>
               </div>
