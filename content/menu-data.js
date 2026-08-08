@@ -67,7 +67,7 @@ window.MENU_BOARD_DATA = {
     }
   ],
   gallery: [
-    { categoryId: "special", image: "content/assets/images/tangsuyuk.jpeg?v=20260808-43", alt: "옛날 탕수육" },
+    { categoryId: "special", image: "content/assets/images/tangsuyuk.jpeg?v=20260808-44", alt: "옛날 탕수육" },
     { categoryId: "noodle", image: "content/assets/images/cold-noodle.png", alt: "냉메밀" },
     { categoryId: "special", image: "content/assets/images/fishcake.png", alt: "콩나물어묵" }
   ],

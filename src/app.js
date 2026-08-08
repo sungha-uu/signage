@@ -39,6 +39,11 @@
     return `<span class="category-icon" aria-hidden="true">${category.icon}</span>`;
   }
 
+  function categoryHeading(category) {
+    const choice = category.id === "mandu" ? '<small class="category-choice">꾼만두 / 찐만두 선택</small>' : "";
+    return `${categoryIcon(category)}${category.title}${choice}`;
+  }
+
   function menuRow(item, dense = false) {
     return `
       <li class="menu-row ${item.accent ? "menu-row--accent" : ""} ${dense ? "menu-row--dense" : ""}">
@@ -59,7 +64,7 @@
       <section class="category ${options.featured ? "category--featured" : ""}">
         <header class="category__header">
           <div>
-            <h2>${categoryIcon(category)}${category.title}</h2>
+            <h2>${categoryHeading(category)}</h2>
           </div>
           ${category.subtitle ? `<p class="category__subtitle">${category.subtitle}</p>` : ""}
         </header>
@@ -96,8 +101,7 @@
           <section class="static-menu-row">
             <section class="dumpling-panel">
               <header class="dumpling-panel__header">
-                <div><h2>${categoryIcon(mandu)}${mandu.title}</h2></div>
-                <p>${mandu.subtitle}</p>
+                <div><h2>${categoryHeading(mandu)}</h2></div>
               </header>
               <ul class="dumpling-grid">${visibleItems(mandu).map((item) => menuRow(item, true)).join("")}</ul>
             </section>
@@ -133,7 +137,7 @@
             <div class="video-menu__groups">
               ${compactGroups.map((category) => `
                 <section class="compact-group compact-group--${category.id}">
-                  <header><h2>${categoryIcon(category)}${category.title}</h2><span>${category.subtitle}</span></header>
+                  <header><h2>${categoryHeading(category)}</h2><span>${category.subtitle}</span></header>
                   <ul>${visibleItems(category).map((item) => menuRow(item, true)).join("")}</ul>
                 </section>`).join("")}
             </div>
