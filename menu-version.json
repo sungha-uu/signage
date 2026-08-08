@@ -1,0 +1,31 @@
+{
+  "packageVersion": 1,
+  "packageStatus": "confirmed",
+  "components": {
+    "tvMenu": {
+      "version": 1,
+      "status": "confirmed",
+      "language": "ko",
+      "palette": "v1_yellow",
+      "menuCardColor": "#ffe699",
+      "menuCardLine": "#ffd966",
+      "githubPages": "https://sungha-uu.github.io/signage/",
+      "commit": "pending_v1_release"
+    },
+    "a4Korean": {
+      "version": 1,
+      "status": "confirmed",
+      "language": "ko",
+      "palette": "champagne_beige",
+      "artifact": "release/v1/A4/A4_메뉴판_한국어_v1.png"
+    },
+    "a4Foreign": {
+      "version": 1,
+      "status": "confirmed",
+      "languages": ["en", "zh"],
+      "layoutReference": "D:/메뉴/섹시한 꾼만두/메뉴 포스터/메뉴판_영문.jpg",
+      "artifact": "release/v1/A4/A4_메뉴판_외국어_v1.png"
+    }
+  },
+  "remoteArchiveStatus": "confirmed_v1_pending_push"
+}

@@ -1,0 +1,63 @@
+:root {
+  --paper-width: 3508px;
+  --paper-height: 2480px;
+  --tv-width: 1920px;
+  --tv-height: 1357.35px;
+  --tv-scale: 1.8270833333;
+  --tv-output-height: 2480px;
+  --coral: #ed553b;
+}
+
+* { box-sizing: border-box; }
+
+html,
+body {
+  width: var(--paper-width);
+  height: var(--paper-height);
+  margin: 0;
+  overflow: hidden;
+  background: var(--coral);
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(255,255,255,.1), transparent 24%),
+    linear-gradient(135deg, #f45d40 0%, var(--coral) 52%, #dc442f 100%);
+}
+
+.a4-page {
+  position: relative;
+  width: var(--paper-width);
+  height: var(--paper-height);
+  overflow: hidden;
+}
+
+.tv-menu-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--paper-width);
+  height: var(--tv-output-height);
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(91, 33, 20, .18);
+}
+
+.tv-menu-frame {
+  display: block;
+  width: var(--tv-width);
+  height: var(--tv-height);
+  border: 0;
+  transform: scale(var(--tv-scale));
+  transform-origin: left top;
+}
+
+@page { size: A4 landscape; margin: 0; }
+
+@media print {
+  html,
+  body,
+  .a4-page {
+    width: 297mm;
+    height: 210mm;
+  }
+}

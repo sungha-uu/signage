@@ -12,18 +12,39 @@
   let activeScreen = 0;
   let screenTimer = null;
 
-  const won = (price) => `${Number(price).toLocaleString("ko-KR")}원`;
+  const labels = data.labels || {};
+  const won = (price) => labels.currency === "prefix"
+    ? `₩${Number(price).toLocaleString("en-US")}`
+    : `${Number(price).toLocaleString("ko-KR")}원`;
   const visibleItems = (category) => category.items.filter((item) => item.visible !== false);
   const searchParams = new URLSearchParams(window.location.search);
   const signageMode = searchParams.get("mode") === "signage";
   const testMode = searchParams.get("test") === "1";
   const effectsMode = searchParams.get("effects");
+  const previewPalette = searchParams.get("palette");
+  const previewPalettes = {
+    "golden-butter": ["#ffe699", "#ffd966", "#fff2e7"],
+    "warm-butter": ["rgba(255, 220, 105, .22)", "#eadfbd", "#fff0eb"],
+    champagne: ["rgba(194, 156, 96, .16)", "#e5d5bb", "#fff2e7"],
+    peach: ["rgba(240, 150, 112, .14)", "#edd2c5", "#ffebe3"],
+    sage: ["rgba(164, 178, 116, .18)", "#d7ddbf", "#fff0e9"]
+  };
+  if (previewPalettes[previewPalette]) {
+    const [card, line, set] = previewPalettes[previewPalette];
+    document.documentElement.style.setProperty("--menu-card-yellow", card);
+    document.documentElement.style.setProperty("--menu-card-line", line);
+    document.documentElement.style.setProperty("--coral-soft", set);
+  }
   if (effectsMode === "summer") {
     document.body.dataset.effects = "summer";
     document.body.classList.add("effects-summer");
   }
   const behavior = signageMode ? { ...data.settings, ...data.settings.signageMode } : data.settings;
   const staticDurationSeconds = testMode ? 1 : data.settings.staticDurationSeconds;
+  const requestedScreen = Number(searchParams.get("screen"));
+  const initialScreen = Number.isInteger(requestedScreen) && requestedScreen >= 0 && requestedScreen <= 1
+    ? requestedScreen
+    : 0;
 
   document.body.classList.toggle("signage-mode", signageMode);
 
@@ -40,7 +61,8 @@
   }
 
   function categoryHeading(category) {
-    const choice = category.id === "mandu" ? '<small class="category-choice">꾼만두/찐만두</small>' : "";
+    const choiceText = labels.manduChoice || "꾼만두/찐만두";
+    const choice = category.id === "mandu" ? `<small class="category-choice">${choiceText}</small>` : "";
     return `${categoryIcon(category)}${category.title}${choice}`;
   }
 
@@ -49,7 +71,7 @@
       <li class="menu-row ${item.accent ? "menu-row--accent" : ""} ${dense ? "menu-row--dense" : ""}">
         <div class="menu-row__copy">
           <div class="menu-row__title-line">
-            ${item.badge ? badge(item.badge, item.badge.includes("여름") ? "blue" : "coral") : ""}
+            ${item.badge ? badge(item.badge, item.badgeVariant || (item.badge.includes("여름") ? "blue" : "coral")) : ""}
             <strong class="menu-row__name">${item.name}</strong>
           </div>
           ${item.description ? `<small class="menu-row__description">${item.description}</small>` : ""}
@@ -84,7 +106,7 @@
             <div class="static-feature">
               <div class="static-feature__copy">
                 ${badge(data.hero.badge)}
-                <p class="static-feature__kicker">베스트 인기 메뉴</p>
+                <p class="static-feature__kicker">${labels.bestMenu || "베스트 인기 메뉴"}</p>
                 <h1><span>${heroMain}</span><em>+</em><span class="accent">${heroAccent}</span></h1>
                 <p class="static-feature__price">${won(data.hero.price)}</p>
               </div>
@@ -111,9 +133,9 @@
           </section>
         </div>
         <footer class="screen-footer">
-          <span>매일 직접 빚는 수제만두 전문점</span>
+          <span>${labels.staticFooterLeft || "매일 직접 빚는 수제만두 전문점"}</span>
           <div class="screen-footer__logo"><img src="${data.brand.logo}" alt="${data.brand.name}" /></div>
-          <p>맛있는 한 끼, 정성껏 준비했습니다.</p>
+          <p>${labels.staticFooterRight || "맛있는 한 끼, 정성껏 준비했습니다."}</p>
         </footer>
       </section>`;
   }
@@ -227,7 +249,7 @@
       if (event.origin !== window.location.origin) return;
       if (event.data?.type === "menu-board-set-screen") setActiveScreen(Number(event.data.screen), true);
     });
-    setActiveScreen(0);
+    setActiveScreen(initialScreen);
   }
 
   initialize();

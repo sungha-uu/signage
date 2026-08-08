@@ -1,0 +1,33 @@
+.print-foreign .static-feature__copy { padding-left: 14px; padding-right: 14px; }
+.print-foreign .static-feature__copy > .badge { font-size: 11px; }
+.print-foreign .static-feature__kicker { margin-top: .55em; font-size: 12px; letter-spacing: 0; }
+.print-foreign .static-feature h1 { font-size: 24px; line-height: 1.04; letter-spacing: -.025em; }
+.print-foreign .static-feature h1 > span { margin: .1em 0; }
+.print-foreign .static-feature h1 .foreign-hero-en,
+.print-foreign .static-feature h1 .foreign-hero-zh { display: block; white-space: normal; }
+.print-foreign .static-feature h1 .foreign-hero-zh { margin-top: 3px; font-size: .82em; }
+.print-foreign .static-feature h1 em { margin: .04em 0; }
+.print-foreign .static-feature__price { font-size: 38px; }
+
+.print-foreign .dumpling-panel__header h2,
+.print-foreign .static-menu-row .category h2 { font-size: 28px; letter-spacing: -.025em; }
+.print-foreign .dumpling-panel__header p,
+.print-foreign .static-menu-row .category__subtitle { max-width: 14em; font-size: 10px; }
+.print-foreign .dumpling-panel__header .category-choice { font-size: .42em; }
+
+.print-foreign .menu-row__name { display: block; line-height: 1.02; white-space: normal; }
+.print-foreign .intl-name__en,
+.print-foreign .intl-name__zh { display: block; white-space: nowrap; }
+.print-foreign .intl-name__zh { margin-top: 3px; font-size: .82em; font-weight: 690; }
+
+.print-foreign .dumpling-grid .menu-row__name { font-size: 18px; }
+.print-foreign .dumpling-grid .menu-row__price { font-size: 20px; }
+.print-foreign .dumpling-grid .menu-row__description { top: calc(50% + 1.65em); font-size: 8px; }
+
+.print-foreign .static-menu-row .category:not(.category--mandu) .menu-row__name { font-size: 27px; }
+.print-foreign .static-menu-row .menu-row__price { font-size: 27px; }
+.print-foreign .static-menu-row .menu-row__description { top: calc(50% + 2.1em); font-size: 10px; }
+.print-foreign .static-menu-row .badge { top: 1px; font-size: 8px; }
+
+.print-foreign .screen-footer span,
+.print-foreign .screen-footer p { font-size: 11px; letter-spacing: .04em; }

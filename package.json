@@ -9,7 +9,8 @@
   "scripts": {
     "start:electron": "electron .",
     "build:portable": "electron-builder --win portable --x64",
-    "release:win": "pnpm run build:portable && node scripts/build-release.cjs"
+    "release:win": "pnpm run build:portable && node scripts/build-release.cjs",
+    "export:a4": "node scripts/export-a4.cjs"
   },
   "devDependencies": {
     "electron": "43.3.0",
