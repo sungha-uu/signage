@@ -14,7 +14,7 @@
 
   const labels = data.labels || {};
   const menuPrice = (price) => Number(price).toLocaleString("ko-KR");
-  const comboPrice = (price) => `₩${Number(price).toLocaleString("ko-KR")}`;
+  const comboPrice = (price) => `<span class="combo-currency">₩</span>${Number(price).toLocaleString("ko-KR")}`;
   const visibleItems = (category) => category.items.filter((item) => item.visible !== false);
   const searchParams = new URLSearchParams(window.location.search);
   const signageMode = searchParams.get("mode") === "signage";
