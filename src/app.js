@@ -13,9 +13,8 @@
   let screenTimer = null;
 
   const labels = data.labels || {};
-  const won = (price) => labels.currency === "prefix"
-    ? `₩${Number(price).toLocaleString("en-US")}`
-    : `${Number(price).toLocaleString("ko-KR")}원`;
+  const menuPrice = (price) => Number(price).toLocaleString("ko-KR");
+  const comboPrice = (price) => `₩${Number(price).toLocaleString("ko-KR")}`;
   const visibleItems = (category) => category.items.filter((item) => item.visible !== false);
   const searchParams = new URLSearchParams(window.location.search);
   const signageMode = searchParams.get("mode") === "signage";
@@ -77,7 +76,7 @@
           ${item.description ? `<small class="menu-row__description">${item.description}</small>` : ""}
         </div>
         <span class="menu-row__leader" aria-hidden="true"></span>
-        <strong class="menu-row__price">${won(item.price)}</strong>
+        <strong class="menu-row__price">${menuPrice(item.price)}</strong>
       </li>`;
   }
 
@@ -108,7 +107,7 @@
                 ${badge(data.hero.badge)}
                 <p class="static-feature__kicker">${labels.bestMenu || "베스트 인기 메뉴"}</p>
                 <h1><span>${heroMain}</span><em>+</em><span class="accent">${heroAccent}</span></h1>
-                <p class="static-feature__price">${won(data.hero.price)}</p>
+                <p class="static-feature__price">${comboPrice(data.hero.price)}</p>
               </div>
               <div class="static-feature__image-wrap">
                 <img src="${data.hero.image}" alt="${data.hero.imageAlt}" class="static-feature__image" />
@@ -154,7 +153,7 @@
                 <span class="video-menu__eyebrow">BEST COMBO</span>
                 ${badge(data.hero.badge)}
                 <h1><span>${heroMain} + </span><span class="accent">${heroAccent}</span></h1>
-                <strong>${won(data.hero.price)}</strong>
+                <strong>${comboPrice(data.hero.price)}</strong>
               </div>
             </section>
             <div class="video-menu__groups">

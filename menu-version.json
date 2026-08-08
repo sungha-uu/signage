@@ -15,7 +15,9 @@
       "comboCardColor": "#fff0eb",
       "comboCardLine": "#d58f83",
       "comboCardShadow": "0 5px 14px rgba(151, 75, 62, .14)",
-      "dashboardRevision": "20260809-67",
+      "priceFormat": "number_only",
+      "comboPriceFormat": "won_symbol_prefix",
+      "dashboardRevision": "20260809-68",
       "githubPages": "https://sungha-uu.github.io/signage/",
       "gitTag": "v1"
     },
