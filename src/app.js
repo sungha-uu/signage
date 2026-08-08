@@ -53,7 +53,8 @@
   }
 
   function comboBadge() {
-    return `<span class="combo-badge-stack"><span class="combo-badge-crown" aria-hidden="true">👑</span>${badge("추천")}</span>`;
+    const crown = `<img class="combo-badge-crown" src="content/assets/images/crown-simple.svg?v=2" alt="" aria-hidden="true" />`;
+    return `<span class="combo-badge-row">${crown}${badge("추천")}${crown}</span>`;
   }
 
   function categoryIcon(category) {

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 54" role="img" aria-label="왕관">
+  <path d="M7 13 21 30 36 7l15 23 14-17-7 28H14Z" fill="#ffd43b" stroke="#24211e" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M14 41h44v7H14Z" fill="#ffd43b" stroke="#24211e" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="7" cy="12" r="4" fill="#ffd43b" stroke="#24211e" stroke-width="3"/>
+  <circle cx="36" cy="6" r="4" fill="#ffd43b" stroke="#24211e" stroke-width="3"/>
+  <circle cx="65" cy="12" r="4" fill="#ffd43b" stroke="#24211e" stroke-width="3"/>
+</svg>
