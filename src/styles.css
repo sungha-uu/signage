@@ -22,14 +22,16 @@
   --coral: #ed553b;
   --coral-deep: #d94730;
   --coral-soft: #fff0eb;
-  --menu-card-yellow: rgba(194, 156, 96, .16);
-  --menu-card-line: #c9ab73;
-  --menu-card-shadow: 0 5px 14px rgba(116, 79, 31, .12);
+  --menu-card-yellow: #fffdf8;
+  --menu-card-line: #918b84;
+  --menu-card-shadow: 0 5px 14px rgba(45, 42, 39, .14);
+  --combo-card-line: #d58f83;
+  --combo-card-shadow: 0 5px 14px rgba(151, 75, 62, .14);
   --price-red: #f04438;
   --combo-price-red: #d9362b;
   --ink: #171918;
   --muted: #66645f;
-  --cream: #fffdf8;
+  --cream: #f7f3ea;
   --line: #ded9d0;
   --blue: #37a7d8;
   --shadow: 0 24px 70px rgba(91, 33, 20, 0.2);
@@ -122,9 +124,10 @@ button { font: inherit; }
   grid-template-columns: minmax(215px, 29%) minmax(0, 71%);
   min-height: 0;
   overflow: hidden;
-  border: 1px solid #f3c2b6;
+  border: 2px solid var(--combo-card-line);
   border-radius: 28px;
   background: var(--coral-soft);
+  box-shadow: var(--combo-card-shadow);
 }
 
 .static-feature__copy {
@@ -186,9 +189,10 @@ button { font: inherit; }
   min-height: 0;
   padding: 14px;
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 2px solid var(--menu-card-line);
   border-radius: 28px;
-  background: #fff;
+  background: var(--menu-card-yellow);
+  box-shadow: var(--menu-card-shadow);
 }
 
 .static-gallery-card > figure {
@@ -276,7 +280,7 @@ button { font: inherit; }
 .board--video { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 26px; padding: 28px; }
 .brand--compact { min-height: clamp(60px, 6.6vh, 98px); }
 .video-menu { display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 18px; min-width: 0; min-height: 0; }
-.video-menu__hero { position: relative; display: flex; align-items: center; justify-content: center; padding: clamp(15px, 1.3vw, 24px); border-radius: clamp(16px, 1.2vw, 24px); background: var(--coral-soft); border: 1px solid #f3c2b6; }
+.video-menu__hero { position: relative; display: flex; align-items: center; justify-content: center; padding: clamp(15px, 1.3vw, 24px); border-radius: clamp(16px, 1.2vw, 24px); background: var(--coral-soft); border: 2px solid var(--combo-card-line); box-shadow: var(--combo-card-shadow); }
 .video-menu__hero-copy { display: grid; grid-template-columns: auto auto auto; grid-template-rows: auto auto; align-items: center; justify-content: center; min-width: 0; column-gap: 18px; }
 .video-menu__eyebrow { grid-column: 2; color: var(--coral-deep); font: 800 clamp(9px, .6vw, 13px)/1 var(--main-font); letter-spacing: .15em; }
 .video-menu__hero-copy > .badge { grid-column: 1; grid-row: 2; align-self: center; justify-self: end; font-weight: 800; }
