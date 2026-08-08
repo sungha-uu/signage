@@ -30,6 +30,7 @@
       "EXE_사용법.md",
       "menu_design.md",
       "content/**/*",
+      "!content/assets/images/foreign-menu/**/*",
       "src/**/*",
       "electron/**/*",
       "package.json"

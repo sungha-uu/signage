@@ -10,7 +10,7 @@
       "menuCardColor": "#ffe699",
       "menuCardLine": "#ffd966",
       "githubPages": "https://sungha-uu.github.io/signage/",
-      "commit": "pending_v1_release"
+      "gitTag": "v1"
     },
     "a4Korean": {
       "version": 1,
@@ -27,5 +27,5 @@
       "artifact": "release/v1/A4/A4_메뉴판_외국어_v1.png"
     }
   },
-  "remoteArchiveStatus": "confirmed_v1_pending_push"
+  "remoteArchiveStatus": "confirmed_v1"
 }
