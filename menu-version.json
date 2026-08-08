@@ -19,7 +19,8 @@
       "comboPriceFormat": "won_symbol_prefix",
       "comboCurrencyScale": "75%",
       "cardHeaderDividerWidth": "2.5px",
-      "dashboardRevision": "20260809-69",
+      "comboBadge": "인기 👍",
+      "dashboardRevision": "20260809-70",
       "githubPages": "https://sungha-uu.github.io/signage/",
       "gitTag": "v1"
     },

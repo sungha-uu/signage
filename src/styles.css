@@ -284,7 +284,7 @@ button { font: inherit; }
 .video-menu__hero { position: relative; display: flex; align-items: center; justify-content: center; padding: clamp(15px, 1.3vw, 24px); border-radius: clamp(16px, 1.2vw, 24px); background: var(--coral-soft); border: 2px solid var(--combo-card-line); box-shadow: var(--combo-card-shadow); }
 .video-menu__hero-copy { display: grid; grid-template-columns: auto auto auto; grid-template-rows: auto auto; align-items: center; justify-content: center; min-width: 0; column-gap: 18px; }
 .video-menu__eyebrow { grid-column: 2; color: var(--coral-deep); font: 800 clamp(9px, .6vw, 13px)/1 var(--main-font); letter-spacing: .15em; }
-.video-menu__hero-copy > .badge { grid-column: 1; grid-row: 2; align-self: center; justify-self: end; font-weight: 800; }
+.video-menu__hero-copy > .badge { grid-column: 1; grid-row: 2; align-self: center; justify-self: end; min-height: 1.9em; padding: .2em .72em; font-size: 15px; font-weight: 800; }
 .video-menu__hero h1 { margin: 0; font-family: var(--main-font); font-size: 50px; font-style: normal; font-weight: 780; line-height: 1; letter-spacing: -.045em; white-space: nowrap; }
 .video-menu__hero h1 .accent { color: var(--coral); }
 .video-menu__hero-copy > h1 { grid-column: 2; grid-row: 2; }
