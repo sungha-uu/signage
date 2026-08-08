@@ -26,8 +26,10 @@
       "page1DumplingColumnGap": "52px",
       "page2DumplingColumnGap": "62px",
       "menuDescriptionBottomGap": "0.5px",
+      "menuCardBottomPadding": "0px",
+      "menuRows": "equal_four_tracks",
       "descriptionRowMainOffset": { "page1": "0", "page2": "0" },
-      "dashboardRevision": "20260809-78",
+      "dashboardRevision": "20260809-79",
       "githubPages": "https://sungha-uu.github.io/signage/",
       "gitTag": "v1"
     },
