@@ -40,7 +40,7 @@
   }
 
   function categoryHeading(category) {
-    const choice = category.id === "mandu" ? '<small class="category-choice">꾼만두 / 찐만두 선택</small>' : "";
+    const choice = category.id === "mandu" ? '<small class="category-choice">(꾼만두/찐만두)</small>' : "";
     return `${categoryIcon(category)}${category.title}${choice}`;
   }
 
@@ -102,6 +102,7 @@
             <section class="dumpling-panel">
               <header class="dumpling-panel__header">
                 <div><h2>${categoryHeading(mandu)}</h2></div>
+                <p>${mandu.subtitle}</p>
               </header>
               <ul class="dumpling-grid">${visibleItems(mandu).map((item) => menuRow(item, true)).join("")}</ul>
             </section>
