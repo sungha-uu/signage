@@ -6,9 +6,9 @@
       "version": 1,
       "status": "confirmed",
       "language": "ko",
-      "palette": "v1_yellow",
-      "menuCardColor": "#ffe699",
-      "menuCardLine": "#ffd966",
+      "palette": "champagne_beige",
+      "menuCardColor": "rgba(194, 156, 96, .16)",
+      "menuCardLine": "#e5d5bb",
       "githubPages": "https://sungha-uu.github.io/signage/",
       "gitTag": "v1"
     },
