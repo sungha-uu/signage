@@ -213,8 +213,8 @@ button { font: inherit; }
 .category h2 { margin: 0; font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: clamp(23px, 2vw, 42px); font-weight: 900; line-height: 1; letter-spacing: -.045em; }
 .category h2, .dumpling-panel__header h2, .compact-group h2 { display: flex; align-items: center; }
 .dumpling-panel__header h2, .compact-group--mandu h2 { white-space: nowrap; }
-.category-choice { margin-left: .55em; color: var(--ink); font-size: .68em; font-weight: 800; line-height: 1; letter-spacing: -.03em; white-space: nowrap; }
-.dumpling-panel__header .category-choice { margin-left: .38em; font-size: .45em; }
+.category-choice { align-self: flex-end; margin: 0 0 .08em .55em; color: var(--ink); font-size: .6em; font-weight: 800; line-height: 1; letter-spacing: -.03em; white-space: nowrap; }
+.dumpling-panel__header .category-choice { margin-left: .38em; font-size: .5em; }
 .category-icon { flex: 0 0 auto; margin-right: .28em; font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif; font-size: .78em; font-weight: 400; line-height: 1; letter-spacing: 0; }
 .category-icon--brand { position: relative; width: 2.05em; height: 1em; overflow: hidden; }
 .category-icon--brand img { position: absolute; top: 0; left: 0; display: block; width: auto; height: 100%; max-width: none; }

@@ -40,7 +40,7 @@
   }
 
   function categoryHeading(category) {
-    const choice = category.id === "mandu" ? '<small class="category-choice">(꾼만두/찐만두)</small>' : "";
+    const choice = category.id === "mandu" ? '<small class="category-choice">꾼만두/찐만두</small>' : "";
     return `${categoryIcon(category)}${category.title}${choice}`;
   }
 
