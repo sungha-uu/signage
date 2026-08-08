@@ -16,6 +16,7 @@ const MIME_TYPES = {
   ".md": "text/markdown; charset=utf-8",
   ".mp4": "video/mp4",
   ".otf": "font/otf",
+  ".woff2": "font/woff2",
   ".png": "image/png",
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",
@@ -141,6 +142,8 @@ async function inspectSignage(window) {
     const video = doc && doc.querySelector("#menu-video");
     const active = doc && doc.querySelector(".screen.is-active");
     const controls = doc && doc.querySelector(".controls");
+    const menuName = active && active.querySelector(".menu-row__name");
+    const menuPrice = active && active.querySelector(".menu-row__price");
     const summerLeaves = [...document.querySelectorAll(".summer-leaf")];
     return {
       ready: Boolean(doc && video && active),
@@ -149,6 +152,10 @@ async function inspectSignage(window) {
       videoCurrentTime: video ? video.currentTime : null,
       videoControls: video ? video.controls : null,
       controlsHidden: controls ? controls.hidden : null,
+      staticDurationSeconds: doc?.defaultView?.MENU_BOARD_DATA?.settings?.staticDurationSeconds ?? null,
+      pretendardReady: doc ? doc.fonts.check('43px "Pretendard Local"') : false,
+      menuNameWeight: menuName ? getComputedStyle(menuName).fontWeight : null,
+      menuPriceWeight: menuPrice ? getComputedStyle(menuPrice).fontWeight : null,
       effectMode: doc?.body?.dataset?.effects || null,
       transitionAnimation: active ? getComputedStyle(active).animationName : null,
       summerLeafCount: summerLeaves.length,
@@ -184,6 +191,10 @@ async function runSmokeTest(window) {
       result.beforeEnded.videoPaused === false &&
       result.beforeEnded.videoControls === false &&
       result.beforeEnded.controlsHidden === true &&
+      result.beforeEnded.staticDurationSeconds === 30 &&
+      result.beforeEnded.pretendardReady === true &&
+      result.beforeEnded.menuNameWeight === "760" &&
+      result.beforeEnded.menuPriceWeight === "600" &&
       result.afterEnded?.activeScreen === "0" &&
       (isSummerVariant
         ? result.beforeEnded.effectMode === "summer" && result.beforeEnded.summerLeafCount === 18 && result.beforeEnded.summerVisibleLeafCount === 18 && result.beforeEnded.transitionAnimation === "signage-screen-in"
