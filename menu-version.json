@@ -23,7 +23,9 @@
       "comboBadgeIcon": "single_simple_svg_crown_top_left",
       "comboBadgeCrownRotation": "-32deg",
       "comboBadgeSize": "15px",
-      "dashboardRevision": "20260809-73",
+      "page1DumplingColumnGap": "52px",
+      "page2DumplingColumnGap": "62px",
+      "dashboardRevision": "20260809-74",
       "githubPages": "https://sungha-uu.github.io/signage/",
       "gitTag": "v1"
     },
