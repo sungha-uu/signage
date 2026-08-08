@@ -25,7 +25,9 @@
       "comboBadgeSize": "15px",
       "page1DumplingColumnGap": "52px",
       "page2DumplingColumnGap": "62px",
-      "dashboardRevision": "20260809-74",
+      "menuDescriptionBottomGap": "5px",
+      "descriptionRowMainOffset": { "page1": "-11px", "page2": "-17px" },
+      "dashboardRevision": "20260809-76",
       "githubPages": "https://sungha-uu.github.io/signage/",
       "gitTag": "v1"
     },
