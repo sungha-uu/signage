@@ -10,6 +10,8 @@
     "start:electron": "electron .",
     "build:portable": "electron-builder --win portable --x64",
     "release:win": "pnpm run build:portable && node scripts/build-release.cjs",
+    "release:v1": "pnpm run build:portable && node scripts/package-v1-release.cjs",
+    "metrics:design": "electron scripts/capture-design-metrics.cjs",
     "export:a4": "node scripts/export-a4.cjs"
   },
   "devDependencies": {
@@ -29,6 +31,9 @@
       "README.md",
       "EXE_사용법.md",
       "menu_design.md",
+      "menu-version.json",
+      "VERSION_V1.md",
+      "design/**/*",
       "content/**/*",
       "!content/assets/images/foreign-menu/**/*",
       "src/**/*",

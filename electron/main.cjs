@@ -194,7 +194,7 @@ async function runSmokeTest(window) {
       result.beforeEnded.staticDurationSeconds === 30 &&
       result.beforeEnded.pretendardReady === true &&
       result.beforeEnded.menuNameWeight === "760" &&
-      result.beforeEnded.menuPriceWeight === "600" &&
+      result.beforeEnded.menuPriceWeight === "700" &&
       result.afterEnded?.activeScreen === "0" &&
       (isSummerVariant
         ? result.beforeEnded.effectMode === "summer" && result.beforeEnded.summerLeafCount === 18 && result.beforeEnded.summerVisibleLeafCount === 18 && result.beforeEnded.transitionAnimation === "signage-screen-in"

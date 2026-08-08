@@ -57,20 +57,30 @@ EXE는 사이니지 모드로 실행하며 다음 동작을 자동으로 수행�
 
 종료는 `Ctrl + Q`, 전체 화면 전환은 `F11`입니다. 자세한 내용은 `EXE_사용법.md`를 참고합니다.
 
+## V1 디자인 명세
+
+- TV 메뉴판: `design/TV_MENU_DESIGN_V1.md`
+- A4 한국어: `design/A4_KOREAN_MENU_DESIGN_V1.md`
+- A4 외국어: `design/A4_FOREIGN_MENU_DESIGN_V1.md`
+- 실제 Chromium 계산 좌표: `design/*_METRICS_V1.json`
+
+명세 좌표를 다시 측정하려면 로컬 서버를 4173 포트로 실행한 뒤 `pnpm run metrics:design`을 사용합니다.
+
 ### EXE 빌드
 
 ```powershell
 pnpm install
-pnpm run release:win
+pnpm run release:v1
 ```
 
 완성본은 빌드 시각을 사용한 아래 형식으로 생성됩니다.
 
 ```text
-dist/release_YYMMDD_HHMM/
-dist/release_YYMMDD_HHMM.zip
+dist/release_YYMMDD_HHMMSS/
+dist/release_YYMMDD_HHMMSS.zip
+dist/release_A4_YYMMDD_HHMMSS_v1/
 ```
 
-`RELEASE_STAMP=YYMMDD_HHMM` 환경 변수를 지정하면 배포 폴더명을 고정할 수 있습니다.
+`RELEASE_STAMP=YYMMDD_HHMMSS` 환경 변수를 지정하면 배포 폴더명을 고정할 수 있습니다. TV ZIP에는 EXE 하나만 포함되고 A4 PNG는 별도 폴더로 생성됩니다.
 
 TV, PC, 휴대폰 모두 같은 16:9 가로 메뉴판을 표시합니다. 휴대폰 세로 화면에서는 전체 메뉴판이 축소되어 위아래 여백과 함께 표시되며, 가로로 돌리면 더 크게 볼 수 있습니다.
