@@ -8,7 +8,9 @@
       "language": "ko",
       "palette": "champagne_beige",
       "menuCardColor": "rgba(194, 156, 96, .16)",
-      "menuCardLine": "#e5d5bb",
+      "menuCardLine": "#c9ab73",
+      "menuCardBorderWidth": "2px",
+      "menuCardShadow": "0 5px 14px rgba(116, 79, 31, .12)",
       "githubPages": "https://sungha-uu.github.io/signage/",
       "gitTag": "v1"
     },
