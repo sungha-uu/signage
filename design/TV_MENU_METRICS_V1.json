@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-08T18:31:24.294Z",
+  "capturedAt": "2026-08-09T13:11:37.276Z",
   "referenceViewport": "1920x1080 CSS px",
   "page1": {
     "screen": "0",
@@ -496,7 +496,7 @@
           "display": "grid",
           "position": "static",
           "gridTemplateColumns": "627.375px",
-          "gridTemplateRows": "56px 388px",
+          "gridTemplateRows": "32px 412px",
           "gap": "normal",
           "columnGap": "normal",
           "rowGap": "normal",
@@ -534,7 +534,7 @@
           "display": "grid",
           "position": "static",
           "gridTemplateColumns": "492.312px",
-          "gridTemplateRows": "56px 388px",
+          "gridTemplateRows": "32px 412px",
           "gap": "normal",
           "columnGap": "normal",
           "rowGap": "normal",
@@ -572,7 +572,7 @@
           "display": "grid",
           "position": "static",
           "gridTemplateColumns": "492.297px",
-          "gridTemplateRows": "56px 388px",
+          "gridTemplateRows": "32px 412px",
           "gap": "normal",
           "columnGap": "normal",
           "rowGap": "normal",
@@ -598,14 +598,14 @@
     ],
     "cardHeaders": [
       {
-        "text": "만두 메뉴꾼만두/찐만두 매일 직접 빚는 수제만두",
+        "text": "만두 메뉴꾼만두/찐만두\n                매일 직접 빚는 수제만두",
         "rect": {
           "x": 88,
           "y": 562,
           "width": 627.375,
-          "height": 56,
+          "height": 32,
           "right": 715.375,
-          "bottom": 618
+          "bottom": 594
         },
         "style": {
           "display": "flex",
@@ -615,7 +615,7 @@
           "gap": "16px",
           "columnGap": "16px",
           "rowGap": "16px",
-          "padding": "0px 0px 10px",
+          "padding": "0px 0px 6px",
           "margin": "0px",
           "border": "",
           "borderRadius": "0px",
@@ -632,17 +632,121 @@
           "transform": "none",
           "objectFit": "fill",
           "objectPosition": "50% 50%"
+        },
+        "titleStyle": {
+          "display": "flex",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "24px",
+          "fontWeight": "780",
+          "lineHeight": "24px",
+          "letterSpacing": "-0.6px",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "iconStyle": {
+          "display": "block",
+          "position": "relative",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px 5.904px 0px 0px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Segoe UI Emoji\", \"Apple Color Emoji\", sans-serif",
+          "fontSize": "19.68px",
+          "fontWeight": "400",
+          "lineHeight": "19.68px",
+          "letterSpacing": "normal",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "choiceStyle": {
+          "display": "block",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px 0px 0.63px 7.35px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "21px",
+          "fontWeight": "700",
+          "lineHeight": "21px",
+          "letterSpacing": "-0.42px",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "subtitleStyle": {
+          "display": "block",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "border": "0px none rgb(102, 100, 95)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(102, 100, 95)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "650",
+          "lineHeight": "16.8px",
+          "letterSpacing": "normal",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
         }
       },
       {
-        "text": "✨️별미 메뉴 만두와 잘 어울리는 인기 메뉴",
+        "text": "✨️별미 메뉴\n          \n          만두와 잘 어울리는 인기 메뉴",
         "rect": {
           "x": 781.375,
           "y": 562,
           "width": 492.313,
-          "height": 56,
+          "height": 32,
           "right": 1273.688,
-          "bottom": 618
+          "bottom": 594
         },
         "style": {
           "display": "flex",
@@ -652,7 +756,7 @@
           "gap": "12px",
           "columnGap": "12px",
           "rowGap": "12px",
-          "padding": "0px 0px 10px",
+          "padding": "0px 0px 6px",
           "margin": "0px",
           "border": "",
           "borderRadius": "0px",
@@ -669,17 +773,96 @@
           "transform": "none",
           "objectFit": "fill",
           "objectPosition": "50% 50%"
+        },
+        "titleStyle": {
+          "display": "flex",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "24px",
+          "fontWeight": "780",
+          "lineHeight": "24px",
+          "letterSpacing": "-0.6px",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "iconStyle": {
+          "display": "block",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px 5.904px 0px 0px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Segoe UI Emoji\", \"Apple Color Emoji\", sans-serif",
+          "fontSize": "19.68px",
+          "fontWeight": "400",
+          "lineHeight": "19.68px",
+          "letterSpacing": "normal",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "choiceStyle": null,
+        "subtitleStyle": {
+          "display": "block",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "border": "0px none rgb(102, 100, 95)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(102, 100, 95)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "650",
+          "lineHeight": "16.8px",
+          "letterSpacing": "normal",
+          "textAlign": "right",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
         }
       },
       {
-        "text": "🍜면 메뉴 따뜻하게, 또는 시원하게",
+        "text": "🍜면 메뉴\n          \n          따뜻하게, 또는 시원하게",
         "rect": {
           "x": 1339.688,
           "y": 562,
           "width": 492.297,
-          "height": 56,
+          "height": 32,
           "right": 1831.984,
-          "bottom": 618
+          "bottom": 594
         },
         "style": {
           "display": "flex",
@@ -689,7 +872,7 @@
           "gap": "12px",
           "columnGap": "12px",
           "rowGap": "12px",
-          "padding": "0px 0px 10px",
+          "padding": "0px 0px 6px",
           "margin": "0px",
           "border": "",
           "borderRadius": "0px",
@@ -703,6 +886,85 @@
           "lineHeight": "normal",
           "letterSpacing": "normal",
           "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "titleStyle": {
+          "display": "flex",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "24px",
+          "fontWeight": "780",
+          "lineHeight": "24px",
+          "letterSpacing": "-0.6px",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "iconStyle": {
+          "display": "block",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px 5.904px 0px 0px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Segoe UI Emoji\", \"Apple Color Emoji\", sans-serif",
+          "fontSize": "19.68px",
+          "fontWeight": "400",
+          "lineHeight": "19.68px",
+          "letterSpacing": "normal",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "choiceStyle": null,
+        "subtitleStyle": {
+          "display": "block",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "border": "0px none rgb(102, 100, 95)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(102, 100, 95)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "650",
+          "lineHeight": "16.8px",
+          "letterSpacing": "normal",
+          "textAlign": "right",
           "transform": "none",
           "objectFit": "fill",
           "objectPosition": "50% 50%"
@@ -718,17 +980,17 @@
         "row": {
           "rect": {
             "x": 88,
-            "y": 618,
+            "y": 594,
             "width": 287.688,
-            "height": 97,
+            "height": 103,
             "right": 375.688,
-            "bottom": 715
+            "bottom": 697
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "149.281px 42.1562px 87.3125px",
-            "gridTemplateRows": "96px",
+            "gridTemplateRows": "102px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -865,17 +1127,17 @@
         "row": {
           "rect": {
             "x": 427.688,
-            "y": 618,
+            "y": 594,
             "width": 287.688,
-            "height": 97,
+            "height": 103,
             "right": 715.375,
-            "bottom": 715
+            "bottom": 697
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "149.281px 42.1562px 87.3125px",
-            "gridTemplateRows": "96px",
+            "gridTemplateRows": "102px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -1012,17 +1274,17 @@
         "row": {
           "rect": {
             "x": 88,
-            "y": 715,
+            "y": 697,
             "width": 287.688,
-            "height": 97,
+            "height": 103,
             "right": 375.688,
-            "bottom": 812
+            "bottom": 800
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "149.281px 42.1562px 87.3125px",
-            "gridTemplateRows": "96px",
+            "gridTemplateRows": "102px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -1159,17 +1421,17 @@
         "row": {
           "rect": {
             "x": 427.688,
-            "y": 715,
+            "y": 697,
             "width": 287.688,
-            "height": 97,
+            "height": 103,
             "right": 715.375,
-            "bottom": 812
+            "bottom": 800
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "149.281px 42.1562px 87.3125px",
-            "gridTemplateRows": "96px",
+            "gridTemplateRows": "102px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -1306,17 +1568,17 @@
         "row": {
           "rect": {
             "x": 88,
-            "y": 812,
+            "y": 800,
             "width": 287.688,
-            "height": 97,
+            "height": 103,
             "right": 375.688,
-            "bottom": 909
+            "bottom": 903
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "149.281px 42.1562px 87.3125px",
-            "gridTemplateRows": "96px",
+            "gridTemplateRows": "102px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -1453,17 +1715,17 @@
         "row": {
           "rect": {
             "x": 427.688,
-            "y": 812,
+            "y": 800,
             "width": 287.688,
-            "height": 97,
+            "height": 103,
             "right": 715.375,
-            "bottom": 909
+            "bottom": 903
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "149.281px 36.7031px 92.7656px",
-            "gridTemplateRows": "96px",
+            "gridTemplateRows": "102px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -1600,9 +1862,9 @@
         "row": {
           "rect": {
             "x": 88,
-            "y": 909,
+            "y": 903,
             "width": 287.688,
-            "height": 97,
+            "height": 103,
             "right": 375.688,
             "bottom": 1006
           },
@@ -1610,7 +1872,7 @@
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "149.281px 36.8281px 92.6406px",
-            "gridTemplateRows": "97px",
+            "gridTemplateRows": "103px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -1722,11 +1984,11 @@
         "row": {
           "rect": {
             "x": 781.375,
-            "y": 618,
+            "y": 594,
             "width": 492.313,
-            "height": 97,
+            "height": 103,
             "right": 1273.688,
-            "bottom": 715
+            "bottom": 697
           },
           "style": {
             "display": "flex",
@@ -1869,11 +2131,11 @@
         "row": {
           "rect": {
             "x": 781.375,
-            "y": 715,
+            "y": 697,
             "width": 492.313,
-            "height": 97,
+            "height": 103,
             "right": 1273.688,
-            "bottom": 812
+            "bottom": 800
           },
           "style": {
             "display": "flex",
@@ -1991,11 +2253,11 @@
         "row": {
           "rect": {
             "x": 781.375,
-            "y": 812,
+            "y": 800,
             "width": 492.313,
-            "height": 97,
+            "height": 103,
             "right": 1273.688,
-            "bottom": 909
+            "bottom": 903
           },
           "style": {
             "display": "flex",
@@ -2163,9 +2425,9 @@
         "row": {
           "rect": {
             "x": 781.375,
-            "y": 909,
+            "y": 903,
             "width": 492.313,
-            "height": 97,
+            "height": 103,
             "right": 1273.688,
             "bottom": 1006
           },
@@ -2310,11 +2572,11 @@
         "row": {
           "rect": {
             "x": 1339.688,
-            "y": 618,
+            "y": 594,
             "width": 492.297,
-            "height": 97,
+            "height": 103,
             "right": 1831.984,
-            "bottom": 715
+            "bottom": 697
           },
           "style": {
             "display": "flex",
@@ -2457,11 +2719,11 @@
         "row": {
           "rect": {
             "x": 1339.688,
-            "y": 715,
+            "y": 697,
             "width": 492.297,
-            "height": 97,
+            "height": 103,
             "right": 1831.984,
-            "bottom": 812
+            "bottom": 800
           },
           "style": {
             "display": "flex",
@@ -2579,11 +2841,11 @@
         "row": {
           "rect": {
             "x": 1339.688,
-            "y": 812,
+            "y": 800,
             "width": 492.297,
-            "height": 97,
+            "height": 103,
             "right": 1831.984,
-            "bottom": 909
+            "bottom": 903
           },
           "style": {
             "display": "flex",
@@ -2701,9 +2963,9 @@
         "row": {
           "rect": {
             "x": 1339.688,
-            "y": 909,
+            "y": 903,
             "width": 492.297,
-            "height": 97,
+            "height": 103,
             "right": 1831.984,
             "bottom": 1006
           },
@@ -3306,7 +3568,7 @@
           "display": "grid",
           "position": "static",
           "gridTemplateColumns": "839px",
-          "gridTemplateRows": "50.7969px 309.344px",
+          "gridTemplateRows": "32px 328.141px",
           "gap": "normal",
           "columnGap": "normal",
           "rowGap": "normal",
@@ -3344,7 +3606,7 @@
           "display": "grid",
           "position": "static",
           "gridTemplateColumns": "388.5px",
-          "gridTemplateRows": "50.7969px 341.547px",
+          "gridTemplateRows": "32px 360.344px",
           "gap": "normal",
           "columnGap": "normal",
           "rowGap": "normal",
@@ -3382,7 +3644,7 @@
           "display": "grid",
           "position": "static",
           "gridTemplateColumns": "388.5px",
-          "gridTemplateRows": "50.7969px 341.547px",
+          "gridTemplateRows": "32px 360.344px",
           "gap": "normal",
           "columnGap": "normal",
           "rowGap": "normal",
@@ -3413,9 +3675,9 @@
           "x": 86,
           "y": 209.516,
           "width": 839,
-          "height": 50.797,
+          "height": 32,
           "right": 925,
-          "bottom": 260.313
+          "bottom": 241.516
         },
         "style": {
           "display": "flex",
@@ -3425,7 +3687,7 @@
           "gap": "8px",
           "columnGap": "8px",
           "rowGap": "8px",
-          "padding": "0px 0px 8.8px",
+          "padding": "0px 0px 6px",
           "margin": "0px",
           "border": "",
           "borderRadius": "0px",
@@ -3439,6 +3701,110 @@
           "lineHeight": "normal",
           "letterSpacing": "normal",
           "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "titleStyle": {
+          "display": "flex",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "24px",
+          "fontWeight": "780",
+          "lineHeight": "24px",
+          "letterSpacing": "-0.6px",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "iconStyle": {
+          "display": "block",
+          "position": "relative",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px 5.904px 0px 0px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Segoe UI Emoji\", \"Apple Color Emoji\", sans-serif",
+          "fontSize": "19.68px",
+          "fontWeight": "400",
+          "lineHeight": "19.68px",
+          "letterSpacing": "normal",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "choiceStyle": {
+          "display": "block",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px 0px 0.63px 10.5px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "21px",
+          "fontWeight": "700",
+          "lineHeight": "21px",
+          "letterSpacing": "-0.42px",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "subtitleStyle": {
+          "display": "block",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "border": "0px none rgb(102, 100, 95)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(102, 100, 95)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "10.368px",
+          "fontWeight": "650",
+          "lineHeight": "12.4416px",
+          "letterSpacing": "normal",
+          "textAlign": "right",
           "transform": "none",
           "objectFit": "fill",
           "objectPosition": "50% 50%"
@@ -3450,9 +3816,9 @@
           "x": 86,
           "y": 613.656,
           "width": 388.5,
-          "height": 50.797,
+          "height": 32,
           "right": 474.5,
-          "bottom": 664.453
+          "bottom": 645.656
         },
         "style": {
           "display": "flex",
@@ -3462,7 +3828,7 @@
           "gap": "8px",
           "columnGap": "8px",
           "rowGap": "8px",
-          "padding": "0px 0px 8.8px",
+          "padding": "0px 0px 6px",
           "margin": "0px",
           "border": "",
           "borderRadius": "0px",
@@ -3479,6 +3845,85 @@
           "transform": "none",
           "objectFit": "fill",
           "objectPosition": "50% 50%"
+        },
+        "titleStyle": {
+          "display": "flex",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "24px",
+          "fontWeight": "780",
+          "lineHeight": "24px",
+          "letterSpacing": "-0.6px",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "iconStyle": {
+          "display": "block",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px 5.904px 0px 0px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Segoe UI Emoji\", \"Apple Color Emoji\", sans-serif",
+          "fontSize": "19.68px",
+          "fontWeight": "400",
+          "lineHeight": "19.68px",
+          "letterSpacing": "normal",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "choiceStyle": null,
+        "subtitleStyle": {
+          "display": "block",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "border": "0px none rgb(102, 100, 95)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(102, 100, 95)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "10.368px",
+          "fontWeight": "650",
+          "lineHeight": "12.4416px",
+          "letterSpacing": "normal",
+          "textAlign": "right",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
         }
       },
       {
@@ -3487,9 +3932,9 @@
           "x": 536.5,
           "y": 613.656,
           "width": 388.5,
-          "height": 50.797,
+          "height": 32,
           "right": 925,
-          "bottom": 664.453
+          "bottom": 645.656
         },
         "style": {
           "display": "flex",
@@ -3499,7 +3944,7 @@
           "gap": "8px",
           "columnGap": "8px",
           "rowGap": "8px",
-          "padding": "0px 0px 8.8px",
+          "padding": "0px 0px 6px",
           "margin": "0px",
           "border": "",
           "borderRadius": "0px",
@@ -3513,6 +3958,85 @@
           "lineHeight": "normal",
           "letterSpacing": "normal",
           "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "titleStyle": {
+          "display": "flex",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "24px",
+          "fontWeight": "780",
+          "lineHeight": "24px",
+          "letterSpacing": "-0.6px",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "iconStyle": {
+          "display": "block",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px 5.904px 0px 0px",
+          "border": "0px none rgb(23, 25, 24)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(23, 25, 24)",
+          "fontFamily": "\"Segoe UI Emoji\", \"Apple Color Emoji\", sans-serif",
+          "fontSize": "19.68px",
+          "fontWeight": "400",
+          "lineHeight": "19.68px",
+          "letterSpacing": "normal",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
+        "choiceStyle": null,
+        "subtitleStyle": {
+          "display": "block",
+          "position": "static",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "0px",
+          "margin": "0px",
+          "border": "0px none rgb(102, 100, 95)",
+          "borderRadius": "0px",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(102, 100, 95)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "10.368px",
+          "fontWeight": "650",
+          "lineHeight": "12.4416px",
+          "letterSpacing": "normal",
+          "textAlign": "right",
           "transform": "none",
           "objectFit": "fill",
           "objectPosition": "50% 50%"
@@ -3528,17 +4052,17 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 260.313,
+            "y": 241.516,
             "width": 388.5,
-            "height": 77.328,
+            "height": 82.031,
             "right": 474.5,
-            "bottom": 337.641
+            "bottom": 323.547
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 149.609px 87.3125px",
-            "gridTemplateRows": "76.3281px",
+            "gridTemplateRows": "81.0312px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -3675,17 +4199,17 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 260.313,
+            "y": 241.516,
             "width": 388.5,
-            "height": 77.328,
+            "height": 82.031,
             "right": 925,
-            "bottom": 337.641
+            "bottom": 323.547
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 149.609px 87.3125px",
-            "gridTemplateRows": "76.3281px",
+            "gridTemplateRows": "81.0312px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -3822,17 +4346,17 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 337.641,
+            "y": 323.547,
             "width": 388.5,
-            "height": 77.344,
+            "height": 82.031,
             "right": 474.5,
-            "bottom": 414.984
+            "bottom": 405.578
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 149.609px 87.3125px",
-            "gridTemplateRows": "76.3438px",
+            "gridTemplateRows": "81.0312px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -3969,17 +4493,17 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 337.641,
+            "y": 323.547,
             "width": 388.5,
-            "height": 77.344,
+            "height": 82.031,
             "right": 925,
-            "bottom": 414.984
+            "bottom": 405.578
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 149.609px 87.3125px",
-            "gridTemplateRows": "76.3438px",
+            "gridTemplateRows": "81.0312px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -4116,17 +4640,17 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 414.984,
+            "y": 405.578,
             "width": 388.5,
-            "height": 77.328,
+            "height": 82.031,
             "right": 474.5,
-            "bottom": 492.313
+            "bottom": 487.609
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 149.609px 87.3125px",
-            "gridTemplateRows": "76.3281px",
+            "gridTemplateRows": "81.0312px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -4263,17 +4787,17 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 414.984,
+            "y": 405.578,
             "width": 388.5,
-            "height": 77.328,
+            "height": 82.031,
             "right": 925,
-            "bottom": 492.313
+            "bottom": 487.609
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 144.156px 92.7656px",
-            "gridTemplateRows": "76.3281px",
+            "gridTemplateRows": "81.0312px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -4410,9 +4934,9 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 492.313,
+            "y": 487.609,
             "width": 388.5,
-            "height": 77.344,
+            "height": 82.047,
             "right": 474.5,
             "bottom": 569.656
           },
@@ -4420,7 +4944,7 @@
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 144.281px 92.6406px",
-            "gridTemplateRows": "77.3438px",
+            "gridTemplateRows": "82.0469px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -4532,11 +5056,11 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 664.453,
+            "y": 645.656,
             "width": 388.5,
-            "height": 85.375,
+            "height": 90.078,
             "right": 474.5,
-            "bottom": 749.828
+            "bottom": 735.734
           },
           "style": {
             "display": "flex",
@@ -4679,11 +5203,11 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 749.828,
+            "y": 735.734,
             "width": 388.5,
-            "height": 85.391,
+            "height": 90.094,
             "right": 474.5,
-            "bottom": 835.219
+            "bottom": 825.828
           },
           "style": {
             "display": "flex",
@@ -4801,11 +5325,11 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 835.219,
+            "y": 825.828,
             "width": 388.5,
-            "height": 85.391,
+            "height": 90.078,
             "right": 474.5,
-            "bottom": 920.609
+            "bottom": 915.906
           },
           "style": {
             "display": "flex",
@@ -4973,9 +5497,9 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 920.609,
+            "y": 915.906,
             "width": 388.5,
-            "height": 85.391,
+            "height": 90.094,
             "right": 474.5,
             "bottom": 1006
           },
@@ -5120,11 +5644,11 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 664.453,
+            "y": 645.656,
             "width": 388.5,
-            "height": 85.375,
+            "height": 90.078,
             "right": 925,
-            "bottom": 749.828
+            "bottom": 735.734
           },
           "style": {
             "display": "flex",
@@ -5267,11 +5791,11 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 749.828,
+            "y": 735.734,
             "width": 388.5,
-            "height": 85.391,
+            "height": 90.094,
             "right": 925,
-            "bottom": 835.219
+            "bottom": 825.828
           },
           "style": {
             "display": "flex",
@@ -5389,11 +5913,11 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 835.219,
+            "y": 825.828,
             "width": 388.5,
-            "height": 85.391,
+            "height": 90.078,
             "right": 925,
-            "bottom": 920.609
+            "bottom": 915.906
           },
           "style": {
             "display": "flex",
@@ -5511,9 +6035,9 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 920.609,
+            "y": 915.906,
             "width": 388.5,
-            "height": 85.391,
+            "height": 90.094,
             "right": 925,
             "bottom": 1006
           },

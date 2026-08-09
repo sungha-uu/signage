@@ -6,7 +6,7 @@
 
 ## 1. V1 고정 조건
 
-- 기준 페이지: `board.html?v=20260809-83`
+- 기준 페이지: `board.html?v=20260809-84`
 - 기준 화면: 1920×1080, 16:9 가로형
 - 화면 수: 2개
 - 1페이지: 대표 세트/사진 3장/만두·별미·면 전체 가격표
@@ -70,7 +70,7 @@ background:
 - 대체 순서: `Pretendard Variable`, `Noto Sans KR`, `Malgun Gothic`, `Apple SD Gothic Neo`, sans-serif
 - 기본 본문 weight: 650
 - 메뉴명: weight 760, line-height 1.04, letter-spacing `-0.035em`
-- 메뉴 카드 제목: weight 780, line-height 1, letter-spacing `-0.035em`
+- 메뉴 카드 제목: 24px/780, line-height 1, letter-spacing `-0.025em`
 - 가격: weight 700, line-height 1.05, letter-spacing `-0.025em`
 - 메뉴명보다 가격을 얇게 보여 시각적 위계를 만든다.
 - 금액 표기: 일반 메뉴는 `7,000`처럼 숫자만, 세트는 `₩9,000`
@@ -139,19 +139,20 @@ padding: 28px;
 
 - 카드 padding: 상 18px, 좌우 22px, 하 2px
 - border 2px `#918B84`, radius 24px
-- header 높이 56px, 하단 padding 10px, 구분선 2.5px `#171918`
-- 카드 제목: 44px/780
-- 만두 선택문구: 제목 크기의 0.5em, weight 700
+- header 실측 높이 32px, 하단 padding 6px, 구분선 2.5px `#171918`
+- 카드 제목: 24px/780
+- 아이콘: 19.68px, 제목과 같은 기준선에 정렬
+- 만두 선택문구: 21px/700
 - 별미/면 부제: 14px/650
 - 메뉴 리스트 상단 padding 0, 하단 카드 padding 2px
-- 네 행은 동일 높이: 정확히 97px
+- 네 행은 동일 높이: 정확히 103px
 - 메뉴명 45px/760, 가격 34px/700
 - 서브 텍스트 16px/650, `bottom:.5px`, `left:5px`
 - 인기/여름 태그: 행 top 3px, left 4px; 12px/750; 최소 높이 18px
 - 메뉴명과 가격 사이 리더: 높이 2px, 8px 주기의 1px 원형 점
 - 마지막 행만 border-bottom 없음. 행 높이는 다른 행과 동일하다.
 
-만두 카드는 2열×4행이다. 열 간격 52px이며 각 행 높이는 97px이다. 일곱 번째 비빔야채는 왼쪽 네 번째 행에 배치되고 오른쪽 네 번째 칸은 빈다.
+만두 카드는 2열×4행이다. 열 간격 52px이며 각 행 높이는 103px이다. 일곱 번째 비빔야채는 왼쪽 네 번째 행에 배치되고 오른쪽 네 번째 칸은 빈다.
 
 ### 6.5 1페이지 메뉴 순서
 
@@ -196,14 +197,15 @@ padding: 28px;
 
 - padding: 상·좌·우 20px, 하 2px
 - border 2px, radius 20px
-- header 높이 50.797px, 하단 padding 8.8px, 선 2.5px
-- 제목 40px/780
+- header 실측 높이 32px, 하단 padding 6px, 선 2.5px
+- 제목 24px/780, 아이콘 19.68px
+- 만두 선택문구 21px/700
 - 리스트 상단 padding 0
 - 태그는 각 행 top 3px, left 4px; 11px/750; 최소 높이 15px
 - 메뉴명 43px/760, 가격 34px/700
 - 서브 텍스트 14px/650, bottom .5px, left 5px
-- 만두 카드: 2열×4행, 열 간격 62px, 행 높이 77.328~77.344px
-- 별미·면 카드: 4행, 행 높이 85.375~85.391px
+- 만두 카드: 2열×4행, 열 간격 62px, 행 높이 82.031~82.047px
+- 별미·면 카드: 4행, 행 높이 90.078~90.094px
 - `0.016px` 차이는 1px 이하 분수 공간을 Grid가 분배하면서 생기는 정상 반올림이다.
 
 ### 7.4 영상

@@ -102,7 +102,14 @@ async function captureTv(win) {
           title: card.querySelector('h1,h2')?.textContent.trim().replace(/\\s+/g, ' ') || null,
           ...p.item(card)
         })),
-        cardHeaders: p.all('.screen.is-active .dumpling-panel__header, .screen.is-active .category__header, .screen.is-active .compact-group header'),
+        cardHeaders: [...active.querySelectorAll('.dumpling-panel__header, .category__header, .compact-group header')].map(header => ({
+          text: header.textContent.trim().replace(/\s+/g, ' '),
+          ...p.item(header),
+          titleStyle: p.style(header.querySelector('h2')),
+          iconStyle: p.style(header.querySelector('.category-icon')),
+          choiceStyle: p.style(header.querySelector('.category-choice')),
+          subtitleStyle: p.style(header.querySelector('p, header > span'))
+        })),
         menuRows: [...active.querySelectorAll('.menu-row')].map(row => ({
           name: row.querySelector('.menu-row__name')?.textContent.trim(),
           price: row.querySelector('.menu-row__price')?.textContent.trim(),
@@ -189,7 +196,7 @@ async function captureForeignA4(win) {
 }
 
 app.whenReady().then(async () => {
-  const tv = await makeWindow(1920, 1080, `${baseUrl}/board.html?v=20260809-83`);
+  const tv = await makeWindow(1920, 1080, `${baseUrl}/board.html?v=20260809-84`);
   const page1 = await captureTv(tv);
   await tv.webContents.executeJavaScript("document.querySelector('#next-screen').click()");
   await new Promise((resolve) => setTimeout(resolve, 350));
