@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-09T13:19:16.180Z",
+  "capturedAt": "2026-08-09T13:54:12.575Z",
   "referenceViewport": "1920x1080 CSS px",
   "page1": {
     "screen": "0",
@@ -496,11 +496,11 @@
           "display": "grid",
           "position": "static",
           "gridTemplateColumns": "627.375px",
-          "gridTemplateRows": "32px 412px",
+          "gridTemplateRows": "50px 412px",
           "gap": "normal",
           "columnGap": "normal",
           "rowGap": "normal",
-          "padding": "18px 22px 2px",
+          "padding": "0px 22px 2px",
           "margin": "0px",
           "border": "2px solid rgb(145, 139, 132)",
           "borderRadius": "24px",
@@ -534,11 +534,11 @@
           "display": "grid",
           "position": "static",
           "gridTemplateColumns": "492.312px",
-          "gridTemplateRows": "32px 412px",
+          "gridTemplateRows": "50px 412px",
           "gap": "normal",
           "columnGap": "normal",
           "rowGap": "normal",
-          "padding": "18px 22px 2px",
+          "padding": "0px 22px 2px",
           "margin": "0px",
           "border": "2px solid rgb(145, 139, 132)",
           "borderRadius": "24px",
@@ -572,11 +572,11 @@
           "display": "grid",
           "position": "static",
           "gridTemplateColumns": "492.297px",
-          "gridTemplateRows": "32px 412px",
+          "gridTemplateRows": "50px 412px",
           "gap": "normal",
           "columnGap": "normal",
           "rowGap": "normal",
-          "padding": "18px 22px 2px",
+          "padding": "0px 22px 2px",
           "margin": "0px",
           "border": "2px solid rgb(145, 139, 132)",
           "borderRadius": "24px",
@@ -598,12 +598,12 @@
     ],
     "cardHeaders": [
       {
-        "text": "만두 메뉴\n                꾼만두/찐만두",
+        "text": "만두 메뉴\n                꾼만두/찐만두 선택",
         "rect": {
           "x": 88,
-          "y": 562,
+          "y": 544,
           "width": 627.375,
-          "height": 32,
+          "height": 50,
           "right": 715.375,
           "bottom": 594
         },
@@ -611,11 +611,11 @@
           "display": "grid",
           "position": "relative",
           "gridTemplateColumns": "231.875px 131.625px 231.875px",
-          "gridTemplateRows": "24px",
+          "gridTemplateRows": "48px",
           "gap": "16px",
           "columnGap": "16px",
           "rowGap": "16px",
-          "padding": "0px 0px 6px",
+          "padding": "0px",
           "margin": "0px",
           "border": "",
           "borderRadius": "0px",
@@ -694,7 +694,7 @@
           "columnGap": "normal",
           "rowGap": "normal",
           "padding": "0px",
-          "margin": "0px 0px 0.63px",
+          "margin": "0px",
           "border": "0px none rgb(23, 25, 24)",
           "borderRadius": "0px",
           "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -717,9 +717,9 @@
         "text": "✨️별미 메뉴",
         "rect": {
           "x": 781.375,
-          "y": 562,
+          "y": 544,
           "width": 492.313,
-          "height": 32,
+          "height": 50,
           "right": 1273.688,
           "bottom": 594
         },
@@ -727,11 +727,11 @@
           "display": "grid",
           "position": "relative",
           "gridTemplateColumns": "175px 118.312px 175px",
-          "gridTemplateRows": "24px",
+          "gridTemplateRows": "48px",
           "gap": "12px",
           "columnGap": "12px",
           "rowGap": "12px",
-          "padding": "0px 0px 6px",
+          "padding": "0px",
           "margin": "0px",
           "border": "",
           "borderRadius": "0px",
@@ -808,9 +808,9 @@
         "text": "🍜면 메뉴",
         "rect": {
           "x": 1339.688,
-          "y": 562,
+          "y": 544,
           "width": 492.297,
-          "height": 32,
+          "height": 50,
           "right": 1831.984,
           "bottom": 594
         },
@@ -818,11 +818,11 @@
           "display": "grid",
           "position": "relative",
           "gridTemplateColumns": "185.062px 98.1719px 185.062px",
-          "gridTemplateRows": "24px",
+          "gridTemplateRows": "48px",
           "gap": "12px",
           "columnGap": "12px",
           "rowGap": "12px",
-          "padding": "0px 0px 6px",
+          "padding": "0px",
           "margin": "0px",
           "border": "",
           "borderRadius": "0px",
@@ -3493,11 +3493,11 @@
           "display": "grid",
           "position": "static",
           "gridTemplateColumns": "839px",
-          "gridTemplateRows": "32px 328.141px",
+          "gridTemplateRows": "50px 330.141px",
           "gap": "normal",
           "columnGap": "normal",
           "rowGap": "normal",
-          "padding": "20px 20px 2px",
+          "padding": "0px 20px 2px",
           "margin": "0px",
           "border": "2px solid rgb(145, 139, 132)",
           "borderRadius": "19.2px",
@@ -3531,11 +3531,11 @@
           "display": "grid",
           "position": "static",
           "gridTemplateColumns": "388.5px",
-          "gridTemplateRows": "32px 360.344px",
+          "gridTemplateRows": "50px 362.344px",
           "gap": "normal",
           "columnGap": "normal",
           "rowGap": "normal",
-          "padding": "20px 20px 2px",
+          "padding": "0px 20px 2px",
           "margin": "0px",
           "border": "2px solid rgb(145, 139, 132)",
           "borderRadius": "19.2px",
@@ -3569,11 +3569,11 @@
           "display": "grid",
           "position": "static",
           "gridTemplateColumns": "388.5px",
-          "gridTemplateRows": "32px 360.344px",
+          "gridTemplateRows": "50px 362.344px",
           "gap": "normal",
           "columnGap": "normal",
           "rowGap": "normal",
-          "padding": "20px 20px 2px",
+          "padding": "0px 20px 2px",
           "margin": "0px",
           "border": "2px solid rgb(145, 139, 132)",
           "borderRadius": "19.2px",
@@ -3595,24 +3595,24 @@
     ],
     "cardHeaders": [
       {
-        "text": "만두 메뉴꾼만두/찐만두",
+        "text": "만두 메뉴꾼만두/찐만두 선택",
         "rect": {
           "x": 86,
-          "y": 209.516,
+          "y": 189.516,
           "width": 839,
-          "height": 32,
+          "height": 50,
           "right": 925,
-          "bottom": 241.516
+          "bottom": 239.516
         },
         "style": {
           "display": "grid",
           "position": "relative",
           "gridTemplateColumns": "345.688px 131.625px 345.688px",
-          "gridTemplateRows": "24px",
+          "gridTemplateRows": "48px",
           "gap": "8px",
           "columnGap": "8px",
           "rowGap": "8px",
-          "padding": "0px 0px 6px",
+          "padding": "0px",
           "margin": "0px",
           "border": "",
           "borderRadius": "0px",
@@ -3691,7 +3691,7 @@
           "columnGap": "normal",
           "rowGap": "normal",
           "padding": "0px",
-          "margin": "0px 0px 0.63px",
+          "margin": "0px",
           "border": "0px none rgb(23, 25, 24)",
           "borderRadius": "0px",
           "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -3714,21 +3714,21 @@
         "text": "✨️별미 메뉴",
         "rect": {
           "x": 86,
-          "y": 613.656,
+          "y": 593.656,
           "width": 388.5,
-          "height": 32,
+          "height": 50,
           "right": 474.5,
-          "bottom": 645.656
+          "bottom": 643.656
         },
         "style": {
           "display": "grid",
           "position": "relative",
           "gridTemplateColumns": "127.094px 118.312px 127.094px",
-          "gridTemplateRows": "24px",
+          "gridTemplateRows": "48px",
           "gap": "8px",
           "columnGap": "8px",
           "rowGap": "8px",
-          "padding": "0px 0px 6px",
+          "padding": "0px",
           "margin": "0px",
           "border": "",
           "borderRadius": "0px",
@@ -3805,21 +3805,21 @@
         "text": "🍜면 메뉴",
         "rect": {
           "x": 536.5,
-          "y": 613.656,
+          "y": 593.656,
           "width": 388.5,
-          "height": 32,
+          "height": 50,
           "right": 925,
-          "bottom": 645.656
+          "bottom": 643.656
         },
         "style": {
           "display": "grid",
           "position": "relative",
           "gridTemplateColumns": "137.156px 98.1719px 137.172px",
-          "gridTemplateRows": "24px",
+          "gridTemplateRows": "48px",
           "gap": "8px",
           "columnGap": "8px",
           "rowGap": "8px",
-          "padding": "0px 0px 6px",
+          "padding": "0px",
           "margin": "0px",
           "border": "",
           "borderRadius": "0px",
@@ -3902,17 +3902,17 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 241.516,
+            "y": 239.516,
             "width": 388.5,
-            "height": 82.031,
+            "height": 82.531,
             "right": 474.5,
-            "bottom": 323.547
+            "bottom": 322.047
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 149.609px 87.3125px",
-            "gridTemplateRows": "81.0312px",
+            "gridTemplateRows": "81.5312px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -4049,17 +4049,17 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 241.516,
+            "y": 239.516,
             "width": 388.5,
-            "height": 82.031,
+            "height": 82.531,
             "right": 925,
-            "bottom": 323.547
+            "bottom": 322.047
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 149.609px 87.3125px",
-            "gridTemplateRows": "81.0312px",
+            "gridTemplateRows": "81.5312px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -4196,17 +4196,17 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 323.547,
+            "y": 322.047,
             "width": 388.5,
-            "height": 82.031,
+            "height": 82.531,
             "right": 474.5,
-            "bottom": 405.578
+            "bottom": 404.578
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 149.609px 87.3125px",
-            "gridTemplateRows": "81.0312px",
+            "gridTemplateRows": "81.5312px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -4343,17 +4343,17 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 323.547,
+            "y": 322.047,
             "width": 388.5,
-            "height": 82.031,
+            "height": 82.531,
             "right": 925,
-            "bottom": 405.578
+            "bottom": 404.578
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 149.609px 87.3125px",
-            "gridTemplateRows": "81.0312px",
+            "gridTemplateRows": "81.5312px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -4490,17 +4490,17 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 405.578,
+            "y": 404.578,
             "width": 388.5,
-            "height": 82.031,
+            "height": 82.531,
             "right": 474.5,
-            "bottom": 487.609
+            "bottom": 487.109
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 149.609px 87.3125px",
-            "gridTemplateRows": "81.0312px",
+            "gridTemplateRows": "81.5312px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -4637,17 +4637,17 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 405.578,
+            "y": 404.578,
             "width": 388.5,
-            "height": 82.031,
+            "height": 82.531,
             "right": 925,
-            "bottom": 487.609
+            "bottom": 487.109
           },
           "style": {
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 144.156px 92.7656px",
-            "gridTemplateRows": "81.0312px",
+            "gridTemplateRows": "81.5312px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -4784,9 +4784,9 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 487.609,
+            "y": 487.109,
             "width": 388.5,
-            "height": 82.047,
+            "height": 82.547,
             "right": 474.5,
             "bottom": 569.656
           },
@@ -4794,7 +4794,7 @@
             "display": "grid",
             "position": "relative",
             "gridTemplateColumns": "142.641px 144.281px 92.6406px",
-            "gridTemplateRows": "82.0469px",
+            "gridTemplateRows": "82.5469px",
             "gap": "6.4px 4.48px",
             "columnGap": "4.48px",
             "rowGap": "6.4px",
@@ -4906,11 +4906,11 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 645.656,
+            "y": 643.656,
             "width": 388.5,
-            "height": 90.078,
+            "height": 90.578,
             "right": 474.5,
-            "bottom": 735.734
+            "bottom": 734.234
           },
           "style": {
             "display": "flex",
@@ -5053,11 +5053,11 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 735.734,
+            "y": 734.234,
             "width": 388.5,
-            "height": 90.094,
+            "height": 90.594,
             "right": 474.5,
-            "bottom": 825.828
+            "bottom": 824.828
           },
           "style": {
             "display": "flex",
@@ -5175,11 +5175,11 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 825.828,
+            "y": 824.828,
             "width": 388.5,
-            "height": 90.078,
+            "height": 90.578,
             "right": 474.5,
-            "bottom": 915.906
+            "bottom": 915.406
           },
           "style": {
             "display": "flex",
@@ -5347,9 +5347,9 @@
         "row": {
           "rect": {
             "x": 86,
-            "y": 915.906,
+            "y": 915.406,
             "width": 388.5,
-            "height": 90.094,
+            "height": 90.594,
             "right": 474.5,
             "bottom": 1006
           },
@@ -5494,11 +5494,11 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 645.656,
+            "y": 643.656,
             "width": 388.5,
-            "height": 90.078,
+            "height": 90.578,
             "right": 925,
-            "bottom": 735.734
+            "bottom": 734.234
           },
           "style": {
             "display": "flex",
@@ -5641,11 +5641,11 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 735.734,
+            "y": 734.234,
             "width": 388.5,
-            "height": 90.094,
+            "height": 90.594,
             "right": 925,
-            "bottom": 825.828
+            "bottom": 824.828
           },
           "style": {
             "display": "flex",
@@ -5763,11 +5763,11 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 825.828,
+            "y": 824.828,
             "width": 388.5,
-            "height": 90.078,
+            "height": 90.578,
             "right": 925,
-            "bottom": 915.906
+            "bottom": 915.406
           },
           "style": {
             "display": "flex",
@@ -5885,9 +5885,9 @@
         "row": {
           "rect": {
             "x": 536.5,
-            "y": 915.906,
+            "y": 915.406,
             "width": 388.5,
-            "height": 90.094,
+            "height": 90.594,
             "right": 925,
             "bottom": 1006
           },

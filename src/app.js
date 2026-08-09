@@ -70,7 +70,7 @@
 
   function categoryChoice(category) {
     if (category.id !== "mandu") return "";
-    return `<small class="category-choice">${labels.manduChoice || "꾼만두/찐만두"}</small>`;
+    return `<small class="category-choice">${labels.manduChoice || "꾼만두/찐만두 선택"}</small>`;
   }
 
   function menuRow(item, dense = false) {
