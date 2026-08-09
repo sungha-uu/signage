@@ -50,6 +50,7 @@ const browserProbe = `(() => {
       padding: css.padding,
       margin: css.margin,
       border: css.border,
+      borderBottom: css.borderBottom,
       borderRadius: css.borderRadius,
       backgroundColor: css.backgroundColor,
       backgroundImage: css.backgroundImage,
@@ -196,7 +197,7 @@ async function captureForeignA4(win) {
 }
 
 app.whenReady().then(async () => {
-  const tv = await makeWindow(1920, 1080, `${baseUrl}/board.html?v=20260809-86`);
+  const tv = await makeWindow(1920, 1080, `${baseUrl}/board.html?v=20260810-87`);
   const page1 = await captureTv(tv);
   await tv.webContents.executeJavaScript("document.querySelector('#next-screen').click()");
   await new Promise((resolve) => setTimeout(resolve, 350));
