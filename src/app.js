@@ -65,9 +65,12 @@
   }
 
   function categoryHeading(category) {
-    const choiceText = labels.manduChoice || "꾼만두/찐만두";
-    const choice = category.id === "mandu" ? `<small class="category-choice">${choiceText}</small>` : "";
-    return `${categoryIcon(category)}${category.title}${choice}`;
+    return `${categoryIcon(category)}${category.title}`;
+  }
+
+  function categoryChoice(category) {
+    if (category.id !== "mandu") return "";
+    return `<small class="category-choice">${labels.manduChoice || "꾼만두/찐만두"}</small>`;
   }
 
   function menuRow(item, dense = false) {
@@ -89,10 +92,7 @@
     return `
       <section class="category ${options.featured ? "category--featured" : ""}">
         <header class="category__header">
-          <div>
-            <h2>${categoryHeading(category)}</h2>
-          </div>
-          ${category.subtitle ? `<p class="category__subtitle">${category.subtitle}</p>` : ""}
+          <h2>${categoryHeading(category)}</h2>
         </header>
         <ul class="menu-list">${visibleItems(category).map((item) => menuRow(item, options.dense)).join("")}</ul>
       </section>`;
@@ -127,8 +127,8 @@
           <section class="static-menu-row">
             <section class="dumpling-panel">
               <header class="dumpling-panel__header">
-                <div><h2>${categoryHeading(mandu)}</h2></div>
-                <p>${mandu.subtitle}</p>
+                <h2>${categoryHeading(mandu)}</h2>
+                ${categoryChoice(mandu)}
               </header>
               <ul class="dumpling-grid">${visibleItems(mandu).map((item) => menuRow(item, true)).join("")}</ul>
             </section>
@@ -164,7 +164,7 @@
             <div class="video-menu__groups">
               ${compactGroups.map((category) => `
                 <section class="compact-group compact-group--${category.id}">
-                  <header><h2>${categoryHeading(category)}</h2><span>${category.subtitle}</span></header>
+                  <header><h2>${categoryHeading(category)}</h2>${categoryChoice(category)}</header>
                   <ul>${visibleItems(category).map((item) => menuRow(item, true)).join("")}</ul>
                 </section>`).join("")}
             </div>

@@ -30,6 +30,9 @@
       "cardTitleIconSize": "19.68px",
       "manduChoiceSize": "21px",
       "cardHeaderBottomPadding": "6px",
+      "cardTitleAlignment": "center_with_icon",
+      "cardHeaderSubtitles": "removed",
+      "manduChoiceAlignment": "right",
       "comboBadge": "추천",
       "comboBadgeIcon": "single_simple_svg_crown_top_left",
       "comboBadgeCrownRotation": "-32deg",
@@ -46,7 +49,7 @@
       "page2MenuBadgeTop": "3px",
       "menuRows": "equal_four_tracks",
       "descriptionRowMainOffset": { "page1": "0", "page2": "0" },
-      "dashboardRevision": "20260809-84",
+      "dashboardRevision": "20260809-85",
       "githubPages": "https://sungha-uu.github.io/signage/",
       "gitTag": "v1"
     },

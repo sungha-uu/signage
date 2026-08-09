@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-09T13:11:37.276Z",
+  "capturedAt": "2026-08-09T13:19:16.180Z",
   "referenceViewport": "1920x1080 CSS px",
   "page1": {
     "screen": "0",
@@ -483,7 +483,7 @@
       },
       {
         "className": "dumpling-panel",
-        "title": "만두 메뉴꾼만두/찐만두",
+        "title": "만두 메뉴",
         "rect": {
           "x": 64,
           "y": 542,
@@ -598,7 +598,7 @@
     ],
     "cardHeaders": [
       {
-        "text": "만두 메뉴꾼만두/찐만두\n                매일 직접 빚는 수제만두",
+        "text": "만두 메뉴\n                꾼만두/찐만두",
         "rect": {
           "x": 88,
           "y": 562,
@@ -608,10 +608,10 @@
           "bottom": 594
         },
         "style": {
-          "display": "flex",
-          "position": "static",
-          "gridTemplateColumns": "none",
-          "gridTemplateRows": "none",
+          "display": "grid",
+          "position": "relative",
+          "gridTemplateColumns": "231.875px 131.625px 231.875px",
+          "gridTemplateRows": "24px",
           "gap": "16px",
           "columnGap": "16px",
           "rowGap": "16px",
@@ -694,7 +694,7 @@
           "columnGap": "normal",
           "rowGap": "normal",
           "padding": "0px",
-          "margin": "0px 0px 0.63px 7.35px",
+          "margin": "0px 0px 0.63px",
           "border": "0px none rgb(23, 25, 24)",
           "borderRadius": "0px",
           "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -711,35 +711,10 @@
           "objectFit": "fill",
           "objectPosition": "50% 50%"
         },
-        "subtitleStyle": {
-          "display": "block",
-          "position": "static",
-          "gridTemplateColumns": "none",
-          "gridTemplateRows": "none",
-          "gap": "normal",
-          "columnGap": "normal",
-          "rowGap": "normal",
-          "padding": "0px",
-          "margin": "0px",
-          "border": "0px none rgb(102, 100, 95)",
-          "borderRadius": "0px",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "backgroundImage": "none",
-          "boxShadow": "none",
-          "color": "rgb(102, 100, 95)",
-          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
-          "fontSize": "14px",
-          "fontWeight": "650",
-          "lineHeight": "16.8px",
-          "letterSpacing": "normal",
-          "textAlign": "start",
-          "transform": "none",
-          "objectFit": "fill",
-          "objectPosition": "50% 50%"
-        }
+        "subtitleStyle": null
       },
       {
-        "text": "✨️별미 메뉴\n          \n          만두와 잘 어울리는 인기 메뉴",
+        "text": "✨️별미 메뉴",
         "rect": {
           "x": 781.375,
           "y": 562,
@@ -749,10 +724,10 @@
           "bottom": 594
         },
         "style": {
-          "display": "flex",
-          "position": "static",
-          "gridTemplateColumns": "none",
-          "gridTemplateRows": "none",
+          "display": "grid",
+          "position": "relative",
+          "gridTemplateColumns": "175px 118.312px 175px",
+          "gridTemplateRows": "24px",
           "gap": "12px",
           "columnGap": "12px",
           "rowGap": "12px",
@@ -827,35 +802,10 @@
           "objectPosition": "50% 50%"
         },
         "choiceStyle": null,
-        "subtitleStyle": {
-          "display": "block",
-          "position": "static",
-          "gridTemplateColumns": "none",
-          "gridTemplateRows": "none",
-          "gap": "normal",
-          "columnGap": "normal",
-          "rowGap": "normal",
-          "padding": "0px",
-          "margin": "0px",
-          "border": "0px none rgb(102, 100, 95)",
-          "borderRadius": "0px",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "backgroundImage": "none",
-          "boxShadow": "none",
-          "color": "rgb(102, 100, 95)",
-          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
-          "fontSize": "14px",
-          "fontWeight": "650",
-          "lineHeight": "16.8px",
-          "letterSpacing": "normal",
-          "textAlign": "right",
-          "transform": "none",
-          "objectFit": "fill",
-          "objectPosition": "50% 50%"
-        }
+        "subtitleStyle": null
       },
       {
-        "text": "🍜면 메뉴\n          \n          따뜻하게, 또는 시원하게",
+        "text": "🍜면 메뉴",
         "rect": {
           "x": 1339.688,
           "y": 562,
@@ -865,10 +815,10 @@
           "bottom": 594
         },
         "style": {
-          "display": "flex",
-          "position": "static",
-          "gridTemplateColumns": "none",
-          "gridTemplateRows": "none",
+          "display": "grid",
+          "position": "relative",
+          "gridTemplateColumns": "185.062px 98.1719px 185.062px",
+          "gridTemplateRows": "24px",
           "gap": "12px",
           "columnGap": "12px",
           "rowGap": "12px",
@@ -943,32 +893,7 @@
           "objectPosition": "50% 50%"
         },
         "choiceStyle": null,
-        "subtitleStyle": {
-          "display": "block",
-          "position": "static",
-          "gridTemplateColumns": "none",
-          "gridTemplateRows": "none",
-          "gap": "normal",
-          "columnGap": "normal",
-          "rowGap": "normal",
-          "padding": "0px",
-          "margin": "0px",
-          "border": "0px none rgb(102, 100, 95)",
-          "borderRadius": "0px",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "backgroundImage": "none",
-          "boxShadow": "none",
-          "color": "rgb(102, 100, 95)",
-          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
-          "fontSize": "14px",
-          "fontWeight": "650",
-          "lineHeight": "16.8px",
-          "letterSpacing": "normal",
-          "textAlign": "right",
-          "transform": "none",
-          "objectFit": "fill",
-          "objectPosition": "50% 50%"
-        }
+        "subtitleStyle": null
       }
     ],
     "menuRows": [
@@ -3555,7 +3480,7 @@
       },
       {
         "className": "compact-group compact-group--mandu",
-        "title": "만두 메뉴꾼만두/찐만두",
+        "title": "만두 메뉴",
         "rect": {
           "x": 64,
           "y": 187.516,
@@ -3670,7 +3595,7 @@
     ],
     "cardHeaders": [
       {
-        "text": "만두 메뉴꾼만두/찐만두매일 직접 빚는 수제만두",
+        "text": "만두 메뉴꾼만두/찐만두",
         "rect": {
           "x": 86,
           "y": 209.516,
@@ -3680,10 +3605,10 @@
           "bottom": 241.516
         },
         "style": {
-          "display": "flex",
-          "position": "static",
-          "gridTemplateColumns": "none",
-          "gridTemplateRows": "none",
+          "display": "grid",
+          "position": "relative",
+          "gridTemplateColumns": "345.688px 131.625px 345.688px",
+          "gridTemplateRows": "24px",
           "gap": "8px",
           "columnGap": "8px",
           "rowGap": "8px",
@@ -3766,7 +3691,7 @@
           "columnGap": "normal",
           "rowGap": "normal",
           "padding": "0px",
-          "margin": "0px 0px 0.63px 10.5px",
+          "margin": "0px 0px 0.63px",
           "border": "0px none rgb(23, 25, 24)",
           "borderRadius": "0px",
           "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -3783,35 +3708,10 @@
           "objectFit": "fill",
           "objectPosition": "50% 50%"
         },
-        "subtitleStyle": {
-          "display": "block",
-          "position": "static",
-          "gridTemplateColumns": "none",
-          "gridTemplateRows": "none",
-          "gap": "normal",
-          "columnGap": "normal",
-          "rowGap": "normal",
-          "padding": "0px",
-          "margin": "0px",
-          "border": "0px none rgb(102, 100, 95)",
-          "borderRadius": "0px",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "backgroundImage": "none",
-          "boxShadow": "none",
-          "color": "rgb(102, 100, 95)",
-          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
-          "fontSize": "10.368px",
-          "fontWeight": "650",
-          "lineHeight": "12.4416px",
-          "letterSpacing": "normal",
-          "textAlign": "right",
-          "transform": "none",
-          "objectFit": "fill",
-          "objectPosition": "50% 50%"
-        }
+        "subtitleStyle": null
       },
       {
-        "text": "✨️별미 메뉴만두와 잘 어울리는 인기 메뉴",
+        "text": "✨️별미 메뉴",
         "rect": {
           "x": 86,
           "y": 613.656,
@@ -3821,10 +3721,10 @@
           "bottom": 645.656
         },
         "style": {
-          "display": "flex",
-          "position": "static",
-          "gridTemplateColumns": "none",
-          "gridTemplateRows": "none",
+          "display": "grid",
+          "position": "relative",
+          "gridTemplateColumns": "127.094px 118.312px 127.094px",
+          "gridTemplateRows": "24px",
           "gap": "8px",
           "columnGap": "8px",
           "rowGap": "8px",
@@ -3899,35 +3799,10 @@
           "objectPosition": "50% 50%"
         },
         "choiceStyle": null,
-        "subtitleStyle": {
-          "display": "block",
-          "position": "static",
-          "gridTemplateColumns": "none",
-          "gridTemplateRows": "none",
-          "gap": "normal",
-          "columnGap": "normal",
-          "rowGap": "normal",
-          "padding": "0px",
-          "margin": "0px",
-          "border": "0px none rgb(102, 100, 95)",
-          "borderRadius": "0px",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "backgroundImage": "none",
-          "boxShadow": "none",
-          "color": "rgb(102, 100, 95)",
-          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
-          "fontSize": "10.368px",
-          "fontWeight": "650",
-          "lineHeight": "12.4416px",
-          "letterSpacing": "normal",
-          "textAlign": "right",
-          "transform": "none",
-          "objectFit": "fill",
-          "objectPosition": "50% 50%"
-        }
+        "subtitleStyle": null
       },
       {
-        "text": "🍜면 메뉴따뜻하게, 또는 시원하게",
+        "text": "🍜면 메뉴",
         "rect": {
           "x": 536.5,
           "y": 613.656,
@@ -3937,10 +3812,10 @@
           "bottom": 645.656
         },
         "style": {
-          "display": "flex",
-          "position": "static",
-          "gridTemplateColumns": "none",
-          "gridTemplateRows": "none",
+          "display": "grid",
+          "position": "relative",
+          "gridTemplateColumns": "137.156px 98.1719px 137.172px",
+          "gridTemplateRows": "24px",
           "gap": "8px",
           "columnGap": "8px",
           "rowGap": "8px",
@@ -4015,32 +3890,7 @@
           "objectPosition": "50% 50%"
         },
         "choiceStyle": null,
-        "subtitleStyle": {
-          "display": "block",
-          "position": "static",
-          "gridTemplateColumns": "none",
-          "gridTemplateRows": "none",
-          "gap": "normal",
-          "columnGap": "normal",
-          "rowGap": "normal",
-          "padding": "0px",
-          "margin": "0px",
-          "border": "0px none rgb(102, 100, 95)",
-          "borderRadius": "0px",
-          "backgroundColor": "rgba(0, 0, 0, 0)",
-          "backgroundImage": "none",
-          "boxShadow": "none",
-          "color": "rgb(102, 100, 95)",
-          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
-          "fontSize": "10.368px",
-          "fontWeight": "650",
-          "lineHeight": "12.4416px",
-          "letterSpacing": "normal",
-          "textAlign": "right",
-          "transform": "none",
-          "objectFit": "fill",
-          "objectPosition": "50% 50%"
-        }
+        "subtitleStyle": null
       }
     ],
     "menuRows": [
