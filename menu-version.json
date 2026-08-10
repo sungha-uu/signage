@@ -1,8 +1,8 @@
 {
-  "packageVersion": 1,
+  "packageVersion": "1.1",
   "packageStatus": "confirmed",
-  "finalizedAt": "2026-08-09",
-  "versionTag": "v1",
+  "finalizedAt": "2026-08-10",
+  "versionTag": "v1.1",
   "designSpecifications": {
     "tv": "design/TV_MENU_DESIGN_V1.md",
     "a4Korean": "design/A4_KOREAN_MENU_DESIGN_V1.md",
@@ -10,7 +10,7 @@
   },
   "components": {
     "tvMenu": {
-      "version": 1,
+      "version": "1.1",
       "status": "confirmed",
       "language": "ko",
       "palette": "warm_ivory",
@@ -62,7 +62,7 @@
       "descriptionRowMainOffset": { "page1": "0", "page2": "0" },
       "dashboardRevision": "20260810-96",
       "githubPages": "https://sungha-uu.github.io/signage/",
-      "gitTag": "v1"
+      "gitTag": "v1.1"
     },
     "a4Korean": {
       "version": 1,
@@ -79,5 +79,5 @@
       "artifact": "release/v1/A4/A4_메뉴판_외국어_v1.png"
     }
   },
-  "remoteArchiveStatus": "confirmed_v1"
+  "remoteArchiveStatus": "confirmed_v1.1"
 }

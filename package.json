@@ -1,6 +1,6 @@
 {
   "name": "sexy-kkunmandu-menu-board",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "섹시한 꾼만두 Windows 디지털 메뉴판",
   "main": "electron/main.cjs",
   "author": "sungha-uu",
@@ -11,6 +11,7 @@
     "build:portable": "electron-builder --win portable --x64",
     "release:win": "pnpm run build:portable && node scripts/build-release.cjs",
     "release:v1": "pnpm run build:portable && node scripts/package-v1-release.cjs",
+    "release:v1.1": "pnpm run build:portable && node scripts/build-release.cjs",
     "metrics:design": "electron scripts/capture-design-metrics.cjs",
     "export:a4": "node scripts/export-a4.cjs"
   },
@@ -33,6 +34,7 @@
       "menu_design.md",
       "menu-version.json",
       "VERSION_V1.md",
+      "VERSION_V1_1.md",
       "design/**/*",
       "content/**/*",
       "!content/assets/images/foreign-menu/**/*",
