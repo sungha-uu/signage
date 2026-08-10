@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-10T00:54:00.599Z",
+  "capturedAt": "2026-08-10T01:07:25.396Z",
   "referenceViewport": "1920x1080 CSS px",
   "page1": {
     "screen": "0",
@@ -926,7 +926,7 @@
         "name": "모듬만두",
         "price": "7,000",
         "description": "고기2 · 깻잎1 · 땡초1 · 새우1",
-        "badge": null,
+        "badge": "인기",
         "row": {
           "rect": {
             "x": 88,
@@ -1045,7 +1045,33 @@
           "objectFit": "fill",
           "objectPosition": "50% 50%"
         },
-        "badgeStyle": null,
+        "badgeStyle": {
+          "display": "flex",
+          "position": "absolute",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "1px 7px",
+          "margin": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "borderBottom": "0px none rgb(255, 255, 255)",
+          "borderRadius": "5px",
+          "backgroundColor": "rgb(237, 85, 59)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "12px",
+          "fontWeight": "750",
+          "lineHeight": "12px",
+          "letterSpacing": "normal",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
         "leaderStyle": {
           "display": "block",
           "position": "static",
@@ -4019,7 +4045,7 @@
         "name": "모듬만두",
         "price": "7,000",
         "description": "고기2 · 깻잎1 · 땡초1 · 새우1",
-        "badge": null,
+        "badge": "인기",
         "row": {
           "rect": {
             "x": 86,
@@ -4138,7 +4164,33 @@
           "objectFit": "fill",
           "objectPosition": "50% 50%"
         },
-        "badgeStyle": null,
+        "badgeStyle": {
+          "display": "flex",
+          "position": "absolute",
+          "gridTemplateColumns": "none",
+          "gridTemplateRows": "none",
+          "gap": "normal",
+          "columnGap": "normal",
+          "rowGap": "normal",
+          "padding": "1px 6px",
+          "margin": "0px",
+          "border": "0px none rgb(255, 255, 255)",
+          "borderBottom": "0px none rgb(255, 255, 255)",
+          "borderRadius": "4px",
+          "backgroundColor": "rgb(237, 85, 59)",
+          "backgroundImage": "none",
+          "boxShadow": "none",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "\"Pretendard Local\", \"Pretendard Variable\", \"Noto Sans KR\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", sans-serif",
+          "fontSize": "11px",
+          "fontWeight": "750",
+          "lineHeight": "11px",
+          "letterSpacing": "normal",
+          "textAlign": "start",
+          "transform": "none",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%"
+        },
         "leaderStyle": {
           "display": "block",
           "position": "static",

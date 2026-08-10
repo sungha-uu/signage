@@ -270,7 +270,7 @@ button { font: inherit; }
 .static-menu-row .menu-row__name { font-size: 45px; font-weight: 760; }
 .static-menu-row .menu-row__price { margin-top: 0; font-size: 34px; font-weight: 700; }
 .static-menu-row .menu-row__description { position: absolute; top: auto; bottom: .5px; left: 5px; margin: 0; font-size: 16px; }
-.static-menu-row .badge { position: absolute; z-index: 1; top: 3px; left: 4px; min-height: 18px; padding: 1px 7px; border-radius: 5px; font-size: 12px; font-weight: 750; transform: none; }
+.static-menu-row .badge { position: absolute; z-index: 1; top: 3px; left: 1px; min-height: 18px; padding: 1px 7px; border-radius: 5px; font-size: 12px; font-weight: 750; transform: none; }
 .static-menu-row .dumpling-grid .menu-row { align-items: center; padding: 0; }
 
 .screen-footer { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; min-height: 30px; padding: 0 1.2%; color: #fff; }
@@ -303,7 +303,7 @@ button { font: inherit; }
 .compact-group .menu-row__price { font-size: 34px; font-weight: 700; }
 .compact-group .menu-row__description { position: absolute; top: auto; bottom: .5px; left: 5px; margin: 0; font-size: 14px; }
 .compact-group .menu-row__title-line { position: static; }
-.compact-group .badge { position: absolute; z-index: 1; top: 3px; left: 4px; min-height: 15px; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 750; transform: none; }
+.compact-group .badge { position: absolute; z-index: 1; top: 3px; left: 1px; min-height: 15px; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 750; transform: none; }
 .compact-group .menu-row__copy { align-self: center; }
 .compact-group .menu-row:has(.menu-row__description) .menu-row__copy { transform: none; }
 .compact-group .menu-row__leader, .compact-group .menu-row__price { align-self: center; margin-top: 0; }
