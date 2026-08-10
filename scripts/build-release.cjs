@@ -4,6 +4,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { spawnSync } = require("node:child_process");
 const packageJson = require("../package.json");
+const menuVersion = require("../menu-version.json");
 
 const projectRoot = path.resolve(__dirname, "..");
 const distRoot = path.join(projectRoot, "dist");
@@ -32,10 +33,15 @@ if (!/^\d{6}_\d{6}$/.test(releaseStamp)) {
   throw new Error(`Invalid RELEASE_STAMP format: ${releaseStamp}`);
 }
 
-const releaseName = `release_${releaseStamp}`;
+const versionTag = menuVersion.versionTag;
+if (!/^v\d+(?:\.\d+){0,2}$/.test(versionTag)) {
+  throw new Error(`Invalid version tag: ${versionTag}`);
+}
+
+const releaseName = `release_${releaseStamp}_${versionTag}`;
 const releaseRoot = path.join(distRoot, releaseName);
 const zipPath = path.join(distRoot, `${releaseName}.zip`);
-const releaseExeName = `섹시한 꾼만두 TV 메뉴판 v1.1.exe`;
+const releaseExeName = `섹시한 꾼만두 TV 메뉴판 ${versionTag}.exe`;
 
 if (!fs.existsSync(portablePath)) {
   throw new Error(`Built EXE not found: ${portablePath}`);
