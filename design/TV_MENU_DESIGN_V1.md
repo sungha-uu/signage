@@ -6,7 +6,7 @@
 
 ## 1. V1 고정 조건
 
-- 기준 페이지: `board.html?v=20260810-94`
+- 기준 페이지: `board.html?v=20260810-95`
 - 기준 화면: 1920×1080, 16:9 가로형
 - 화면 수: 2개
 - 1페이지: 대표 세트/사진 3장/만두·별미·면 전체 가격표
@@ -131,9 +131,10 @@ padding: 28px;
 - padding 14px, gap 14px, radius 28px
 - 세 사진은 동일 높이, 3등분 열
 - 각 figure: border 1px `#DED9D0`, radius 18px, overflow hidden
-- 탕수육: `object-position:center center`, `scale(1.05)`
-- 콩나물어묵: `fishcake-generated-v2.png`, `object-position:center center`, `scale(1)`
-- 네 음식 사진은 접시가 차지하는 시각적 크기가 유사하도록 보정
+- 탕수육: `object-position:center center`, `translateY(2.5%) scale(1.18)`
+- 콩나물어묵: `fishcake-generated-v2.png`, `object-position:center center`, `translateY(2.5%) scale(1.12)`
+- 탕수육·콩나물어묵은 하단 테이블이 거의 보이지 않고 상단 테이블만 조금 남도록 확대·하향 배치
+- 네 음식 사진은 그릇과 테이블의 시각적 비율이 유사하도록 보정
 - 카드 배경·테두리·그림자는 일반 메뉴 카드와 동일
 
 ### 6.4 1페이지 메뉴 카드

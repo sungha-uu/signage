@@ -197,7 +197,7 @@ async function captureForeignA4(win) {
 }
 
 app.whenReady().then(async () => {
-  const tv = await makeWindow(1920, 1080, `${baseUrl}/board.html?v=20260810-94`);
+  const tv = await makeWindow(1920, 1080, `${baseUrl}/board.html?v=20260810-95`);
   const page1 = await captureTv(tv);
   await tv.webContents.executeJavaScript("document.querySelector('#next-screen').click()");
   await new Promise((resolve) => setTimeout(resolve, 350));
