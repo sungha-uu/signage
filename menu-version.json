@@ -54,8 +54,11 @@
       "page2MenuBadgeTop": "3px",
       "page2MenuBadgeLeft": "0px",
       "menuRows": "equal_four_tracks",
+      "tangsuyukPhotoScale": "1.05",
+      "fishcakePhotoScale": "1.0",
+      "fishcakePhoto": "content/assets/images/fishcake-generated-v2.png",
       "descriptionRowMainOffset": { "page1": "0", "page2": "0" },
-      "dashboardRevision": "20260810-92",
+      "dashboardRevision": "20260810-94",
       "githubPages": "https://sungha-uu.github.io/signage/",
       "gitTag": "v1"
     },

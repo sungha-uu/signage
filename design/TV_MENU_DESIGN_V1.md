@@ -6,7 +6,7 @@
 
 ## 1. V1 고정 조건
 
-- 기준 페이지: `board.html?v=20260810-92`
+- 기준 페이지: `board.html?v=20260810-94`
 - 기준 화면: 1920×1080, 16:9 가로형
 - 화면 수: 2개
 - 1페이지: 대표 세트/사진 3장/만두·별미·면 전체 가격표
@@ -131,8 +131,9 @@ padding: 28px;
 - padding 14px, gap 14px, radius 28px
 - 세 사진은 동일 높이, 3등분 열
 - 각 figure: border 1px `#DED9D0`, radius 18px, overflow hidden
-- 탕수육: `object-position:center`, `scale(1.58)`
-- 가운데 콩나물어묵, 오른쪽 냉메밀
+- 탕수육: `object-position:center center`, `scale(1.05)`
+- 콩나물어묵: `fishcake-generated-v2.png`, `object-position:center center`, `scale(1)`
+- 네 음식 사진은 접시가 차지하는 시각적 크기가 유사하도록 보정
 - 카드 배경·테두리·그림자는 일반 메뉴 카드와 동일
 
 ### 6.4 1페이지 메뉴 카드
@@ -257,7 +258,7 @@ padding: 28px;
 | `logo.png` | `44B448667BD8AA2BFF42274470C4ED12213E01D7AC49B7B70724017F97A90EB5` |
 | `mandu-bibim.png` | `8DACD48558B65FDD230208598A3CB82532420A43FF0091083B4C26DF7A352B9B` |
 | `tangsuyuk.jpeg` | `7730E178A11A419E00609B5B9A695051FD8598D703D346A3935880B6637A9A09` |
-| `fishcake.png` | `3D46701BB16571E5DC2327B418F02A44D02454E3FE8C928F18618E301959BD03` |
+| `fishcake-generated-v2.png` | `83810721853AA5EBE1E91A19B89A078732BA53A6D0865EE877B96CC5CAE8D2F9` |
 | `cold-noodle.png` | `9D3980C1B12FFCF625CC9CD72E38165567334326A0291FD7036D459018D843D4` |
 | `menu-video.mp4` | `BDDE03DED7C938D6F5DC8109893DDDA5BEF4DDAF1216E114563C71C95AB6B6D4` |
 
