@@ -69,7 +69,7 @@ window.MENU_BOARD_DATA = {
   gallery: [
     { categoryId: "special", image: "content/assets/images/tangsuyuk.jpeg?v=20260808-51", alt: "옛날 탕수육" },
     { categoryId: "noodle", image: "content/assets/images/cold-noodle.png", alt: "냉메밀" },
-    { categoryId: "special", image: "content/assets/images/fishcake.png", alt: "콩나물어묵" }
+    { categoryId: "special", image: "content/assets/images/fishcake-generated-v2.png?v=20260810-93", alt: "콩나물어묵" }
   ],
   video: {
     src: "content/assets/video/menu-video.mp4",

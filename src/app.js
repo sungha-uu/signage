@@ -120,7 +120,7 @@
             </div>
             <section class="static-gallery-card">
               <figure class="static-photo static-photo--tangsuyuk"><img src="${tangsuyukPhoto.image}" alt="${tangsuyukPhoto.alt}" /></figure>
-              <figure class="static-photo"><img src="${fishcakePhoto.image}" alt="${fishcakePhoto.alt}" /></figure>
+              <figure class="static-photo static-photo--fishcake"><img src="${fishcakePhoto.image}" alt="${fishcakePhoto.alt}" /></figure>
               <figure class="static-photo"><img src="${noodlePhoto.image}" alt="${noodlePhoto.alt}" /></figure>
             </section>
           </section>
