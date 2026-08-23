@@ -1,8 +1,8 @@
 {
-  "packageVersion": "1.1",
+  "packageVersion": "1.2",
   "packageStatus": "confirmed",
-  "finalizedAt": "2026-08-10",
-  "versionTag": "v1.1",
+  "finalizedAt": "2026-08-23",
+  "versionTag": "v1.2",
   "designSpecifications": {
     "tv": "design/TV_MENU_DESIGN_V1.md",
     "a4Korean": "design/A4_KOREAN_MENU_DESIGN_V1.md",
@@ -10,7 +10,7 @@
   },
   "components": {
     "tvMenu": {
-      "version": "1.1",
+      "version": "1.2",
       "status": "confirmed",
       "language": "ko",
       "palette": "warm_ivory",
@@ -23,6 +23,15 @@
       "comboCardLine": "#d58f83",
       "comboCardShadow": "0 5px 14px rgba(151, 75, 62, .14)",
       "priceFormat": "number_only",
+      "tangsuyukSizePrices": {
+        "oldStyle": { "small": 8000, "large": 12000 },
+        "yurin": { "small": 9000, "large": 14000 },
+        "layout": "two_rows_top_bottom",
+        "page1NumberSize": "28px",
+        "page2NumberSize": "27px",
+        "labelScale": "60%",
+        "labelColumnAlignment": "shared_vertical_line"
+      },
       "comboPriceFormat": "won_symbol_prefix",
       "comboCurrencyScale": "75%",
       "cardHeaderDividerWidth": "0px",
@@ -60,9 +69,9 @@
       "fishcakePhotoTranslateY": "2.5%",
       "fishcakePhoto": "content/assets/images/fishcake-generated-v2.png",
       "descriptionRowMainOffset": { "page1": "0", "page2": "0" },
-      "dashboardRevision": "20260810-96",
+      "dashboardRevision": "20260823-08",
       "githubPages": "https://sungha-uu.github.io/signage/",
-      "gitTag": "v1.1"
+      "gitTag": "v1.2"
     },
     "a4Korean": {
       "version": 1,
@@ -79,5 +88,5 @@
       "artifact": "release/v1/A4/A4_메뉴판_외국어_v1.png"
     }
   },
-  "remoteArchiveStatus": "confirmed_v1.1"
+  "remoteArchiveStatus": "confirmed_v1.2"
 }
