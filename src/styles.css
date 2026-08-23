@@ -258,7 +258,7 @@ button { font: inherit; }
 }
 .menu-row__price { flex: 0 0 auto; margin-left: auto; font-size: clamp(17px, 1.18vw, 26px); font-weight: 700; line-height: 1.05; letter-spacing: -.025em; white-space: nowrap; }
 .menu-row__price--split { display: grid; grid-template-rows: repeat(2, 1fr); align-items: stretch; justify-items: end; row-gap: 0; font-size: clamp(15px, 1vw, 21px); line-height: 1; letter-spacing: -.015em; }
-.menu-row__price-line { display: grid; grid-template-columns: .76em 1fr; align-items: center; width: 4.13em; column-gap: .12em; }
+.menu-row__price-line { display: grid; grid-template-columns: .76em 1fr; align-items: center; width: 4.16em; column-gap: .15em; }
 .menu-row__price-line:first-child { align-self: start; }
 .menu-row__price-line:last-child { align-self: end; }
 .menu-row__price-line small { color: var(--ink); font-size: .6em; font-weight: 780; text-align: center; }
