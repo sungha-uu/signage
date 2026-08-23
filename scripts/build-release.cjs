@@ -56,7 +56,10 @@ fs.rmSync(zipPath, { force: true });
 fs.copyFileSync(portablePath, path.join(releaseRoot, releaseExeName));
 
 const psLiteral = (value) => `'${value.replaceAll("'", "''")}'`;
-const zipCommand = `Compress-Archive -LiteralPath ${psLiteral(releaseRoot)} -DestinationPath ${psLiteral(zipPath)} -CompressionLevel Optimal -Force`;
+const zipCommand = [
+  "Add-Type -AssemblyName System.IO.Compression.FileSystem",
+  `[System.IO.Compression.ZipFile]::CreateFromDirectory(${psLiteral(releaseRoot)}, ${psLiteral(zipPath)}, [System.IO.Compression.CompressionLevel]::Optimal, $true)`
+].join("; ");
 const zipResult = spawnSync("powershell.exe", ["-NoProfile", "-NonInteractive", "-Command", zipCommand], {
   cwd: distRoot,
   encoding: "utf8"
