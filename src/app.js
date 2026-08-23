@@ -73,6 +73,16 @@
     return `<small class="category-choice">${labels.manduChoice || "꾼만두/찐만두 선택"}</small>`;
   }
 
+  function menuPriceMarkup(item) {
+    if (!item.sizePrices) return `<strong class="menu-row__price">${menuPrice(item.price)}</strong>`;
+    return `
+      <strong class="menu-row__price menu-row__price--split" aria-label="${item.sizePrices.map(({ label, price }) => `${label} ${menuPrice(price)}원`).join(", ")}">
+        ${item.sizePrices.map(({ label, price }) => `
+          <span class="menu-row__price-line"><small>${label}</small><span>${menuPrice(price)}</span></span>
+        `).join("")}
+      </strong>`;
+  }
+
   function menuRow(item, dense = false) {
     return `
       <li class="menu-row ${item.accent ? "menu-row--accent" : ""} ${dense ? "menu-row--dense" : ""}">
@@ -84,7 +94,7 @@
           ${item.description ? `<small class="menu-row__description">${item.description}</small>` : ""}
         </div>
         <span class="menu-row__leader" aria-hidden="true"></span>
-        <strong class="menu-row__price">${menuPrice(item.price)}</strong>
+        ${menuPriceMarkup(item)}
       </li>`;
   }
 

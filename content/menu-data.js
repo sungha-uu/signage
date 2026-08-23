@@ -47,8 +47,8 @@ window.MENU_BOARD_DATA = {
       icon: "✨️",
       subtitle: "만두와 잘 어울리는 인기 메뉴",
       items: [
-        { name: "옛날 탕수육", price: 12000, badge: "인기", visible: true },
-        { name: "유린 탕수육", price: 14000, visible: true },
+        { name: "옛날 탕수육", sizePrices: [{ label: "소", price: 8000 }, { label: "대", price: 12000 }], badge: "인기", visible: true },
+        { name: "유린 탕수육", sizePrices: [{ label: "소", price: 9000 }, { label: "대", price: 14000 }], visible: true },
         { name: "콩나물어묵", price: 5000, description: "1인분 4개", badge: "인기", visible: true },
         { name: "음료수", price: 2000, description: "콜라 · 사이다", visible: true }
       ]
