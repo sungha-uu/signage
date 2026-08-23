@@ -27,10 +27,13 @@
         "oldStyle": { "small": 8000, "large": 12000 },
         "yurin": { "small": 9000, "large": 14000 },
         "layout": "two_rows_top_bottom",
-        "page1NumberSize": "28px",
-        "page2NumberSize": "27px",
-        "labelScale": "60%",
-        "labelColumnAlignment": "shared_vertical_line"
+        "page1NumberSize": "31px",
+        "page2NumberSize": "30px",
+        "labelScale": "100%",
+        "labelColumnAlignment": "shared_vertical_line",
+        "dashboardLabelNumberGap": "0.15em",
+        "signageLabelNumberGap": "0.21em",
+        "signageGapCorrection": "approximately +1.9px at 1920x1080"
       },
       "comboPriceFormat": "won_symbol_prefix",
       "comboCurrencyScale": "75%",
