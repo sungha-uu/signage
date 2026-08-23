@@ -262,7 +262,7 @@ button { font: inherit; }
 .menu-row__price-line:first-child { align-self: start; }
 .menu-row__price-line:last-child { align-self: end; }
 .menu-row__price-line small { color: var(--muted); font-size: .72em; font-weight: 780; text-align: center; }
-.menu-row__price-line > span { min-width: 4.15em; text-align: right; }
+.menu-row__price-line > span { min-width: 0; text-align: right; }
 .menu-row--accent .menu-row__name, .menu-row--accent .menu-row__price { color: var(--coral); }
 .menu-row--dense { padding-top: clamp(8px, .87vh, 13px); padding-bottom: clamp(8px, .87vh, 13px); }
 
