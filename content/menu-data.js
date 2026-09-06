@@ -59,7 +59,6 @@ window.MENU_BOARD_DATA = {
       icon: "🍜",
       subtitle: "따뜻하게, 또는 시원하게",
       items: [
-        { name: "냉메밀", price: 7000, badge: "여름 한정", visible: true },
         { name: "냄비우동", price: 5000, visible: true },
         { name: "얼큰우동", price: 6000, visible: true },
         { name: "비빔우동", price: 6000, visible: true }
@@ -68,7 +67,7 @@ window.MENU_BOARD_DATA = {
   ],
   gallery: [
     { categoryId: "special", image: "content/assets/images/tangsuyuk.jpeg?v=20260808-51", alt: "옛날 탕수육" },
-    { categoryId: "noodle", image: "content/assets/images/cold-noodle.png", alt: "냉메밀" },
+    { categoryId: "noodle", image: "content/assets/images/pot-udon.jpg?v=20260906-01", alt: "냄비우동" },
     { categoryId: "special", image: "content/assets/images/fishcake-generated-v2.png?v=20260810-96", alt: "콩나물어묵" }
   ],
   video: {
