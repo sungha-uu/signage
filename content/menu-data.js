@@ -49,8 +49,7 @@ window.MENU_BOARD_DATA = {
       items: [
         { name: "옛날 탕수육", sizePrices: [{ label: "소", price: 8000 }, { label: "대", price: 12000 }], badge: "인기", visible: true },
         { name: "유린 탕수육", sizePrices: [{ label: "소", price: 9000 }, { label: "대", price: 14000 }], visible: true },
-        { name: "콩나물어묵", price: 5000, description: "1인분 4개", badge: "인기", visible: true },
-        { name: "음료수", price: 2000, description: "콜라 · 사이다", visible: true }
+        { name: "콩나물어묵", price: 5000, description: "1인분 4개", badge: "인기", visible: true }
       ]
     },
     {
@@ -61,13 +60,14 @@ window.MENU_BOARD_DATA = {
       items: [
         { name: "냄비우동", price: 5000, visible: true },
         { name: "얼큰우동", price: 6000, visible: true },
-        { name: "비빔우동", price: 6000, visible: true }
+        { name: "비빔우동", price: 6000, visible: true },
+        { name: "음료수", price: 2000, description: "콜라 · 사이다", visible: true }
       ]
     }
   ],
   gallery: [
     { categoryId: "special", image: "content/assets/images/tangsuyuk.jpeg?v=20260808-51", alt: "옛날 탕수육" },
-    { categoryId: "noodle", image: "content/assets/images/pot-udon-no-seaweed.png?v=20260906-04", alt: "김가루 없는 냄비우동" },
+    { categoryId: "noodle", image: "content/assets/images/pot-udon-seaweed-retouched.png?v=20260906-05", alt: "김가루 리터치 냄비우동" },
     { categoryId: "special", image: "content/assets/images/fishcake-generated-v2.png?v=20260810-96", alt: "콩나물어묵" }
   ],
   video: {

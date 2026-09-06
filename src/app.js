@@ -100,7 +100,7 @@
 
   function categoryBlock(category, options = {}) {
     return `
-      <section class="category ${options.featured ? "category--featured" : ""}">
+      <section class="category category--${category.id} ${options.featured ? "category--featured" : ""}">
         <header class="category__header">
           <h2>${categoryHeading(category)}</h2>
         </header>
