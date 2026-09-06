@@ -283,6 +283,8 @@ button { font: inherit; }
 .static-menu-row .category--special .menu-row__price--split { padding-top: 18px; padding-bottom: 18px; }
 .static-menu-row .category--special .menu-row__price-line > span { font-size: 34px; }
 .static-menu-row .category--special .menu-row__price-line small { font-size: 28px; }
+.static-menu-row .category--special .menu-row__price--split { flex: 0 0 4.51em; width: 4.51em; margin-left: auto; margin-right: 0; }
+.static-menu-row .category--special .menu-row__price-line { width: 100%; }
 .static-menu-row .menu-row__description { position: absolute; top: auto; bottom: .5px; left: 5px; margin: 0; font-size: 16px; }
 .static-menu-row .badge { position: absolute; z-index: 1; top: 3px; left: 0; min-height: 18px; padding: 1px 7px; border-radius: 5px; font-size: 12px; font-weight: 750; transform: none; }
 .static-menu-row .category--special .badge { top: 18px; }
@@ -322,6 +324,8 @@ button { font: inherit; }
 .compact-group--special .menu-row__price-line > span { font-size: 34px; }
 .compact-group .menu-row__price-line small { font-size: .8em; }
 .compact-group--special .menu-row__price-line small { font-size: 28px; }
+.compact-group--special .menu-row__price--split { flex: 0 0 4.51em; width: 4.51em; margin-left: auto; margin-right: 0; }
+.compact-group--special .menu-row__price-line { width: 100%; }
 .signage-mode .menu-row__price-line small { font-size: 1em; }
 .compact-group .menu-row__description { position: absolute; top: auto; bottom: .5px; left: 5px; margin: 0; font-size: 14px; }
 .compact-group .menu-row__title-line { position: static; }
