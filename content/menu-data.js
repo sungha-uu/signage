@@ -58,7 +58,7 @@ window.MENU_BOARD_DATA = {
       icon: "🍜",
       subtitle: "따뜻하게, 또는 시원하게",
       items: [
-        { name: "냄비우동", price: 5000, visible: true },
+        { name: "냄비우동", price: 5000, badge: "인기", visible: true },
         { name: "얼큰우동", price: 6000, visible: true },
         { name: "비빔우동", price: 6000, visible: true },
         { name: "음료수", price: 2000, description: "콜라 · 사이다", visible: true }
