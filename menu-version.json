@@ -1,8 +1,8 @@
 {
-  "packageVersion": "1.2",
+  "packageVersion": "1.3",
   "packageStatus": "confirmed",
-  "finalizedAt": "2026-08-23",
-  "versionTag": "v1.2",
+  "finalizedAt": "2026-09-06",
+  "versionTag": "v1.3",
   "designSpecifications": {
     "tv": "design/TV_MENU_DESIGN_V1.md",
     "a4Korean": "design/A4_KOREAN_MENU_DESIGN_V1.md",
@@ -10,7 +10,7 @@
   },
   "components": {
     "tvMenu": {
-      "version": "1.2",
+      "version": "1.3",
       "status": "confirmed",
       "language": "ko",
       "palette": "warm_ivory",
@@ -65,16 +65,24 @@
       "page2MenuListTopPadding": "0px",
       "page2MenuBadgeTop": "3px",
       "page2MenuBadgeLeft": "0px",
-      "menuRows": "equal_four_tracks",
+      "menuRows": {
+        "mandu": "equal_four_tracks_two_columns",
+        "special": "equal_three_tracks_full_card_height",
+        "noodle": "equal_four_tracks"
+      },
       "tangsuyukPhotoScale": "1.50",
       "fishcakePhotoScale": "1.12",
       "tangsuyukPhotoTranslateY": "0%",
       "fishcakePhotoTranslateY": "2.5%",
       "fishcakePhoto": "content/assets/images/fishcake-generated-v2.png",
+      "potUdonPhoto": "content/assets/images/pot-udon-seaweed-retouched.png",
+      "potUdonPhotoScale": "1.03",
+      "potUdonPhotoTranslateY": "3.5%",
+      "drinkCategory": "noodle",
       "descriptionRowMainOffset": { "page1": "0", "page2": "0" },
-      "dashboardRevision": "20260823-08",
+      "dashboardRevision": "20260906-07",
       "githubPages": "https://sungha-uu.github.io/signage/",
-      "gitTag": "v1.2"
+      "gitTag": "v1.3"
     },
     "a4Korean": {
       "version": 1,
@@ -91,5 +99,5 @@
       "artifact": "release/v1/A4/A4_메뉴판_외국어_v1.png"
     }
   },
-  "remoteArchiveStatus": "confirmed_v1.2"
+  "remoteArchiveStatus": "confirmed_v1.3"
 }

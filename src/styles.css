@@ -212,7 +212,7 @@ button { font: inherit; }
 .static-gallery-card > figure img { width: 100%; height: 100%; object-fit: cover; }
 .static-gallery-card > .static-photo--tangsuyuk img { object-position: center center; transform: scale(1.50); }
 .static-gallery-card > .static-photo--fishcake img { object-position: center center; transform: translateY(2.5%) scale(1.12); }
-.static-gallery-card > .static-photo--noodle img { object-position: center center; transform: translateY(3.5%) scale(1.01); }
+.static-gallery-card > .static-photo--noodle img { object-position: center center; transform: translateY(3.5%) scale(1.03); }
 
 .static-menu-row {
   display: grid;

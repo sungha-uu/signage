@@ -67,7 +67,7 @@ window.MENU_BOARD_DATA = {
   ],
   gallery: [
     { categoryId: "special", image: "content/assets/images/tangsuyuk.jpeg?v=20260808-51", alt: "옛날 탕수육" },
-    { categoryId: "noodle", image: "content/assets/images/pot-udon-seaweed-retouched.png?v=20260906-05", alt: "김가루 리터치 냄비우동" },
+    { categoryId: "noodle", image: "content/assets/images/pot-udon-seaweed-retouched.png?v=20260906-07", alt: "김가루 리터치 냄비우동" },
     { categoryId: "special", image: "content/assets/images/fishcake-generated-v2.png?v=20260810-96", alt: "콩나물어묵" }
   ],
   video: {
