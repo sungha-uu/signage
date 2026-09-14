@@ -288,6 +288,7 @@ button { font: inherit; }
 .static-menu-row .category--special .menu-row__price-line { width: 100%; }
 .static-menu-row .menu-row__description { position: absolute; top: auto; bottom: .5px; left: 5px; margin: 0; font-size: 16px; }
 .static-menu-row .badge { position: absolute; z-index: 1; top: 3px; left: 0; min-height: 18px; padding: 1px 7px; border-radius: 5px; font-size: 12px; font-weight: 750; transform: none; }
+.static-menu-row .badge--yellow { top: 5px; }
 .static-menu-row .category--special .badge { top: 18px; }
 .static-menu-row .dumpling-grid .menu-row { align-items: center; padding: 0; }
 
