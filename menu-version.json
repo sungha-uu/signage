@@ -1,8 +1,8 @@
 {
-  "packageVersion": "1.4",
+  "packageVersion": "1.5",
   "packageStatus": "confirmed",
-  "finalizedAt": "2026-09-06",
-  "versionTag": "v1.4",
+  "finalizedAt": "2026-09-14",
+  "versionTag": "v1.5",
   "designSpecifications": {
     "tv": "design/TV_MENU_DESIGN_V1.md",
     "a4Korean": "design/A4_KOREAN_MENU_DESIGN_V1.md",
@@ -10,7 +10,7 @@
   },
   "components": {
     "tvMenu": {
-      "version": "1.4",
+      "version": "1.5",
       "status": "confirmed",
       "language": "ko",
       "palette": "warm_ivory",
@@ -67,6 +67,15 @@
       "page2MenuListTopPadding": "0px",
       "page2MenuBadgeTop": "3px",
       "page2MenuBadgeLeft": "0px",
+      "newMenuBadge": {
+        "item": "치즈만두",
+        "text": "신메뉴",
+        "background": "#f4c542",
+        "textColor": "#3a2b00",
+        "angle": "0deg",
+        "page1Top": "5px",
+        "page2Top": "5px"
+      },
       "menuRows": {
         "mandu": "equal_four_tracks_two_columns",
         "special": "equal_three_tracks_full_card_height",
@@ -82,9 +91,9 @@
       "potUdonPhotoTranslateY": "3.5%",
       "drinkCategory": "noodle",
       "descriptionRowMainOffset": { "page1": "0", "page2": "0" },
-      "dashboardRevision": "20260906-22",
+      "dashboardRevision": "20260906-27",
       "githubPages": "https://sungha-uu.github.io/signage/",
-      "gitTag": "v1.4"
+      "gitTag": "v1.5"
     },
     "a4Korean": {
       "version": 1,
@@ -101,5 +110,5 @@
       "artifact": "release/v1/A4/A4_메뉴판_외국어_v1.png"
     }
   },
-  "remoteArchiveStatus": "confirmed_v1.4"
+  "remoteArchiveStatus": "confirmed_v1.5"
 }
