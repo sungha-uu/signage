@@ -117,6 +117,7 @@ button { font: inherit; }
 .badge { display: inline-flex; align-items: center; min-height: 1.65em; padding: .14em .58em; color: #fff; border-radius: .36em; font-size: .65em; font-weight: 750; line-height: 1; vertical-align: .16em; white-space: nowrap; }
 .badge--coral { background: var(--coral); }
 .badge--blue { background: var(--blue); }
+.badge--yellow { background: #f4c542; color: #3a2b00; }
 .combo-badge-wrap { position: relative; display: inline-flex; align-items: center; justify-content: center; width: max-content; }
 .combo-badge-wrap .badge { min-height: 1.9em; padding: .2em .72em; font-size: 15px; font-weight: 800; }
 .combo-badge-crown { position: absolute; z-index: 1; top: -11px; left: -10px; display: block; width: 23px; height: 19px; object-fit: contain; transform: rotate(-32deg); transform-origin: center; }
@@ -330,6 +331,7 @@ button { font: inherit; }
 .compact-group .menu-row__description { position: absolute; top: auto; bottom: .5px; left: 5px; margin: 0; font-size: 14px; }
 .compact-group .menu-row__title-line { position: static; }
 .compact-group .badge { position: absolute; z-index: 1; top: 3px; left: 0; min-height: 15px; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 750; transform: none; }
+.compact-group .badge--yellow { transform: rotate(-30deg); transform-origin: left center; }
 .compact-group--special .badge { top: 18px; }
 .compact-group .menu-row__copy { align-self: center; }
 .compact-group .menu-row:has(.menu-row__description) .menu-row__copy { transform: none; }
