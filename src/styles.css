@@ -331,7 +331,7 @@ button { font: inherit; }
 .compact-group .menu-row__description { position: absolute; top: auto; bottom: .5px; left: 5px; margin: 0; font-size: 14px; }
 .compact-group .menu-row__title-line { position: static; }
 .compact-group .badge { position: absolute; z-index: 1; top: 3px; left: 0; min-height: 15px; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-weight: 750; transform: none; }
-.compact-group .badge--yellow { transform: rotate(-30deg); transform-origin: left center; }
+.compact-group .badge--yellow { top: 5px; transform: none; }
 .compact-group--special .badge { top: 18px; }
 .compact-group .menu-row__copy { align-self: center; }
 .compact-group .menu-row:has(.menu-row__description) .menu-row__copy { transform: none; }
