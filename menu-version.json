@@ -1,8 +1,8 @@
 {
-  "packageVersion": "1.5",
+  "packageVersion": "1.6",
   "packageStatus": "confirmed",
-  "finalizedAt": "2026-09-14",
-  "versionTag": "v1.5",
+  "finalizedAt": "2026-10-01",
+  "versionTag": "v1.6",
   "designSpecifications": {
     "tv": "design/TV_MENU_DESIGN_V1.md",
     "a4Korean": "design/A4_KOREAN_MENU_DESIGN_V1.md",
@@ -10,7 +10,7 @@
   },
   "components": {
     "tvMenu": {
-      "version": "1.5",
+      "version": "1.6",
       "status": "confirmed",
       "language": "ko",
       "palette": "warm_ivory",
@@ -91,9 +91,9 @@
       "potUdonPhotoTranslateY": "3.5%",
       "drinkCategory": "noodle",
       "descriptionRowMainOffset": { "page1": "0", "page2": "0" },
-      "dashboardRevision": "20260906-27",
+      "dashboardRevision": "20260906-29",
       "githubPages": "https://sungha-uu.github.io/signage/",
-      "gitTag": "v1.5"
+      "gitTag": "v1.6"
     },
     "a4Korean": {
       "version": 1,
@@ -110,5 +110,5 @@
       "artifact": "release/v1/A4/A4_메뉴판_외국어_v1.png"
     }
   },
-  "remoteArchiveStatus": "confirmed_v1.5"
+  "remoteArchiveStatus": "confirmed_v1.6"
 }
