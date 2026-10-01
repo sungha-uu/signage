@@ -37,9 +37,9 @@ window.MENU_BOARD_DATA = {
         { name: "깻잎만두", price: 7000, description: "1인분 5개", visible: true },
         { name: "땡초만두", price: 7000, description: "1인분 5개", visible: true },
         { name: "새우만두", price: 7000, description: "1인분 5개", visible: true },
-        { name: "탕수만두", price: 9000, description: "1인분 5개", visible: true },
+        { name: "치즈만두", price: 7000, description: "1인분 6개", badge: "신메뉴", badgeVariant: "yellow", visible: true },
         { name: "비빔야채", price: 2000, accent: true, visible: true },
-        { name: "치즈만두", price: 7000, description: "1인분 6개", badge: "신메뉴", badgeVariant: "yellow", visible: true }
+        { name: "탕수만두", price: 9000, description: "1인분 5개", visible: true }
       ]
     },
     {
