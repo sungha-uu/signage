@@ -9,6 +9,7 @@
   "scripts": {
     "start:electron": "electron .",
     "build:portable": "electron-builder --win portable --x64",
+    "build:updater": "node scripts/build-updater.cjs",
     "release:win": "pnpm run build:portable && node scripts/build-release.cjs",
     "release:v1": "pnpm run build:portable && node scripts/package-v1-release.cjs",
     "release:v1.1": "pnpm run build:portable && node scripts/build-release.cjs",

@@ -59,11 +59,29 @@ EXE 옆의 `content` 폴더를 삭제하거나 이름을 바꾸면 EXE 내부에
 
 ## Windows 시작 시 자동 실행
 
-1. `Win + R`을 누릅니다.
-2. `shell:startup`을 입력하고 확인합니다.
-3. 사용할 버전 EXE 하나의 바로가기를 시작프로그램 폴더에 넣습니다.
+자동 업데이트를 사용하는 매장 PC에서는 `SignageUpdater.exe`를 한 번 설치합니다.
 
-원본 EXE와 `content` 폴더는 같은 배포 폴더에 그대로 두고, 시작프로그램 폴더에는 바로가기만 넣는 것을 권장합니다.
+```text
+SignageUpdater.exe --install --app-source "기존 메뉴판 EXE 경로"
+```
+
+업데이터는 다음 작업을 자동으로 처리합니다.
+
+- 로그온 후 15초 뒤 GitHub Release 확인.
+- 최초 확인 이후 기본 10분 간격으로 최신 버전 확인.
+- 새 EXE 다운로드 및 SHA-256 검증.
+- 실행 중인 메뉴판 종료.
+- `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\Sexy-Kkunmandu-MenuBoard.exe` 교체.
+- 새 EXE 실행 및 실패 시 이전 버전 복구.
+
+업데이트 설정과 로그는 다음 위치에 저장됩니다.
+
+```text
+%LOCALAPPDATA%\Sexy-Kkunmandu\updater\config.json
+%LOCALAPPDATA%\Sexy-Kkunmandu\updater\logs\updater.log
+```
+
+확인 주기를 바꾸려면 `config.json`의 `checkIntervalSeconds`를 수정합니다. 최소값은 60초이며, 매장 운영에는 300~600초를 권장합니다.
 
 ## 권장 TV PC 설정
 
