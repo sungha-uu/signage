@@ -271,8 +271,32 @@ def configure_email(logger: logging.Logger) -> None:
                     "passwordProtected": protect_text(password),
                 },
             )
-            logger.info("업데이트 메일 설정을 저장했습니다.")
-            messagebox.showinfo("저장 완료", "업데이트 메일 설정을 저장했습니다.", parent=root)
+            verified = send_notification_email(
+                "[섹시한 꾼만두] 이메일 인증 완료",
+                "\n".join(
+                    [
+                        "섹시한 꾼만두 TV 메뉴판 업데이터 이메일 인증이 완료되었습니다.",
+                        "",
+                        f"PC: {socket.gethostname()}",
+                        f"인증 시각: {time.strftime('%Y-%m-%d %H:%M:%S %z')}",
+                        f"수신자: {recipient}",
+                        "",
+                        "이 PC에서 이후 업데이트 감지 및 성공·실패 알림을 전송할 수 있습니다.",
+                    ]
+                ),
+                logger,
+            )
+            if not verified:
+                raise UpdateError(
+                    "설정은 저장했지만 이메일 인증에 실패했습니다. "
+                    "SMTP 서버, 계정, 비밀번호를 확인해 주세요."
+                )
+            logger.info("업데이트 메일 설정 및 이메일 인증을 완료했습니다.")
+            messagebox.showinfo(
+                "이메일 인증 완료",
+                "이메일 인증이 완료되었고 인증 완료 메일을 보냈습니다.",
+                parent=root,
+            )
             root.destroy()
         except Exception as error:
             messagebox.showerror("저장 실패", str(error), parent=root)
