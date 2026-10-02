@@ -1020,7 +1020,7 @@ def install(
         config["appPath"] = str(app_source)
         atomic_write_json(config_file(), config)
         app_path = app_source
-        launch_menu_board(app_path, logger)
+        ensure_app_running(config, logger)
         logger.info("기존 메뉴판 EXE를 현재 위치에서 실행하고 관리 대상으로 등록했습니다: %s", app_path)
     elif Path(config["appPath"]).exists():
         ensure_app_running(config, logger)
