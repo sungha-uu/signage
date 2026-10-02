@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "version": "v1.7",
+  "assets": [
+    {
+      "id": "menu-board",
+      "file": "Sexy-Kkunmandu-MenuBoard-v1.7.zip",
+      "mode": "replace-exe"
+    },
+    {
+      "id": "download-only-example",
+      "file": "example.zip",
+      "mode": "download-only",
+      "destination": "example.zip"
+    },
+    {
+      "id": "managed-file-example",
+      "file": "example.dat",
+      "mode": "replace-file",
+      "target": "data/example.dat"
+    }
+  ]
+}

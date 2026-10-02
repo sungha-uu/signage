@@ -56,14 +56,43 @@ SignageUpdater.exe --check-only
 SignageUpdater.exe --check-once
 ```
 
-## Release 규칙
+## Release 규칙과 일반 파일 배포
 
-각 GitHub Release에는 다음 중 하나가 있어야 합니다.
+새 Release에는 `update-manifest.json`을 함께 첨부하는 방식을 권장합니다. 매니페스트에 선언된 파일만 처리하므로, Release에 올린 파일이 자동으로 실행되지는 않습니다.
 
-- `Sexy-Kkunmandu-MenuBoard-*.zip` 또는 `*menu-board*.zip`
-- 메뉴판 EXE 직접 첨부 파일
+```json
+{
+  "schemaVersion": 1,
+  "version": "v1.7",
+  "assets": [
+    {
+      "id": "menu-board",
+      "file": "Sexy-Kkunmandu-MenuBoard-v1.7.zip",
+      "mode": "replace-exe"
+    },
+    {
+      "id": "store-guide",
+      "file": "store-guide.pdf",
+      "mode": "download-only",
+      "destination": "store-guide.pdf"
+    },
+    {
+      "id": "managed-tool",
+      "file": "tool.zip",
+      "mode": "replace-file",
+      "target": "tools/tool.zip"
+    }
+  ]
+}
+```
 
-ZIP 내부에서 업데이터가 아닌 EXE를 찾아 메뉴판 EXE로 사용합니다. GitHub Release asset의 SHA-256 digest가 있으면 다운로드 후 자동 검증합니다.
+지원 모드는 다음과 같습니다.
+
+- `replace-exe`: ZIP 안의 메뉴판 EXE 또는 직접 첨부한 EXE를 Startup 메뉴판으로 교체하고 실행합니다. 한 Release에 하나만 둘 수 있습니다.
+- `replace-file`: 파일을 업데이터의 관리 폴더에 교체합니다. `target`은 관리 폴더 아래 상대 경로이며, 프로세스를 종료해야 하면 선택적으로 `processName`을 추가할 수 있습니다.
+- `download-only`: APK, Python, ZIP, PDF 등 기타 파일을 실행하지 않고 `%LOCALAPPDATA%\Sexy-Kkunmandu\updater\downloads\v버전`에 보관합니다. `destination`은 해당 폴더 아래 상대 경로입니다.
+
+각 `file`은 같은 Release의 asset 이름과 정확히 일치해야 하며, 매니페스트 버전은 Release tag와 같아야 합니다. Release asset의 SHA-256 digest가 있으면 다운로드 후 자동 검증합니다. 기존 Release처럼 매니페스트가 없는 경우에는 `Sexy-Kkunmandu-MenuBoard-*.zip` 또는 메뉴판 EXE를 찾아 기존 방식으로 호환 처리합니다.
 
 ## 메일 알림
 

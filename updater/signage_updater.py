@@ -53,6 +53,8 @@ DEFAULT_SMTP_SERVER = "smtp.kakao.com"
 DEFAULT_SMTP_PORT = 465
 DEFAULT_NOTIFICATION_RECIPIENT = "sungha.yoo@kakao.com"
 EMAIL_CONFIG_NAME = "email.json"
+UPDATE_MANIFEST_NAME = "update-manifest.json"
+UPDATE_MODES = {"replace-exe", "replace-file", "download-only"}
 
 
 class DataBlob(ctypes.Structure):
@@ -312,7 +314,7 @@ def update_detection_body(
     local_version: tuple[int, int, int],
     remote_version: tuple[int, int, int],
     release: dict[str, Any],
-    asset: dict[str, Any],
+    asset_names: list[str],
     app_path: Path,
 ) -> str:
     return "\n".join(
@@ -323,10 +325,10 @@ def update_detection_body(
             f"현재 버전: v{version_text(local_version)}",
             f"새 버전: v{version_text(remote_version)}",
             f"Release: {release.get('html_url', '')}",
-            f"파일: {asset.get('name', '')}",
+            f"파일: {', '.join(asset_names)}",
             f"교체 대상: {app_path}",
             "",
-            "다운로드와 EXE 교체를 시작합니다.",
+            "Release manifest 기준으로 파일 처리를 시작합니다.",
         ]
     )
 
@@ -456,6 +458,29 @@ def select_asset(release: dict[str, Any]) -> dict[str, Any]:
     return candidates[0]
 
 
+def find_release_asset(release: dict[str, Any], name: str) -> dict[str, Any]:
+    wanted = Path(str(name)).name
+    for asset in release.get("assets") or []:
+        if isinstance(asset, dict) and Path(str(asset.get("name", ""))).name == wanted:
+            return asset
+    raise UpdateError(f"Release에서 manifest가 지정한 asset을 찾지 못했습니다: {wanted}")
+
+
+def find_manifest_asset(release: dict[str, Any]) -> dict[str, Any] | None:
+    for asset in release.get("assets") or []:
+        if isinstance(asset, dict) and Path(str(asset.get("name", ""))).name == UPDATE_MANIFEST_NAME:
+            return asset
+    return None
+
+
+def release_asset_names(release: dict[str, Any]) -> list[str]:
+    return [
+        Path(str(asset.get("name", ""))).name
+        for asset in release.get("assets") or []
+        if isinstance(asset, dict) and asset.get("name")
+    ]
+
+
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as source:
@@ -464,9 +489,16 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def download_asset(asset: dict[str, Any], logger: logging.Logger) -> Path:
+def download_asset(
+    asset: dict[str, Any],
+    logger: logging.Logger,
+    destination_dir: Path | None = None,
+    expected_digest: str | None = None,
+) -> Path:
     name = Path(str(asset["name"])).name
-    destination = state_directory() / "downloads" / name
+    destination_dir = destination_dir or (state_directory() / "downloads")
+    destination_dir.mkdir(parents=True, exist_ok=True)
+    destination = destination_dir / name
     partial = destination.with_suffix(destination.suffix + ".part")
     partial.unlink(missing_ok=True)
 
@@ -487,7 +519,7 @@ def download_asset(asset: dict[str, Any], logger: logging.Logger) -> Path:
         raise UpdateError(f"Release 다운로드 실패: {error}") from error
 
     os.replace(partial, destination)
-    expected = str(asset.get("digest", ""))
+    expected = str(expected_digest or asset.get("digest", ""))
     if expected.startswith("sha256:"):
         expected = expected.split(":", 1)[1].lower()
         actual = sha256_file(destination)
@@ -509,6 +541,169 @@ def safe_extract(zip_path: Path, destination: Path) -> None:
             if member_path != root and root not in member_path.parents:
                 raise UpdateError("ZIP 내부에 허용되지 않은 경로가 포함되어 있습니다.")
         archive.extractall(destination)
+
+
+def build_update_plan(
+    release: dict[str, Any],
+    remote_version: tuple[int, int, int],
+    logger: logging.Logger,
+) -> list[dict[str, Any]]:
+    """Read the optional Release manifest, with a v1.6-compatible fallback."""
+    manifest_asset = find_manifest_asset(release)
+    if manifest_asset is None:
+        return [{"id": "menu-board", "mode": "replace-exe", "asset": select_asset(release)}]
+
+    manifest_path = download_asset(
+        manifest_asset,
+        logger,
+        destination_dir=state_directory() / "staging" / "manifest",
+    )
+    try:
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as error:
+            raise UpdateError(f"update-manifest.json을 읽지 못했습니다: {error}") from error
+
+        if not isinstance(manifest, dict) or int(manifest.get("schemaVersion", 1)) != 1:
+            raise UpdateError("지원하지 않는 update-manifest.json schema입니다.")
+        manifest_version = parse_version(manifest.get("version", release.get("tag_name")))
+        if manifest_version != remote_version:
+            raise UpdateError("update-manifest.json의 버전과 Release tag가 다릅니다.")
+
+        entries = manifest.get("assets")
+        if not isinstance(entries, list) or not entries:
+            raise UpdateError("update-manifest.json에 assets가 없습니다.")
+
+        plan: list[dict[str, Any]] = []
+        replace_exe_count = 0
+        for index, entry in enumerate(entries):
+            if not isinstance(entry, dict):
+                raise UpdateError(f"manifest asset 항목이 올바르지 않습니다: {index}")
+            mode = str(entry.get("mode", "")).strip().lower()
+            if mode not in UPDATE_MODES:
+                raise UpdateError(f"지원하지 않는 manifest mode입니다: {mode}")
+            file_name = Path(str(entry.get("file", ""))).name
+            if not file_name or file_name == UPDATE_MANIFEST_NAME:
+                raise UpdateError(f"manifest file 이름이 올바르지 않습니다: {file_name}")
+            asset = find_release_asset(release, file_name)
+            item = {
+                "id": str(entry.get("id", file_name)),
+                "mode": mode,
+                "asset": asset,
+                "target": entry.get("target"),
+                "destination": entry.get("destination"),
+                "processName": entry.get("processName"),
+                "expectedDigest": entry.get("sha256"),
+            }
+            if mode == "replace-exe":
+                replace_exe_count += 1
+            if mode == "replace-file" and not entry.get("target"):
+                raise UpdateError(f"replace-file에 target이 없습니다: {file_name}")
+            plan.append(item)
+
+        if replace_exe_count > 1:
+            raise UpdateError("한 Release manifest에는 replace-exe를 하나만 지정할 수 있습니다.")
+        logger.info("Release manifest 처리 계획: %s", ", ".join(item["id"] for item in plan))
+        return plan
+    finally:
+        manifest_path.unlink(missing_ok=True)
+
+
+def safe_managed_path(relative_value: Any, root: Path) -> Path:
+    relative = Path(str(relative_value or ""))
+    if not str(relative) or relative.is_absolute() or relative.name in ("", ".", ".."):
+        raise UpdateError("managed target은 상대 경로여야 합니다.")
+    resolved_root = root.resolve()
+    resolved = (root / relative).resolve()
+    if resolved != resolved_root and resolved_root not in resolved.parents:
+        raise UpdateError("managed target이 허용된 폴더 밖을 가리킵니다.")
+    return resolved
+
+
+def replace_managed_file(
+    candidate: Path,
+    target: Path,
+    process_name: str | None,
+    logger: logging.Logger,
+) -> None:
+    """Atomically replace a manifest-declared non-menu file under managed/."""
+    target.parent.mkdir(parents=True, exist_ok=True)
+    if process_name:
+        stop_menu_board(process_name, logger)
+    staged = target.with_name(f".{target.name}.{os.getpid()}.new")
+    backup = state_directory() / "backup" / "managed" / target.name
+    backup.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        if target.exists():
+            shutil.copy2(target, backup)
+        shutil.copy2(candidate, staged)
+        os.replace(staged, target)
+        logger.info("manifest 파일 교체 완료: %s", target)
+    except Exception:
+        staged.unlink(missing_ok=True)
+        if backup.exists():
+            os.replace(backup, target)
+        raise
+
+
+def execute_update_plan(
+    plan: list[dict[str, Any]],
+    config: dict[str, Any],
+    remote_version: tuple[int, int, int],
+    logger: logging.Logger,
+) -> list[str]:
+    stage = state_directory() / "staging" / f"release-{version_text(remote_version)}-{int(time.time())}"
+    asset_stage = stage / "assets"
+    extracted_stage = stage / "extracted"
+    prepared: list[tuple[dict[str, Any], Path]] = []
+    actions: list[str] = []
+    try:
+        for index, item in enumerate(plan):
+            expected_digest = item.get("expectedDigest")
+            if expected_digest and not str(expected_digest).startswith("sha256:"):
+                expected_digest = f"sha256:{expected_digest}"
+            downloaded = download_asset(
+                item["asset"],
+                logger,
+                destination_dir=asset_stage,
+                expected_digest=expected_digest,
+            )
+            if item["mode"] == "replace-exe" and downloaded.suffix.lower() == ".zip":
+                extraction = extracted_stage / str(index)
+                safe_extract(downloaded, extraction)
+                candidate = find_menu_executable(extraction)
+            else:
+                candidate = downloaded
+            prepared.append((item, candidate))
+
+        downloads_root = state_directory() / "downloads" / f"v{version_text(remote_version)}"
+        for item, candidate in prepared:
+            if item["mode"] != "download-only":
+                continue
+            destination = safe_managed_path(
+                item.get("destination") or item["asset"]["name"], downloads_root
+            )
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(candidate, destination)
+            actions.append(f"download-only: {destination.name}")
+            logger.info("다운로드 보관 완료: %s", destination)
+
+        managed_root = state_directory() / "managed"
+        for item, candidate in prepared:
+            if item["mode"] != "replace-file":
+                continue
+            target = safe_managed_path(item["target"], managed_root)
+            replace_managed_file(candidate, target, item.get("processName"), logger)
+            actions.append(f"replace-file: {target.name}")
+
+        for item, candidate in prepared:
+            if item["mode"] != "replace-exe":
+                continue
+            replace_managed_exe(candidate, Path(config["appPath"]), remote_version, logger)
+            actions.append("replace-exe: menu board")
+        return actions
+    finally:
+        shutil.rmtree(stage, ignore_errors=True)
 
 
 def find_menu_executable(directory: Path) -> Path:
@@ -668,13 +863,16 @@ def check_once(config: dict[str, Any], logger: logging.Logger, check_only: bool 
     remote_version = parse_version(release.get("tag_name"))
     if remote_version is None:
         raise UpdateError("Release tag에서 버전을 읽지 못했습니다.")
-    asset = select_asset(release)
+    asset_names = release_asset_names(release)
+    if not asset_names:
+        raise UpdateError("최신 Release에 다운로드할 asset이 없습니다.")
     local_version = current_version(config, state)
     result = {
         "localVersion": version_text(local_version),
         "remoteVersion": version_text(remote_version),
         "releaseTag": release.get("tag_name"),
-        "asset": asset.get("name"),
+        "assets": asset_names,
+        "asset": ", ".join(asset_names),
         "updated": False,
     }
     logger.info(
@@ -695,24 +893,12 @@ def check_once(config: dict[str, Any], logger: logging.Logger, check_only: bool 
         app_path = Path(config["appPath"])
         send_notification_email(
             f"[섹시한 꾼만두] 메뉴판 업데이트 감지 v{version_text(remote_version)}",
-            update_detection_body(local_version, remote_version, release, asset, app_path),
+            update_detection_body(local_version, remote_version, release, asset_names, app_path),
             logger,
         )
 
-        archive = download_asset(asset, logger)
-        staging = state_directory() / "staging" / f"release-{version_text(remote_version)}-{int(time.time())}"
-        try:
-            if archive.suffix.lower() == ".zip":
-                safe_extract(archive, staging)
-                candidate = find_menu_executable(staging)
-            else:
-                staging.mkdir(parents=True, exist_ok=True)
-                candidate = staging / APP_EXE_NAME
-                shutil.copy2(archive, candidate)
-            replace_managed_exe(candidate, app_path, remote_version, logger)
-        finally:
-            shutil.rmtree(staging, ignore_errors=True)
-            archive.unlink(missing_ok=True)
+        plan = build_update_plan(release, remote_version, logger)
+        actions = execute_update_plan(plan, config, remote_version, logger)
 
     except Exception as error:
         send_notification_email(
@@ -733,6 +919,7 @@ def check_once(config: dict[str, Any], logger: logging.Logger, check_only: bool 
     state["installedVersion"] = version_text(remote_version)
     state["installedTag"] = release.get("tag_name")
     state["installedAt"] = time.strftime("%Y-%m-%dT%H:%M:%S%z")
+    state["lastActions"] = actions
     save_state(state)
     result["updated"] = True
     send_notification_email(
@@ -743,7 +930,7 @@ def check_once(config: dict[str, Any], logger: logging.Logger, check_only: bool 
             release,
             Path(config["appPath"]),
             True,
-            "새 EXE 교체 및 실행을 확인했습니다.",
+            ", ".join(actions) if actions else "처리할 파일이 없어 버전만 기록했습니다.",
         ),
         logger,
     )
