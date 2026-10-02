@@ -966,7 +966,41 @@ def create_scheduled_task(logger: logging.Logger) -> None:
     logger.info("로그온 자동 실행 작업 등록 완료: %s", TASK_NAME)
 
 
-def install(args: argparse.Namespace, logger: logging.Logger) -> None:
+def detect_menu_board_source(logger: logging.Logger) -> Path | None:
+    """Find the existing menu EXE for one-click first-run setup."""
+    updater_path = frozen_executable().resolve()
+    candidates: list[Path] = []
+
+    try:
+        managed_path = Path(make_default_config()["appPath"])
+        candidates.append(managed_path)
+        candidates.extend(sorted(managed_path.parent.glob("Sexy-Kkunmandu-MenuBoard*.exe")))
+    except Exception as error:
+        logger.warning("Startup 폴더를 확인하지 못했습니다: %s", error)
+
+    if updater_path.parent.exists():
+        candidates.extend(sorted(updater_path.parent.glob("Sexy-Kkunmandu-MenuBoard*.exe")))
+
+    seen: set[Path] = set()
+    for candidate in candidates:
+        try:
+            resolved = candidate.resolve()
+        except OSError:
+            continue
+        if resolved in seen or resolved == updater_path:
+            continue
+        seen.add(resolved)
+        if resolved.is_file():
+            logger.info("기존 메뉴판 EXE를 자동으로 찾았습니다: %s", resolved)
+            return resolved
+    return None
+
+
+def install(
+    args: argparse.Namespace,
+    logger: logging.Logger,
+    app_source_override: Path | None = None,
+) -> None:
     config = load_config(args)
     ensure_directories()
     source = frozen_executable()
@@ -977,15 +1011,24 @@ def install(args: argparse.Namespace, logger: logging.Logger) -> None:
         logger.warning("개발 모드 설치: Python 파일을 복사하지 않고 현재 경로를 사용합니다.")
     create_scheduled_task(logger)
 
-    app_source = Path(args.app_source).expanduser().resolve() if args.app_source else None
+    app_source = (
+        Path(args.app_source).expanduser().resolve()
+        if args.app_source
+        else app_source_override
+    )
     if app_source:
-        app_path = Path(config["appPath"])
-        app_path.parent.mkdir(parents=True, exist_ok=True)
-        stop_menu_board(app_source.name, logger)
-        shutil.copy2(app_source, app_path)
-        remove_legacy_startup_executables(app_path, logger)
+        config["appPath"] = str(app_source)
+        atomic_write_json(config_file(), config)
+        app_path = app_source
         launch_menu_board(app_path, logger)
-        logger.info("기존 메뉴판을 Startup 폴더에 설치했습니다: %s", app_path)
+        logger.info("기존 메뉴판 EXE를 현재 위치에서 실행하고 관리 대상으로 등록했습니다: %s", app_path)
+    elif Path(config["appPath"]).exists():
+        ensure_app_running(config, logger)
+    else:
+        raise UpdateError(
+            "기존 메뉴판 EXE를 자동으로 찾지 못했습니다. "
+            "메뉴판 EXE와 업데이터를 같은 폴더에 둔 뒤 다시 실행해 주세요."
+        )
 
     logger.info("설치 완료. 설정 파일: %s", config_file())
 
@@ -1016,7 +1059,7 @@ def parse_args() -> argparse.Namespace:
     mode.add_argument("--uninstall", action="store_true", help="로그온 자동 실행 제거")
     mode.add_argument("--configure-email", action="store_true", help="업데이트 메일 SMTP 설정 저장")
     parser.add_argument("--app-path", help="관리할 메뉴판 EXE 경로")
-    parser.add_argument("--app-source", help="--install 시 Startup 폴더로 복사할 기존 메뉴판 EXE")
+    parser.add_argument("--app-source", help="기존 메뉴판 EXE 경로(자동 설치 시 생략 가능)")
     parser.add_argument("--interval", type=int, help="확인 주기(초), 최소 60초")
     parser.add_argument("--startup-grace", type=int, help="로그온 후 첫 확인까지 대기할 초")
     parser.add_argument("--version", action="version", version=UPDATER_VERSION)
@@ -1035,9 +1078,20 @@ def main() -> int:
             configure_email(logger)
             return 0
 
+        first_run = getattr(sys, "frozen", False) and not config_file().exists()
         config = load_config(args)
         if args.install:
             install(args, logger)
+            return 0
+
+        if first_run and not (args.watch or args.check_once or args.check_only):
+            source = detect_menu_board_source(logger)
+            if source:
+                config["appPath"] = str(source)
+                atomic_write_json(config_file(), config)
+            install(args, logger, app_source_override=source)
+            if not email_config_file().exists():
+                configure_email(logger)
             return 0
 
         if args.watch or not (args.check_once or args.check_only):
