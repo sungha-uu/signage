@@ -51,7 +51,7 @@ HEALTH_CHECK_SECONDS = 10
 USER_AGENT = f"Sexy-Kkunmandu-Signage-Updater/{UPDATER_VERSION}"
 DEFAULT_SMTP_SERVER = "smtp.kakao.com"
 DEFAULT_SMTP_PORT = 465
-DEFAULT_NOTIFICATION_RECIPIENT = "pieces19@naver.com"
+DEFAULT_NOTIFICATION_RECIPIENT = "sungha.yoo@kakao.com"
 EMAIL_CONFIG_NAME = "email.json"
 
 

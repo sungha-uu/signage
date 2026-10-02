@@ -31,7 +31,7 @@ SignageUpdater.exe --install --app-source "기존 TV 메뉴판 EXE 경로"
 SignageUpdater.exe --configure-email
 ```
 
-기본 SMTP 서버는 `smtp.kakao.com:465`, 기본 수신자는 `pieces19@naver.com`입니다.
+기본 SMTP 서버는 `smtp.kakao.com:465`, 기본 수신자는 `sungha.yoo@kakao.com`입니다.
 발신 계정과 비밀번호를 입력하면 비밀번호는 EXE나 평문 설정 파일에 넣지 않고 Windows DPAPI로 현재 사용자에게만 복호화되도록 저장합니다.
 
 기본 메뉴판 위치는 다음과 같습니다.
