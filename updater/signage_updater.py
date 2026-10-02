@@ -46,7 +46,7 @@ APP_EXE_NAME = "Sexy-Kkunmandu-MenuBoard.exe"
 TASK_NAME = "Sexy Kkunmandu Signage Updater"
 DEFAULT_INTERVAL_SECONDS = 600
 MIN_INTERVAL_SECONDS = 60
-STARTUP_GRACE_SECONDS = 15
+STARTUP_GRACE_SECONDS = 600
 HEALTH_CHECK_SECONDS = 10
 USER_AGENT = f"Sexy-Kkunmandu-Signage-Updater/{UPDATER_VERSION}"
 DEFAULT_SMTP_SERVER = "smtp.kakao.com"
@@ -393,7 +393,13 @@ def make_default_config() -> dict[str, Any]:
 
 def load_config(args: argparse.Namespace) -> dict[str, Any]:
     config = make_default_config()
-    config.update(read_json(config_file(), {}))
+    stored_config = read_json(config_file(), {})
+    config.update(stored_config)
+
+    # 15 seconds was the original default. Migrate that untouched default to
+    # the safer 10-minute boot grace period; preserve explicit custom values.
+    if args.startup_grace is None and stored_config.get("startupGraceSeconds") == 15:
+        config["startupGraceSeconds"] = STARTUP_GRACE_SECONDS
 
     if args.app_path:
         config["appPath"] = str(Path(args.app_path).expanduser().resolve())

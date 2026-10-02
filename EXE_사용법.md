@@ -67,7 +67,7 @@ SignageUpdater.exe --install --app-source "기존 메뉴판 EXE 경로"
 
 업데이터는 다음 작업을 자동으로 처리합니다.
 
-- 로그온 후 15초 뒤 GitHub Release 확인.
+- 로그온 후 10분 뒤 GitHub Release 확인. 느린 매장 PC에서 Windows Startup 메뉴판이 먼저 올라올 시간을 확보합니다.
 - 최초 확인 이후 기본 10분 간격으로 최신 버전 확인.
 - 새 EXE 다운로드 및 SHA-256 검증.
 - 실행 중인 메뉴판 종료.
